@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AutoFlow — Automatización Inteligente</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0f;
+      --bg2: #111118;
+      --bg3: #16161f;
+      --accent: #5b4fff;
+      --accent2: #00e5c3;
+      --text: #f0eff8;
+      --muted: #7a7890;
+      --border: rgba(255,255,255,0.07);
+      --card-bg: rgba(255,255,255,0.03);
+      --radius: 14px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 60px;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      font-size: 1.3rem; font-weight: 700; letter-spacing: -0.5px;
+      color: var(--text);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .logo-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent2); box-shadow: 0 0 12px var(--accent2); }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 400; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--accent); color: #fff; border: none; border-radius: 8px;
+      padding: 10px 22px; font-size: 0.9rem; font-weight: 500; cursor: pointer;
+      font-family: inherit; transition: opacity .2s;
+    }
+    .nav-cta:hover { opacity: 0.85; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 140px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-glow {
+      position: absolute; top: 20%; left: 50%; transform: translateX(-50%);
+      width: 700px; height: 500px;
+      background: radial-gradient(ellipse at center, rgba(91,79,255,0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(91,79,255,0.12); border: 1px solid rgba(91,79,255,0.3);
+      border-radius: 99px; padding: 6px 16px; font-size: 0.78rem; color: #a59eff;
+      margin-bottom: 28px; letter-spacing: 0.3px;
+    }
+    .hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent2); display: inline-block; }
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -2px;
+      max-width: 860px;
+      margin-bottom: 24px;
+    }
+    h1 span { color: var(--accent2); }
+    .hero-sub {
+      font-size: 1.15rem; color: var(--muted); max-width: 520px;
+      line-height: 1.75; margin-bottom: 48px;
+    }
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+    .btn-primary {
+      background: var(--accent); color: #fff;
+      padding: 16px 36px; border-radius: 10px; font-size: 1rem; font-weight: 600;
+      border: none; cursor: pointer; font-family: inherit;
+      transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 0 32px rgba(91,79,255,0.35);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 40px rgba(91,79,255,0.55); }
+    .btn-outline {
+      background: transparent; color: var(--text);
+      padding: 16px 36px; border-radius: 10px; font-size: 1rem; font-weight: 500;
+      border: 1px solid var(--border); cursor: pointer; font-family: inherit;
+      transition: border-color .2s, background .2s;
+    }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.04); }
+
+    /* stats strip */
+    .stats {
+      display: flex; justify-content: center; gap: 60px; flex-wrap: wrap;
+      padding: 60px 24px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .stat-item { text-align: center; }
+    .stat-number { font-size: 2.4rem; font-weight: 700; letter-spacing: -1px; color: var(--text); }
+    .stat-label { font-size: 0.85rem; color: var(--muted); margin-top: 4px; }
+
+    /* ── SERVICES ── */
+    section { padding: 100px 60px; max-width: 1200px; margin: 0 auto; }
+    .section-tag {
+      font-family: 'DM Mono', monospace; font-size: 0.75rem;
+      color: var(--accent2); letter-spacing: 1.5px; text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    h2 {
+      font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700;
+      letter-spacing: -1px; line-height: 1.15; margin-bottom: 16px;
+    }
+    .section-sub { color: var(--muted); font-size: 1.05rem; max-width: 520px; }
+
+    .services-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px; margin-top: 60px;
+    }
+    .service-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      transition: border-color .25s, transform .25s;
+      position: relative; overflow: hidden;
+    }
+    .service-card:hover { border-color: rgba(91,79,255,0.4); transform: translateY(-4px); }
+    .service-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      opacity: 0; transition: opacity .25s;
+    }
+    .service-card:hover::before { opacity: 1; }
+    .service-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(91,79,255,0.12); font-size: 1.4rem; margin-bottom: 20px;
+    }
+    .service-card h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 10px; }
+    .service-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
+
+    /* ── HOW IT WORKS ── */
+    .steps-section { background: var(--bg2); border-radius: 24px; padding: 80px 60px; }
+    .steps-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px; margin-top: 60px; position: relative;
+    }
+    .step {
+      position: relative;
+    }
+    .step-number {
+      font-family: 'DM Mono', monospace; font-size: 0.7rem;
+      color: var(--accent); letter-spacing: 1px; margin-bottom: 16px;
+    }
+    .step h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; }
+    .step p { color: var(--muted); font-size: 0.88rem; line-height: 1.7; }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      text-align: center;
+      background: linear-gradient(135deg, rgba(91,79,255,0.1) 0%, rgba(0,229,195,0.05) 100%);
+      border: 1px solid rgba(91,79,255,0.2);
+      border-radius: 24px;
+      padding: 90px 40px;
+      margin: 40px auto;
+    }
+    .cta-section h2 { font-size: clamp(1.8rem, 3vw, 2.8rem); margin-bottom: 16px; }
+    .cta-section p { color: var(--muted); font-size: 1rem; margin-bottom: 40px; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 60px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+      gap: 16px;
+      color: var(--muted); font-size: 0.85rem;
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      section { padding: 70px 24px; }
+      .stats { gap: 32px; }
+      .steps-section { padding: 60px 24px; }
+      footer { flex-direction: column; text-align: center; padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">
+      <span class="logo-dot"></span>
+      AutoFlow
+    </div>
+    <ul class="nav-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#proceso">Proceso</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="nav-cta">Hablar con expertos</button>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-glow"></div>
+    <span class="hero-badge">Modulo 1</span>
+    <h1>Haz más.<br>Automatiza <span>lo que frena</span><br>tu negocio.</h1>
+    <p class="hero-sub">
+      Diseñamos e implementamos flujos de trabajo inteligentes que eliminan tareas repetitivas,
+      reducen errores y liberan a tu equipo para lo que realmente importa.
+    </p>
+    <div class="hero-buttons">
+      <button class="btn-primary">Solicitar diagnóstico gratuito</button>
+      <button class="btn-outline">Ver casos de éxito →</button>
+    </div>
+  </div>
+
+ 
+
+</body>
+</html>
