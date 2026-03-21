@@ -13,7 +13,7 @@ En *** somos una empresa especializada en el desarrollo de soluciones integrales
 <table>
   <tr>
     <td align="center">
-      <img src="Imag/Integrantes/nicolas_davial.png" width="250"/><br/>
+      <img src="Imag/Integrantes/nicolas_davila.png" width="250"/><br/>
       <b>Nicolas Fernando Davila Peñuela</b><br/>
       <span>Ingeniero Mecatronico - </span>
     </td>
@@ -90,7 +90,37 @@ Este proyecto consiste en el diseño e implementación de una planta automatizad
 
 
 ## 📑 Requerimientos del proyecto 
+Línea de alto volumen con mínimo **3 productos diferentes**
+
+| Tipo de Envase | Volumen |
+|---|---|
+| Bajo volumen | 150 – 600 mL |
+| Medio volumen | 1 – 3 L |
+| Gran volumen (Garrafones) | 12 o 20 L |
+
+| Aspecto de Diferenciación |
+|---|
+| Capacidad y geometría del envase |
+| Sabores o ingredientes |
+| Velocidad de producción |
+| Secuencia lógica de operación |
+| Estrategia de inspección y calidad |
+| Trazabilidad y toma de decisiones |
+
+> Los productos deben diferenciarse en **≥2** aspectos de la tabla anterior.
 ## 🗂️Modulos del Proyecto
+
+- [Modulo 1: Introducción a la automatización de manufactura ](./Modulo_1/)
+- [Modulo 2: Gestión de producción ](./Modulo_2/)
+- [Modulo 3: Planeación de proyectos](./Modulo_3/)
+- [Modulo 4: Celdas robotizadas de manufactura](./Modulo_4/)
+- [Modulo 5: Digital factory](./Modulo_5/)
+- [Modulo 6: Automatización discreta (PLC)](./Modulo_6/)
+- [Modulo 7: SCADA y comunicaciones](./Modulo_7/)
+
 ## 💾Anexos 
+ - [Pagina web](https://nicolasdavila2001.github.io/APM-20261S/)
+ - [Drive](https://drive.google.com/drive/folders/1QVZhY7u8GsLHCyEWJAowoTUEtw_0oujM?usp=drive_link)
+ - [Presentaciones](https://drive.google.com/drive/folders/1rmt_XTF3Gyx2ZOrqQg3J9glDm1CesLqV?usp=sharing)
 
 
