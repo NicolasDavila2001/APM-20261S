@@ -67,7 +67,7 @@ En *** somos una empresa especializada en el desarrollo de soluciones integrales
   </tr>
   <tr>
     <td align="center">
-      <img src="Imag/Profesores/Ricardo.png" width="200"/><br/>
+      <img src="Imag/Profesores/Ricardo.png" width="220"/><br/>
       <b>Ricardo Ramirez H.</b><br/>
       <span>Ing. Mecánico & Electrónico | MSc. Automatización Industrial | PhD. Ciencias de Ingeniería Mecánica|Docente UNAL </span>
     </td>
