@@ -107,7 +107,7 @@ Línea de alto volumen con mínimo **3 productos diferentes**
 | Estrategia de inspección y calidad |
 | Trazabilidad y toma de decisiones |
 
-> Los productos deben diferenciarse en **≥2** aspectos de la tabla anterior.
+> Los productos deben diferenciarse en al menos dos aspectos de la tabla anterior.
 ## 🗂️Modulos del Proyecto
 
 - [Modulo 1: Introducción a la automatización de manufactura ](./Modulo_1/)
