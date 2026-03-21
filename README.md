@@ -108,9 +108,9 @@ Línea de alto volumen con mínimo **3 productos diferentes**
 | Estrategia de inspección y calidad |
 | Trazabilidad y toma de decisiones |
 
-> Los productos deben diferenciarse en al menos dos aspectos de la tabla anterior.
-> 
 </div>
+
+> Los productos deben diferenciarse en al menos dos aspectos de la tabla anterior.
 
 ## 🗂️Modulos del Proyecto
 
