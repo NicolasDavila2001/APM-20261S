@@ -91,7 +91,7 @@ Este proyecto consiste en el diseño e implementación de una planta automatizad
 
 ## 📑 Requerimientos del proyecto 
 Línea de alto volumen con mínimo **3 productos diferentes**
-
+<td align="center">
 | Tipo de Envase | Volumen |
 |---|---|
 | Bajo volumen | 150 – 600 mL |
@@ -108,6 +108,8 @@ Línea de alto volumen con mínimo **3 productos diferentes**
 | Trazabilidad y toma de decisiones |
 
 > Los productos deben diferenciarse en al menos dos aspectos de la tabla anterior.
+</td>
+
 ## 🗂️Modulos del Proyecto
 
 - [Modulo 1: Introducción a la automatización de manufactura ](./Modulo_1/)
