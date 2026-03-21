@@ -164,4 +164,3 @@ El proyecto sigue una arquitectura basada en el estándar **ISA-95**, incluyendo
 ---
 
 ## 📂 Estructura del Repositorio
->>>>>>> 5d3c8b890abfd4e570f813391ad1c9dd871be6ab
