@@ -15,34 +15,34 @@ En *** somos una empresa especializada en el desarrollo de soluciones integrales
 <table>
   <tr>
     <td align="center">
-      <img src="images/Luis.jpeg" width="250"/><br/>
+      <img src="imag/Luis.jpeg" width="250"/><br/>
       <b>Proceso</b><br/>
       <span>Descripción del proceso productivo</span>
     </td>
     <td align="center">
-      <img src="images/Carlos.png" width="250"/><br/>
+      <img src="imag/Carlos.png" width="250"/><br/>
       <b>SCADA</b><br/>
       <span>Interfaz de supervisión del sistema</span>
     </td>
     <td align="center">
-      <img src="images/Ubaldo.png" width="250"/><br/>
+      <img src="imag/Ubaldo.png" width="250"/><br/>
       <b>Robot</b><br/>
       <span>Celda de manufactura robotizada</span>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="images/Ricardo.png" width="250"/><br/>
+      <img src="imag/Ricardo.png" width="250"/><br/>
       <b>Simulación</b><br/>
       <span>Modelo del sistema en entorno virtual</span>
     </td>
     <td align="center">
-      <img src="images/Victor.png" width="250"/><br/>
+      <img src="imag/Victor.png" width="250"/><br/>
       <b>Control</b><br/>
       <span>Lógica PLC en Ladder</span>
     </td>
     <td align="center">
-      <img src="images/Eduardo.png" width="250"/><br/>
+      <img src="imag/Eduardo.png" width="250"/><br/>
       <b>Datos</b><br/>
       <span>Análisis de indicadores productivos</span>
     </td>
