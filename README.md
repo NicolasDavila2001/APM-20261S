@@ -13,7 +13,7 @@ En *** somos una empresa especializada en el desarrollo de soluciones integrales
 <table>
   <tr>
     <td align="center">
-      <img src="Imag/Integrantes/NicolasDavila.jpeg" width="250"/><br/>
+      <img src="Imag/Integrantes/nicolas_davial.png" width="250"/><br/>
       <b>Nicolas Fernando Davila Peñuela</b><br/>
       <span>Ingeniero Mecatronico - </span>
     </td>
