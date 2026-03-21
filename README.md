@@ -50,7 +50,7 @@ En *** somos una empresa especializada en el desarrollo de soluciones integrales
 <table>
   <tr>
     <td align="center">
-      <img src="Imag/Profesores/Luis.jpeg" width="250"/><br/>
+      <img src="Imag/Profesores/Luis.jpeg" width="150"/><br/>
       <b>Luis Miguel Méndez M.</b><br/>
       <span>Dr.-Ing.|Ingeniería Mecánica, Biomecánica & PrecisiónMantenimiento Hospitalario |HVAC · Máquinas Térmicas & Hidráulicas |Docente UNAL</span>
     </td>
