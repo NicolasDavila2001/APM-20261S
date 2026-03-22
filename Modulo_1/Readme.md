@@ -15,3 +15,15 @@ El presente módulo aborda el análisis de una arquitectura de automatización i
 | **OEE** | Efectividad Total de los Equipos (Disponibilidad × Eficiencia × Calidad). | **84.6 %** |
 
 se estima un valor de 0.95 para una línea de producción automatizada y se toma un valor de 0.99 como valor típico de embotellado. Seria lo ideal y se deconocen estos valores reales. 
+
+### Tiempos Estimados por Etapa de Proceso (Línea 3)
+
+| Etapa del Proceso | Tiempo Estimado (min) |
+| :--- | :--- |
+| **Lavado y preparación** | 25 |
+| **Llenado y sellado** | 40 |
+| **Etiquetado e inspección** | 15 |
+| **Empaque y paletizado** | 25 |
+| **Tiempo Total Aproximado** | **105** |
+
+"Llenado y sellado" con 40 minutos representa el cuello de botella del sistema y determina la velocidad de la operación
