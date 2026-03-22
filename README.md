@@ -35,7 +35,7 @@ En *** somos una empresa especializada en el desarrollo de soluciones integrales
       <span>Ingeniero Mecatronico -</span>
     </td>
     <td align="center">
-      <img src="Imag/Integrantes/" width="250"/><br/>
+      <img src="Imag/Integrantes/Santiago_Avila.jpg" width="250"/><br/>
       <b>Santiago Avila Corredor</b><br/>
       <span>Ingeniero Mecatronico - </span>
     </td>
@@ -50,7 +50,7 @@ En *** somos una empresa especializada en el desarrollo de soluciones integrales
 <table>
   <tr>
     <td align="center">
-      <img src="Imag/Profesores/Luis.jpeg" width="250"/><br/>
+      <img src="Imag/Profesores/Luis.jpeg" width="150"/><br/>
       <b>Luis Miguel Méndez M.</b><br/>
       <span>Dr.-Ing.|Ingeniería Mecánica, Biomecánica & PrecisiónMantenimiento Hospitalario |HVAC · Máquinas Térmicas & Hidráulicas |Docente UNAL</span>
     </td>
@@ -67,7 +67,7 @@ En *** somos una empresa especializada en el desarrollo de soluciones integrales
   </tr>
   <tr>
     <td align="center">
-      <img src="Imag/Profesores/Ricardo.png" width="250"/><br/>
+      <img src="Imag/Profesores/Ricardo.png" width="220"/><br/>
       <b>Ricardo Ramirez H.</b><br/>
       <span>Ing. Mecánico & Electrónico | MSc. Automatización Industrial | PhD. Ciencias de Ingeniería Mecánica|Docente UNAL </span>
     </td>
@@ -91,7 +91,8 @@ Este proyecto consiste en el diseño e implementación de una planta automatizad
 
 ## 📑 Requerimientos del proyecto 
 Línea de alto volumen con mínimo **3 productos diferentes**
-
+<div align="center">
+  
 | Tipo de Envase | Volumen |
 |---|---|
 | Bajo volumen | 150 – 600 mL |
@@ -107,7 +108,10 @@ Línea de alto volumen con mínimo **3 productos diferentes**
 | Estrategia de inspección y calidad |
 | Trazabilidad y toma de decisiones |
 
+</div>
+
 > Los productos deben diferenciarse en al menos dos aspectos de la tabla anterior.
+
 ## 🗂️Modulos del Proyecto
 
 - [Modulo 1: Introducción a la automatización de manufactura ](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_1/)
