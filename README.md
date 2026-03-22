@@ -35,7 +35,7 @@ En *** somos una empresa especializada en el desarrollo de soluciones integrales
       <span>Ingeniero Mecatronico -</span>
     </td>
     <td align="center">
-      <img src="Imag/Integrantes/Santiago_Avila.JPG" width="250"/><br/>
+      <img src="Imag/Integrantes/Santiago_Avila.jpg" width="250"/><br/>
       <b>Santiago Avila Corredor</b><br/>
       <span>Ingeniero Mecatronico - </span>
     </td>
