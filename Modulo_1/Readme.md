@@ -43,6 +43,6 @@ La distribución de esta línea sigue un **flujo circular**. El proceso comienza
 #### 2. Planta de Tratamiento de Agua Potable (PTAP)
 Es el sistema de soporte encargado de procesar el insumo principal. Su diseño es **lineal**, transformando el agua cruda en agua tratada mediante filtración y desinfección, enviándola directamente a la línea de envasado para la mezcla del jarabe.
 
-![Layout Línea 3 y PTAP](./Modulo_1/Layout.png)
+![Layout Línea 3 y PTAP](Layout.png)
 
 > **Nota:** La imagen superior integra la vista de planta de la Línea 3 y la infraestructura de la PTAP, facilitando la comprensión del flujo de materiales desde el tratamiento del recurso hídrico hasta el paletizado final.
