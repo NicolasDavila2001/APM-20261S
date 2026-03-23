@@ -12,10 +12,10 @@ Se presenta un diagrama de flujo superfical sobre el proceso de embotellamiento 
 ```mermaid
 flowchart TD
     A[Inicio] --> B[Tratar Agua]
-    B --> C[Limpieza Botellas Recuperadas]
+    B --> C[Limpiar Botellas Recuperadas]
     C --> D[Embotellar Producto]
     D --> E[Empacar Producto]
-    E --> F[Embalaje para Distribución]
+    E --> F[Embalar para Distribución]
     F --> G[Fin]
 ```
 
