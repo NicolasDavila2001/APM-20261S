@@ -7,43 +7,38 @@ Se presentan los diagramas de operaciones de proceso de dos etapas importantes p
 
 ```mermaid 
 flowchart TD
-    A[Inicio] --> B[Botellas Recuperadas]
+    A[Inicio] --> B[Inspeccionar Botella]
     
-    B --> C[Inspeccionar Botella]
-    C --> D{¿Botella Funcional?}
+    B --> C{¿Botella Funcional?}
     
-    D -- No --> X[Desecho de Botella]
-    D -- Sí --> E[Retirar Etiqueta y Residuos]
+    C -- No --> X[Desecho de Botella]
+    C -- Sí --> E[Retirar Etiqueta y Residuos]
     
     E --> F[Lavar Botellas]
-    F --> G[Botella Limpia]
     
-    G --> H{¿Botella Limpia Correctamente?}
-    H -- No --> F
-    H -- Sí --> I[Fin Etapa 1 / Inicio Etapa 2]
-    
-    I --> J[Dosificar Producto]
-    J --> K[Tapar y Sellar Botellas]
+    F--> H{¿Botella Limpia ?}
+    H -- No --> E
+    H -- Sí --> I[Dosificar Producto]
+
+    I --> K[Tapar y Sellar Botellas]
     K --> L[Etiquetar Producto]
     
-    L --> M[Inspeccionar Sellado y Etiquetado]
-    M --> N{¿Sellado y Etiquetado Correcto?}
+    L --> N{¿Sellado y Etiquetado Correcto?}
     
     N -- No --> Y[Reproceso o Desecho de Producto]
     N -- Sí --> O[Inspeccionar Calidad del Lote]
     
     O --> P{¿Lote Cumple Calidad?}
     P -- No --> Y
-    P -- Sí --> Q[Fin Etapa 2 / Inicio Etapa 3]
+    P -- Sí --> Q[Empacar Botellas en Paquetes]
     
-    Q --> R[Empacar Botellas en Paquetes]
-    R --> S[Inspeccionar Empaque]
+    Q --> S[Inspeccionar Empaque]
     
     S --> T{¿Empaque Correcto?}
-    T -- No --> R
-    T -- Sí --> U[Embalar Paquetes en Carros]
+    T -- No --> Q
+    T -- Sí --> U[[Paletizar paquetes]
     
-    U --> V[Paletizado]
+    U --> V[Embalar en Carros]
     V --> W[Producto para Distribuir]
     
     W --> Z[Fin]
