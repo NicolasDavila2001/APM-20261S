@@ -17,7 +17,7 @@ flowchart TD
     E --> F[Lavar Botellas]
     
     F--> H{¿Botella Limpia ?}
-    H -- No --> E
+    H -- No --> F
     H -- Sí --> I[Dosificar Producto]
 
     I --> K[Tapar y Sellar Botellas]
