@@ -56,6 +56,8 @@ Para ver el desarrollo del VSM , Diagrama DOP,layaouts y calculo de indicadores 
 | Tiempo falla promedio|  21 minutos |
 | Tiempo mantenimiento promedio|  17 - 30 minutos |
 
+---
+
 ### Tiempos Estimados por Etapa de Proceso (Línea 3)
 
 | Etapa del Proceso | Tiempo Estimado (min) |
