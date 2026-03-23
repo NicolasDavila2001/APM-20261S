@@ -19,7 +19,7 @@ flowchart TD
     F --> G[Fin]
 ```
 
-
+Para ver el desarrollo del VSM , Diagrama DOP,layaouts y calculo de indicadores dirigirse al [Modulo 2](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_2)
 
 ## Datos Importantes de la Visita Técnica
 
