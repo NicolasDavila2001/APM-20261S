@@ -39,9 +39,7 @@ flowchart TD
     T -- Sí --> U[Paletizar paquetes]
     
     U --> V[Embalar en Carros]
-    V --> W[Producto para Distribuir]
-    
-    W --> Z[Fin]
+    V --> Z[Fin]
 ```
 
 ### Diagrama de Tratamiento de Agua
