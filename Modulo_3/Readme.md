@@ -7,6 +7,7 @@ La planeación de proyectos es una etapa fundamental para garantizar el éxito d
 <p align="center">
   <img src="edt_proceso.png" width="45%"/>
 </p>
+
 ### EDT de proyecto
 <p align="center">
   <img src="EDT_Proyecto.png" width="45%"/>
