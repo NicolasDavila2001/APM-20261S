@@ -21,52 +21,53 @@ flowchart TD
 
 Para ver el desarrollo del VSM , Diagrama DOP,layaouts y calculo de indicadores dirigirse al [Modulo 2](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_2)
 
-## Datos Importantes de la Visita Técnica
+## Datos Establecidos segun investigación y visita Técnica 
 
 <div align="center">
-<table>
-  <tr>
-    <th>Categoría</th>
-    <th>Detalle</th>
-  </tr>
 
-  <tr>
-    <td><b>Líneas y productos</b></td>
-    <td align="left">
-      1. Coca Cola 237 mL (retornable)<br>
-      2. 350 mL distintos productos (retornable)<br>
-      3. 2L (retornable)<br>
-      4. No retornables (distintos tamaños)<br>
-      5. Latas<br>
-      6. Agua saborizada (Brisa)
-    </td>
-  </tr>
+## Datos Importantes de la Visita Técnica
 
-  <tr>
-    <td><b>Velocidades de líneas</b></td>
-    <td>15k/h, 60k/h, 52k/h</td>
-  </tr>
+### Líneas y Productos
 
-  <tr>
-    <td><b>Tiempo total de proceso</b></td>
-    <td>90 - 105 minutos (desde entrada hasta salida)</td>
-  </tr>
+| Linea | Producto |
+| :--- | :--- |
+| 1 | Coca Cola 237 mL (retornable) |
+| 2 | 350 mL distintos productos (retornable) |
+| 3 | 2L (retornable) |
+| 5 | No retornables (distintos tamaños) |
+| 6 | Latas |
+| 7 | Agua saborizada (Brisa) |
 
-  <tr>
-    <td><b>Tiempo de proceso - Línea 3</b></td>
-    <td>25 - 40 - 25 - 25 min (llenadora = 40 min)</td>
-  </tr>
+---
 
-  <tr>
-    <td><b>Paradas promedio</b></td>
-    <td>
-      Falla: 21 min<br>
-      Mantenimiento: 17 min
-    </td>
-  </tr>
+### Velocidades de Líneas
 
-</table>
+| Línea | Velocidad |
+| :--- | :--- |
+| Línea 1 | 15k/h |
+| Línea 2 | 60k/h |
+| Línea 3 | 52k/h |
 
-</div>
+---
 
+### Tiempo Total de Proceso
+
+| Descripción | Tiempo |
+| :--- | :--- |
+| Tiempo total del proceso | 90 - 105 minutos |
+| Tiempo falla promedio|  21 minutos |
+| Tiempo mantenimiento promedio|  17 - 30 minutos |
+
+### Tiempos Estimados por Etapa de Proceso (Línea 3)
+
+| Etapa del Proceso | Tiempo Estimado (min) |
+| :--- | :--- |
+| **Lavado y preparación** | 25 |
+| **Llenado y sellado** | 40 |
+| **Etiquetado e inspección** | 15 |
+| **Empaque y paletizado** | 25 |
+| **Tiempo Total Aproximado** | **105** |
+
+"Llenado y sellado" con 40 minutos representa el cuello de botella del sistema y determina la velocidad de la operación
 ## Referencias de Busqueda 
+- 
