@@ -62,7 +62,7 @@ flowchart TD
     I --> J[Fin]
 ```
 
-*** Nota *** Para ver los diagramas DOP con nomenclatura revisar [D_DOP](./Diagrama_DOP.pdf)
+***Nota*** Para ver los diagramas DOP con nomenclatura revisar [D_DOP](./Diagrama_DOP.pdf)
 
 ## Diagrama de Análsis de proceso
 ## Distribución de Planta (Layout)
