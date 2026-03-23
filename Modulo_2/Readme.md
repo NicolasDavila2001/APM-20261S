@@ -8,57 +8,67 @@ Se presentan los diagramas de operaciones de proceso de dos etapas importantes p
 ```mermaid 
 flowchart TD
     A[Inicio] --> B[Botellas Recuperadas]
+    
     B --> C[Inspeccionar Botella]
     C --> D{¿Botella Funcional?}
     
     D -- No --> X[Desecho de Botella]
     D -- Sí --> E[Retirar Etiqueta y Residuos]
+    
     E --> F[Lavar Botellas]
-    F --> G[Fin Etapa 1 / Inicio Etapa 2]
-
-    G --> H[Dosificar Producto]
-    H --> I[Tapar y Sellar Botellas]
-    I --> J[Etiquetar Producto]
-    J --> K[Inspeccionar Sellado y Etiquetado]
-
-    K --> L{¿Cumple?}
-    L -- No --> Y[Desecho de Producto]
-    L -- Sí --> M[Inspeccionar Calidad del Lote]
-
-    M --> N{¿Aprobado?}
-    N -- No --> Y
-    N -- Sí --> O[Fin Etapa 2 / Inicio Etapa 3]
-
-    O --> P[Empacar Botellas en Paquetes]
-    P --> Q[Inspeccionar Empaque]
-
-    Q --> R{¿Correcto?}
-    R -- No --> Y
-    R -- Sí --> S[Embalar en Carros]
-
-    S --> T[Paletizado]
-    T --> U[Producto para Distribuir]
-    U --> V[Fin]
+    F --> G[Botella Limpia]
+    
+    G --> H{¿Botella Limpia Correctamente?}
+    H -- No --> F
+    H -- Sí --> I[Fin Etapa 1 / Inicio Etapa 2]
+    
+    I --> J[Dosificar Producto]
+    J --> K[Tapar y Sellar Botellas]
+    K --> L[Etiquetar Producto]
+    
+    L --> M[Inspeccionar Sellado y Etiquetado]
+    M --> N{¿Sellado y Etiquetado Correcto?}
+    
+    N -- No --> Y[Reproceso o Desecho de Producto]
+    N -- Sí --> O[Inspeccionar Calidad del Lote]
+    
+    O --> P{¿Lote Cumple Calidad?}
+    P -- No --> Y
+    P -- Sí --> Q[Fin Etapa 2 / Inicio Etapa 3]
+    
+    Q --> R[Empacar Botellas en Paquetes]
+    R --> S[Inspeccionar Empaque]
+    
+    S --> T{¿Empaque Correcto?}
+    T -- No --> R
+    T -- Sí --> U[Embalar Paquetes en Carros]
+    
+    U --> V[Paletizado]
+    V --> W[Producto para Distribuir]
+    
+    W --> Z[Fin]
 ```
 
 ### Diagrama de Tratamiento de Agua
 
 ```mermaid
 flowchart TD
-    A[Agua Sin Procesar] --> B[Inspeccionar Características Químicas]
+    A[Inicio] --> B[Agua Sin Procesar]
 
-    B --> C{¿Cumple?}
-    C -- No --> D[Tratar Agua con Cloro]
-    D --> E[Filtrar con Carbón y Filtros Pulidores]
-    E --> F[Inspeccionar pH y Micropartículas]
+    B --> C[Inspeccionar Características Químicas]
+    C --> D{¿Cumple?}
 
-    F --> G{¿Cumple?}
-    G -- No --> D
-    G -- Sí --> H[Almacenar Agua Tratada]
+    D -- No --> E[Tratar Agua con Cloro]
+    E --> F[Filtrar con Carbón y Filtros Pulidores]
+    F --> G[Inspeccionar pH y Micropartículas]
 
-    C -- Sí --> E
+    G --> H{¿Cumple?}
+    H -- No --> E
+    H -- Sí --> I[Almacenar Agua Tratada]
 
-    H --> I[Agua Lista para Uso o Reutilización]
+    D -- Sí --> I
+
+    I --> J[Fin]
 ```
 
 *** Nota *** Para ver los diagramas DOP con nomenclatura revisar [D_DOP](./Diagrama_DOP.pdf)
