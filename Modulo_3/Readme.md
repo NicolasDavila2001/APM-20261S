@@ -15,7 +15,15 @@ La planeación de proyectos es una etapa fundamental para garantizar el éxito d
 > **Nota** Para mayor comprension de las actividades revisar la [documentacion](Documentacion_EDTs.pdf) de los edts  y los EDTs [Proceso](EDT_Proceso.pdf) o [Proyecto](EDT_Proyecto.pdf)
 
 ## Conograma y diagrama de Gantt
-## Presupuesto y flujo de caja
+## Análisis de Precios Unitarios (APU)
+
+![APU](APU.png)
+
+## Flujo de caja
+
+![Flujo de caja](flujo_caja.png)
+
+
 
 <!-- 
 ## Matriz de adquisiciones
