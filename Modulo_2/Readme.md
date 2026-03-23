@@ -4,6 +4,7 @@ En el presente módulo se aborda de manera integral el estudio del proceso de em
 ## Diagrama de Operaciones de Proceso 
 Se presentan los diagramas de operaciones de proceso de dos etapas importantes para la produccion de bebida el tratamiento de agua y producion de bebidas con sus respectivas operaciones para tener mejor compresión del flujo de trabajo.
 ### Diagrama de operaciones de Proceso
+
 ```Mermaid 
 flowchart TD
     A[Inicio] --> B[Botellas Recuperadas]
@@ -39,7 +40,9 @@ flowchart TD
     T --> U[Producto para Distribuir]
     U --> V[Fin]
 ```
+
 ### Diagrama de Tratamiento de Agua
+
 ```Mermaid
 flowchart TD
     A[Agua Sin Procesar] --> B[Inspeccionar Características Químicas]
@@ -57,6 +60,7 @@ flowchart TD
 
     H --> I[Agua Lista para Uso o Reutilización]
 ```
+
 *** Nota *** Para ver los diagramas DOP con nomenclatura revisar [D_DOP](./Diagrama_DOP.pdf)
 
 ## Diagrama de Análsis de proceso
