@@ -15,7 +15,14 @@ La planeación de proyectos es una etapa fundamental para garantizar el éxito d
 
 > **Nota** Para mayor comprension de las actividades revisar la [documentacion](Documentacion_EDTs.pdf) de los edts  y los EDTs [Proceso](EDT_Proceso.pdf) o [Proyecto](EDT_Proyecto.pdf)
 
-## Conograma y diagrama de Gantt
+## Cronograma y diagrama de Gantt
+
+La planificación temporal se estructuró en un diagrama de Gantt que abarca del **7 de marzo** al **30 de mayo de 2026**. Debido a la complejidad del proyecto (89 actividades), la imagen a continuación presenta una **versión colapsada** que muestra únicamente los 12 niveles principales de la EDT, y la fase que se esta realizando actualmente. Esta vista permite identificar rápidamente la secuencia macro, la ruta crítica y el cumplimiento de las fases de diseño, simulación y control.
+
+![Diagrama de Gantt - Vista General](Gantt_APM_collpsed.png)
+
+> **Nota:** Para una revisión a fondo de las 89 tareas, incluyendo fechas de inicio/fin de cada subítem, predecesoras y duraciones específicas, se anexa la **versión de detalle** en el siguiente enlace: [Cronograma Detallado (PDF)](Gantt_APM_Def.pdf).
+> 
 ## Análisis de Precios Unitarios (APU)
 
 ![APU](APU.png)
