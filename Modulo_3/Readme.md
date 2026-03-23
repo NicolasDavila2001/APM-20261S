@@ -9,7 +9,7 @@ La planeación de proyectos es una etapa fundamental para garantizar el éxito d
 </p>
 ### EDT de proyecto
 <p align="center">
-  <img src="EDT_Proyecto.pdf" width="45%"/>
+  <img src="EDT_Proyecto.png" width="45%"/>
 </p>
 
 > **Nota** Para mayor comprension de las actividades revisar la [documentacion](Documentacion_EDTs.pdf) de los edts  y los EDTs [Proceso](EDT_Proceso.pdf) o [Proyecto](EDT_Proyecto.pdf)
