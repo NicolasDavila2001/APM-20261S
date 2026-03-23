@@ -36,7 +36,7 @@ flowchart TD
     
     S --> T{¿Empaque Correcto?}
     T -- No --> Q
-    T -- Sí --> U[[Paletizar paquetes]
+    T -- Sí --> U[Paletizar paquetes]
     
     U --> V[Embalar en Carros]
     V --> W[Producto para Distribuir]
