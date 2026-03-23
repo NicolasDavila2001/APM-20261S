@@ -226,7 +226,15 @@ graph TD
 > **Nota** Para mayor comprension de las actividades revisar la documentacion de los edts en [drive](https://drive.google.com/drive/folders/1u4X_VxKKNBwQw5WIbT5CfG8ByEeDgeEC?usp=sharing) y los EDTs [Proceso](EDT_Proceso.pdf) o [Proyecto](EDT_Proyecto.pdf)
 
 ## Conograma y diagrama de Gantt
-## Presupuesto y flujo de caja
+## Análisis de Precios Unitarios (APU)
+
+![APU](APU.png)
+
+## Flujo de caja
+
+![Flujo de caja](flujo_caja.png)
+
+
 
 <!-- 
 ## Matriz de adquisiciones
