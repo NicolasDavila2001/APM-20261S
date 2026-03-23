@@ -1,11 +1,11 @@
 # Modulo 2 : Gestión de producción
-En el presente módulo se aborda de manera integral el estudio del proceso de embotellamiento analizado en el [modulo 1](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_), a partir de la información investigada y recopilada durante una visita técnica. Se presentan herramientas clave de análisis como el diagrama de operaciones de proceso, el diagrama de análisis, el layout,flujo de materiales y el Value Stream Mapping (VSM), Adicional se hace el calculo de indicadores  y parametros de produccion  de la planta inicial los cuales son la base para presentar la propuesta de automatización para mejorar estos.Adicionalmente La propuesta final se enfoca únicamente en el proceso de producción de bebidas. El tratamiento de agua se incluye en este módulo debido a la relevancia que se le atribuyó durante la visita técnica, sin que forme parte del alcance de la propuesta.
+En el presente módulo se aborda de manera integral el estudio del proceso de embotellamiento analizado en el [modulo 1](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_1), a partir de la información investigada y recopilada durante una visita técnica. Se presentan herramientas clave de análisis como el diagrama de operaciones de proceso, el diagrama de análisis, el layout,flujo de materiales y el Value Stream Mapping (VSM), Adicional se hace el calculo de indicadores  y parametros de produccion  de la planta inicial los cuales son la base para presentar la propuesta de automatización para mejorar estos.Adicionalmente La propuesta final se enfoca únicamente en el proceso de producción de bebidas. El tratamiento de agua se incluye en este módulo debido a la relevancia que se le atribuyó durante la visita técnica, sin que forme parte del alcance de la propuesta.
 
 ## Diagrama de Operaciones de Proceso 
 Se presentan los diagramas de operaciones de proceso de dos etapas importantes para la produccion de bebida el tratamiento de agua y producion de bebidas con sus respectivas operaciones para tener mejor compresión del flujo de trabajo.
 ### Diagrama de operaciones de Proceso
 
-```Mermaid 
+```mermaid 
 flowchart TD
     A[Inicio] --> B[Botellas Recuperadas]
     B --> C[Inspeccionar Botella]
@@ -43,7 +43,7 @@ flowchart TD
 
 ### Diagrama de Tratamiento de Agua
 
-```Mermaid
+```mermaid
 flowchart TD
     A[Agua Sin Procesar] --> B[Inspeccionar Características Químicas]
 
@@ -83,7 +83,7 @@ Es el sistema de soporte encargado de procesar el insumo principal. Su diseño e
 > **Nota:** La imagen superior integra la vista de planta de la Línea 3 y la infraestructura de la PTAP, facilitando la comprensión del flujo de materiales desde el tratamiento del recurso hídrico hasta el paletizado final.
 ## Diagrama VSM (Value Stream Mapping) 
 ## Indicadores y Parámetros de Producción (Línea 3 - Envase retornable 2L)
-Usando la informacion obtenida en la vista tecnica e investigacion con otras fuentes ([modulo 1](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_))se obtuvieron los siguientes valores.
+Usando la informacion obtenida en la vista tecnica e investigacion con otras fuentes ([modulo 1](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_1))se obtuvieron los siguientes valores.
 
 | Indicador | Definición / Fórmula | Valor Calculado |
 | :--- | :--- | :--- |
