@@ -62,7 +62,7 @@ flowchart TD
     I --> J[Fin]
 ```
 
-***Nota*** Para ver los diagramas DOP con nomenclatura revisar [D_DOP](./Diagrama_DOP.pdf)
+>***Nota*** Para ver los diagramas DOP con nomenclatura revisar [D_DOP](./Diagrama_DOP.pdf)
 
 ## Diagrama de Análsis de proceso
 ## Distribución de Planta (Layout)
@@ -98,7 +98,7 @@ Usando la informacion obtenida en la vista tecnica e investigacion con otras fue
 
 se estima un valor de 0.95 para una línea de producción automatizada y se toma un valor de 0.99 como valor típico de embotellado. Seria lo ideal y se deconocen estos valores reales. 
 
-**Nota** Para conocer la manera como se calcularon cada uno de los indicadores remitirse a [Talle 1](./Taller1.pdf) 
+>**Nota** Para conocer la manera como se calcularon cada uno de los indicadores remitirse a [Taller 1](./Taller1.pdf) 
 
 
 
