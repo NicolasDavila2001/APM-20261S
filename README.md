@@ -2,8 +2,8 @@
 ## Automatización de Procesos de Manufactura (2026-1)
 
 <p align="center">
-  <img src="Imag/logo_UN.png" width="45%"/>
-  <img src="Imag/logo_Empresa.png" width="45%"/>
+  <img src="Imag/logo_UN.png" width="20%"/>
+  <img src="Imag/logo_Empresa.png" width="10%"/>
 </p>
 
 ## 🔍Quienes Somos?
