@@ -53,12 +53,10 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    A[Inicio] --> B[Agua Sin Procesar]
+    A[Inicio] --> B[Inspeccionar Características Químicas]
 
-    B --> C[Inspeccionar Características Químicas]
-    C --> D{¿Cumple?}
-
-    D -- No --> E[Tratar Agua con Cloro]
+    B --> C{¿Cumple?}
+    C -- No --> E[Tratar Agua con Cloro]
     E --> F[Filtrar con Carbón y Filtros Pulidores]
     F --> G[Inspeccionar pH y Micropartículas]
 
@@ -66,7 +64,7 @@ flowchart TD
     H -- No --> E
     H -- Sí --> I[Almacenar Agua Tratada]
 
-    D -- Sí --> I
+    C -- Sí --> I
 
     I --> J[Fin]
 ```
