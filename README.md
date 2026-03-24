@@ -1,4 +1,4 @@
-# Proyecto Integrador %%% Nombre de la Empresa %%%
+# Proyecto Integrador **_Chibcho Sistemas_**
 ## Automatización de Procesos de Manufactura (2026-1)
 
 <p align="center">
