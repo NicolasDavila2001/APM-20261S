@@ -23,7 +23,7 @@ En *** somos una empresa especializada en el desarrollo de soluciones integrales
       <span>Ingeniero Mecatronico -</span>
     </td>
     <td align="center">
-      <img src="Images/Integrantes/" width="250"/><br/>
+      <img src="Images/Integrantes/cris.jpg" width="250"/><br/>
       <b>Cristian Fabián Martínez Bohorquez</b><br/>
       <span>Ingeniero Mecatronico -</span>
     </td>
