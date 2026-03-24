@@ -30,7 +30,7 @@ En *** somos una empresa especializada en el desarrollo de soluciones integrales
   </tr>
   <tr>
     <td align="center">
-      <img src="Images/Integrantes/" width="250"/><br/>
+      <img src="Images/Integrantes/andres.png" width="250"/><br/>
       <b>Andres Mauricio Avilan Herrera</b><br/>
       <span>Ingeniero Mecatronico -</span>
     </td>
