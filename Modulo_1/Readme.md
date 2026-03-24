@@ -68,7 +68,8 @@ Para ver el desarrollo del VSM , Diagrama DOP,layaouts y calculo de indicadores 
 | **Empaque y paletizado** | 25 |
 | **Tiempo Total Aproximado** | **105** |
 
-"Llenado y sellado" con 40 minutos representa el cuello de botella del sistema y determina la velocidad de la operación
+"Llenado y sellado" con 40 minutos representa el cuello de botella del sistema y determina la velocidad de la operación .Por otra parte, se asumió una producción por turno de alrededor de 416.000 botellas por turno.
+
 ## Referencias de Busqueda 
 - https://www.youtube.com/watch?v=1VRI_r-YMjI
 - https://web.facebook.com/watch/?v=521596619874703
