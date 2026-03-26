@@ -1628,10 +1628,17 @@ footer.style-1 .footer-link li {
     padding-top: 20px;
 }
 
+
+#team-section .team-member {
+    position: relative;
+    width: 100%;
+}
+
 #team-section .team-member img{
-    width: 99%;
+    width: 100%;
     height: 300px;
     object-fit: cover;
+    display: block;
     text-align: center;
 }
 
