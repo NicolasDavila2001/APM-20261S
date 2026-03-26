@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Chibcho Sistemas – Módulo 3</title>
+
+    <!-- Bootstrap Core CSS (ruta relativa desde subcarpeta Modulo_N/) -->
+    <link href="../asset/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Animate CSS -->
+    <link href="../css/animate.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+
+    <!-- Colors CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/color/light-red.css">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+
+    <!-- Modernizr -->
+    <script src="../js/modernizr.custom.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        body {
+            padding-top: 100px;
+        }
+        .modulo-header {
+            background-color: #f5f5f5;
+            padding: 40px 0 30px;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #e74c3c;
+        }
+        .modulo-header h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .modulo-header p {
+            font-size: 16px;
+            color: #222;
+        }
+        .modulo-content {
+            padding-bottom: 60px;
+        }
+        .btn-back {
+            margin-bottom: 30px;
+        }
+        .navbar-default {
+            background-color: #222 !important;
+            border-color: #222 !important;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+        .navbar-default .navbar-brand {
+            color: #e74c3c !important;
+            font-family: 'Kaushan Script', cursive !important;
+        }
+        .navbar-default .navbar-brand:hover {
+            color: #e74c3c !important;
+        }
+        .navbar-default .nav > li > a {
+            color: #fff !important;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        .navbar-default .nav > li > a:hover,
+        .navbar-default .nav > li.active > a {
+            color: #fff !important;
+            background-color: #e74c3c !important;
+        }
+    </style>
+    
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVBAR (idéntico al de index.html)
+    ====================================================== -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="../index.html">Chibcho Sistemas</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden"><a href="#page-top"></a></li>
+                    <li><a href="../index.html#feature">Nuestra Empresa</a></li>
+                    <li><a href="../index.html#portfolio">Modulos</a></li>
+                    <li><a href="../index.html#about-us">APM 2025-1</a></li>
+                    <li><a href="../index.html#service">Proyecto planta de bebidas</a></li>
+                    <li><a href="../index.html#team">Equipo de trabajo</a></li>
+                    <li><a href="../index.html#partner">Expertos y Proveedores</a></li>
+                    <li><a href="../index.html#Reflexiones">Reflexiones</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- FIN NAVBAR -->
+
+
+    <!-- =====================================================
+         ENCABEZADO DEL MÓDULO
+    ====================================================== -->
+    <div class="modulo-header">
+        <div class="container text-center">
+            <h2>Módulo 3 –  Planeación de proyectos</h2>
+            <p>La planeación de proyectos es una etapa fundamental para garantizar el éxito de cualquier iniciativa, ya que permite estructurar de manera ordenada los recursos, los tiempos y las responsabilidades involucradas. En este módulo se abordan las principales herramientas y metodologías utilizadas en la gestión de proyectos, donde se utilizo la metodología EDT. Dando como resultado la definición de distintas herramientas de análisis como EDT, Cronograma (Diagrama de Gantt),etc.</p>
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL DEL MÓDULO
+         Reemplaza esta sección con el contenido real de cada módulo
+    ====================================================== -->
+    <div class="modulo-content">
+        <div class="container">
+            <style>
+                * { box-sizing: border-box; margin: 0; padding: 0; }
+                body { font-family: var(--font-sans); }
+
+                .edt-wrap { padding: 16px 0; }
+
+                .edt-title {
+                font-size: 15px;
+                font-weight: 500;
+                color: var(--color-text-primary);
+                margin-bottom: 16px;
+                text-align: center;
+                }
+
+                .modules-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 8px;
+                margin-bottom: 16px;
+                }
+
+                .mod-card {
+                background: #2a2a2a;
+                border: 1.5px solid #444;
+                border-radius: 8px;
+                padding: 10px 8px;
+                cursor: pointer;
+                transition: border-color .18s, background .18s;
+                text-align: center;
+                user-select: none;
+                }
+                .mod-card:hover {
+                border-color: #e74c3c;
+                background: #333;
+                }
+                .mod-card.active {
+                border-color: #e74c3c;
+                background: #3a1a1a;
+                }
+                .mod-num {
+                font-size: 11px;
+                font-weight: 500;
+                color: #e74c3c;
+                margin-bottom: 4px;
+                text-transform: uppercase;
+                letter-spacing: .5px;
+                }
+                .mod-name {
+                font-size: 12px;
+                color: #ddd;
+                line-height: 1.35;
+                }
+
+                .detail-panel {
+                background: #1e1e1e;
+                border: 1px solid #444;
+                border-radius: 10px;
+                padding: 16px;
+                display: none;
+                }
+                .detail-panel.visible { display: block; }
+
+                .detail-header {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 14px;
+                border-bottom: 1px solid #333;
+                padding-bottom: 12px;
+                }
+                .detail-badge {
+                background: #e74c3c;
+                color: #fff;
+                font-size: 11px;
+                font-weight: 500;
+                padding: 3px 8px;
+                border-radius: 20px;
+                white-space: nowrap;
+                }
+                .detail-title {
+                font-size: 14px;
+                font-weight: 500;
+                color: #eee;
+                }
+
+                .tasks-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                gap: 8px;
+                }
+
+                .task-item {
+                background: #2a2a2a;
+                border: 0.5px solid #444;
+                border-radius: 6px;
+                padding: 8px 10px;
+                display: flex;
+                align-items: flex-start;
+                gap: 8px;
+                }
+                .task-dot {
+                width: 6px;
+                height: 6px;
+                min-width: 6px;
+                background: #e74c3c;
+                border-radius: 50%;
+                margin-top: 5px;
+                }
+                .task-text {
+                font-size: 12px;
+                color: #ccc;
+                line-height: 1.4;
+                }
+
+                .hint {
+                font-size: 12px;
+                color: var(--color-text-secondary);
+                text-align: center;
+                margin-top: 10px;
+                }
+                </style>
+                <div class="edt-wrap">
+                    <p class="edt-title">EDT de Producción — Proceso de Embotellamiento</p>
+                    <div class="modules-grid" id="modules2"></div>
+                    <div class="detail-panel" id="detail2">
+                        <div class="detail-header">
+                            <span class="detail-badge" id="d2-badge"></span>
+                            <span class="detail-title" id="d2-title"></span>
+                        </div>
+                        <div class="tasks-grid" id="d2-tasks"></div>
+                    </div>
+                    <p class="hint">Haz clic en un módulo para ver sus actividades</p>
+                    </div>
+
+                    <script>
+                    var edt2Data = [
+                    { num:"1", name:"Recepción de Insumos", tasks:["1.1 Materias Primas","1.2 Envases","1.3 Tapas y Etiquetas","1.4 Inspección Inicial","1.5 Registro de Lotes"] },
+                    { num:"2", name:"Almacenamiento y Preparación", tasks:["2.1 Almacenamiento","2.2 Alistamiento","2.3 Transporte Interno","2.4 Verif. Disponibilidad"] },
+                    { num:"3", name:"Formulación", tasks:["3.1 Dosificación","3.2 Mezcla","3.3 Receta Producto A","3.4 Receta Producto B","3.5 Receta Producto C","3.6 Ajuste de Parámetros"] },
+                    { num:"4", name:"Tratamientos de Proceso", tasks:["4.1 Calentamiento","4.2 Enfriamiento","4.3 Carbonatación","4.4 Pasteurización","4.5 Control de Variables"] },
+                    { num:"5", name:"Alimentación de Envases", tasks:["5.1 Ingreso de Envases","5.2 Transporte","5.3 Posicionamiento","5.4 Defección","5.5 Rechazo Defectuosos"] },
+                    { num:"6", name:"Acondicionamiento Envases", tasks:["6.1 Lavado","6.2 Enjuague","6.3 Inspección"] },
+                    { num:"7", name:"Llenado", tasks:["7.1 Alim. del Producto","7.2 Posicionamiento","7.3 Dosificación","7.4 Verif. de Nivel","7.5 Rechazo por Tolerancia"] },
+                    { num:"8", name:"Tapado o Sellado", tasks:["8.1 Alim. de Tapas","8.2 Cierre","8.3 Verificación","8.4 Detección de Fugas"] },
+                    { num:"9", name:"Control de Calidad en Línea", tasks:["9.1 Insp. de Llenado","9.2 Insp. de Tapa","9.3 Inspección Visual","9.4 Rechazo","9.5 Registro de Calidad"] },
+                    { num:"10", name:"Etiquetado y Codificación", tasks:["10.1 Etiquetado","10.2 Codificación","10.3 Verificación","10.4 Rechazo"] },
+                    { num:"11", name:"Empaque Secundario", tasks:["11.1 Agrupación","11.2 Formación Cajas/Packs","11.3 Sellado","11.4 Identificación"] },
+                    { num:"12", name:"Paletizado / Robotizado", tasks:["12.1 Recepción","12.2 Toma por Robot","12.3 Ubicación","12.4 Verificación"] },
+                    { num:"13", name:"Almacenamiento Final", tasks:["13.1 Clasificación","13.2 Inventario","13.3 Consolidación"] },
+                    { num:"14", name:"Despacho", tasks:["14.1 Prep. de Pedido","14.2 Verificación","14.3 Cargue","14.4 Registro de Salida"] },
+                    { num:"15", name:"Set-up y Cambios de Producto", tasks:["15.1 Parada","15.2 Limpieza","15.3 Cambio de Formato","15.4 Cambio de Receta","15.5 Ajustes","15.6 Validación"] },
+                    { num:"16", name:"Mantenimiento por Fallas", tasks:["16.1 Detección","16.2 Diagnóstico","16.3 Reparación","16.4 Prueba","16.5 Registro"] },
+                    { num:"17", name:"Supervisión y Trazabilidad", tasks:["17.1 Monitoreo","17.2 Registro de Producción","17.3 Alarmas","17.4 Datos para OEE","17.5 Visualización SCADA"] }
+                    ];
+
+                    var active2 = null;
+                    var grid2 = document.getElementById('modules2');
+                    var panel2 = document.getElementById('detail2');
+                    var d2Badge = document.getElementById('d2-badge');
+                    var d2Title = document.getElementById('d2-title');
+                    var d2Tasks = document.getElementById('d2-tasks');
+
+                    edt2Data.forEach(function(m, i) {
+                    var card = document.createElement('div');
+                    card.className = 'mod-card';
+                    card.innerHTML = '<div class="mod-num">Etapa ' + m.num + '</div><div class="mod-name">' + m.name + '</div>';
+                    card.onclick = function() {
+                        if (active2 === i) {
+                        card.classList.remove('active');
+                        panel2.classList.remove('visible');
+                        active2 = null;
+                        return;
+                        }
+                        document.querySelectorAll('.mod-card').forEach(function(c){ c.classList.remove('active'); });
+                        card.classList.add('active');
+                        active2 = i;
+                        d2Badge.textContent = 'Etapa ' + m.num;
+                        d2Title.textContent = m.name;
+                        d2Tasks.innerHTML = m.tasks.map(function(t){
+                        return '<div class="task-item"><div class="task-dot"></div><div class="task-text">' + t + '</div></div>';
+                        }).join('');
+                        panel2.classList.add('visible');
+                    };
+                    grid2.appendChild(card);
+                    });
+                    </script>
+
+                <div class="edt-wrap">
+                <p class="edt-title">EDT del Proyecto — Sistema de Automatización</p>
+
+                <div class="modules-grid" id="modules"></div>
+                <div class="detail-panel" id="detail">
+                    <div class="detail-header">
+                    <span class="detail-badge" id="d-badge"></span>
+                    <span class="detail-title" id="d-title"></span>
+                    </div>
+                    <div class="tasks-grid" id="d-tasks"></div>
+                </div>
+                <p class="hint">Haz clic en un módulo para ver sus actividades</p>
+                </div>
+
+                <script>
+                const data = [
+                { num: "1", name: "Formulación y Alcance", tasks: ["Definición del problema","Selección de línea de producción","Definición de productos","Diferenciación de productos","Alcance técnico del proyecto","Restricciones y supuestos"] },
+                { num: "2", name: "Investigación y Análisis del Proceso", tasks: ["Referentes industriales","Contexto técnico y empresarial","Identificación de etapas del proceso","Definición de variables de proceso","Tiempos y recursos del proceso","Control de calidad y trazabilidad"] },
+                { num: "3", name: "Diseño de la Solución de Automatización", tasks: ["Diagrama general del proceso","Arquitectura de automatización","Selección de instrumentación y sensores","Estrategia operativa del sistema","Gestión de cambios de producto","Estrategia de aseguramiento de calidad","Estrategia de trazabilidad"] },
+                { num: "4", name: "Evaluación de la Producción Automatizada", tasks: ["Diagnóstico del proceso actual","Análisis de tiempos proceso actual","VSM actual","Propuesta de mejora del proceso","Análisis de tiempos proceso automatizado","VSM futuro","Indicadores de desempeño","Análisis comparativo antes vs después"] },
+                { num: "5", name: "Celda Robotizada", tasks: ["Justificación técnica de la celda","Definición de la operación automatizada","Flujo de materiales y operaciones","Seguridad industrial y resguardos","Simulación de la celda","Identificación y análisis de riesgos"] },
+                { num: "6", name: "Entrega Parcial del Proyecto", tasks: ["Documento de avance del proyecto","Video explicativo del avance","Repositorio técnico en GitHub","Página web del proyecto","Evidencias de simulación y desarrollo","Presentación de resultados preliminares","Retroalimentación y ajustes"] },
+                { num: "7", name: "Gemelo Digital y Simulación", tasks: ["Modelado en entorno virtual","Integración del modelo con el proceso","Conexión con Logix Emulate","Simulación de operación normal","Simulación de cambios de set-up","Simulación de fallas operativas","Validación funcional del sistema"] },
+                { num: "8", name: "Controladores Industriales", tasks: ["Secuencia de control","Desarrollo del Grafcet","Programación en Ladder","Implementación del programa de control","Pruebas del sistema de control","Validación del sistema"] },
+                { num: "9", name: "Sistema SCADA", tasks: ["Definición variables de supervisión","Diseño de interfaces HMI","Comunicación mediante OPC","Integración con el sistema de control","Pantallas y alarmas","Validación del sistema SCADA"] },
+                { num: "10", name: "Planeación y Evaluación Económica", tasks: ["Identificación de recursos requeridos","Estimación de costos del sistema","Presupuesto del proyecto","Flujo de caja estimado","Indicadores financieros","Propuesta de valor","Oferta comercial de la solución"] },
+                { num: "11", name: "Resultados y Cierre", tasks: ["Comparación antes vs después","Costo total del sistema propuesto","Tiempo total del proceso automatizado","Diferencial tecnológico","Cuadro resumen de resultados"] },
+                { num: "12", name: "Gestión Documental y Divulgación", tasks: ["Repositorio del proyecto en GitHub","Evidencias técnicas del desarrollo","Página web del proyecto","Video demostrativo final","Informe técnico final","Presentación y sustentación"] }
+                ];
+
+                let active = null;
+
+                const grid = document.getElementById('modules');
+                const panel = document.getElementById('detail');
+                const dBadge = document.getElementById('d-badge');
+                const dTitle = document.getElementById('d-title');
+                const dTasks = document.getElementById('d-tasks');
+
+                data.forEach((m, i) => {
+                const card = document.createElement('div');
+                card.className = 'mod-card';
+                card.innerHTML = `<div class="mod-num">Etapa ${m.num}</div><div class="mod-name">${m.name}</div>`;
+                card.onclick = () => {
+                    if (active === i) {
+                    card.classList.remove('active');
+                    panel.classList.remove('visible');
+                    active = null;
+                    return;
+                    }
+                    document.querySelectorAll('.mod-card').forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+                    active = i;
+
+                    dBadge.textContent = `Etapa ${m.num}`;
+                    dTitle.textContent = m.name;
+                    dTasks.innerHTML = m.tasks.map(t =>
+                    `<div class="task-item"><div class="task-dot"></div><div class="task-text">${t}</div></div>`
+                    ).join('');
+                    panel.classList.add('visible');
+                };
+                grid.appendChild(card);
+                });
+                </script>
+
+            <!-- Botón de regreso -->
+            <div class="btn-back">
+                <a href="../index.html#portfolio" class="btn btn-default">
+                    <i class="fa fa-arrow-left"></i>&nbsp; Volver a Módulos
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <!-- FIN CONTENIDO PRINCIPAL -->
+
+
+    <!-- =====================================================
+         SECCIÓN DE CONTACTO Y FOOTER
+         (idéntica a la del index.html)
+    ====================================================== -->
+    <section id="contact" class="contact">
+        <!-- Footer con redes sociales -->
+        <footer class="style-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-xs-12">
+                        <span class="copyright">Copyright &copy; Chibcho Sistemas 2025</span>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="footer-social text-center">
+                            <ul>
+                                <li><a href="https://github.com/NicolasDavila2001/APM-20261S.git" target="_blank"><i class="fa fa-github"></i></a></li>
+                                <li>
+                                    <a href="https://drive.google.com/drive/folders/1QVZhY7u8GsLHCyEWJAowoTUEtw_0oujM?usp=sharing" target="_blank" style="display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.3 78" width="20" height="20">
+                                            <path d="M6.6 66.85l3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8H.1c0 1.55.4 3.1 1.2 4.5z" fill="#fff"/>
+                                            <path d="M43.65 25L29.9 1.2C28.55 2 27.4 3.1 26.6 4.5L1.3 49.15c-.8 1.4-1.2 2.95-1.2 4.5h27.5z" fill="#fff"/>
+                                            <path d="M73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5H59.8l5.85 11.5z" fill="#fff"/>
+                                            <path d="M43.65 25L57.4 1.2C56.05.4 54.5 0 52.9 0H34.4c-1.6 0-3.1.45-4.5 1.2z" fill="#fff"/>
+                                            <path d="M59.8 53.65H27.5L13.75 77.45c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.1-.45 4.5-1.2z" fill="#fff"/>
+                                            <path d="M73.4 26.35l-12.65-21.9C59.95 3.05 58.8 2 57.4 1.2L43.65 25l16.15 28.65H87.2c0-1.55-.4-3.1-1.2-4.5z" fill="#fff"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="footer-link">
+                            <ul class="pull-right">
+                                <li><a href="#">Política de Privacidad</a></li>
+                                <li><a href="#">Términos de Uso</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <!-- FIN CONTACTO Y FOOTER -->
+
+
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../asset/js/bootstrap.min.js"></script>
+    <script src="../js/jquery.easing.1.3.js"></script>
+    <script src="../js/classie.js"></script>
+    <script src="../js/cbpAnimatedHeader.js"></script>
+
+</body>
+</html>
