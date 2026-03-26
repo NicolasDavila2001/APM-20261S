@@ -1,4 +1,4 @@
-# Proyecto Integrador %%% Nombre de la Empresa %%%
+# Proyecto Integrador **_Chibcho Sistemas_**
 ## Automatización de Procesos de Manufactura (2026-1)
 
 <p align="center">
@@ -23,14 +23,14 @@ En *** somos una empresa especializada en el desarrollo de soluciones integrales
       <span>Ingeniero Mecatronico -</span>
     </td>
     <td align="center">
-      <img src="Images/Integrantes/" width="250"/><br/>
+      <img src="Images/Integrantes/cris.jpg" width="250"/><br/>
       <b>Cristian Fabián Martínez Bohorquez</b><br/>
       <span>Ingeniero Mecatronico -</span>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="Images/Integrantes/" width="250"/><br/>
+      <img src="Images/Integrantes/andres.png" width="250"/><br/>
       <b>Andres Mauricio Avilan Herrera</b><br/>
       <span>Ingeniero Mecatronico -</span>
     </td>
