@@ -3,11 +3,11 @@
 
 <p align="center">
   <img src="images/logo_UN.png" width="20%"/>
-</p>
-
-<p align="center">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="images/logo_chibcho.png" width="22%"/>
 </p>
+
+
 
 ## 🔍Quienes Somos?
 
