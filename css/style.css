@@ -1630,7 +1630,8 @@ footer.style-1 .footer-link li {
 
 #team-section .team-member img{
     width: 99%;
-    height: auto;
+    height: 300px;
+    object-fit: cover;
     text-align: center;
 }
 
