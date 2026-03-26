@@ -1,9 +1,12 @@
-# Proyecto Integrador **_Chibcho Sistemas_**
+# Proyecto Integrador Chibcho Sistemas
 ## Automatización de Procesos de Manufactura (2026-1)
 
 <p align="center">
   <img src="Images/logo_UN.png" width="20%"/>
-  <img src="Images/logo_Empresa.png" width="10%"/>
+</p>
+
+<p align="center">
+  <img src="Images/logo_chibcho.png" width="22%"/>
 </p>
 
 ## 🔍Quienes Somos?
@@ -23,7 +26,7 @@ En *** somos una empresa especializada en el desarrollo de soluciones integrales
       <span>Ingeniero Mecatronico -</span>
     </td>
     <td align="center">
-      <img src="Images/Integrantes/cris.jpg" width="250"/><br/>
+      <img src="Images/Integrantes/" width="250"/><br/>
       <b>Cristian Fabián Martínez Bohorquez</b><br/>
       <span>Ingeniero Mecatronico -</span>
     </td>
@@ -127,5 +130,3 @@ Línea de alto volumen con mínimo **3 productos diferentes**
  - [Pagina web](https://nicolasdavila2001.github.io/APM-20261S/)
  - [Drive](https://drive.google.com/drive/folders/1QVZhY7u8GsLHCyEWJAowoTUEtw_0oujM?usp=drive_link)
  - [Presentaciones](https://drive.google.com/drive/folders/1rmt_XTF3Gyx2ZOrqQg3J9glDm1CesLqV?usp=sharing)
-
-
