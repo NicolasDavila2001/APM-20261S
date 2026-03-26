@@ -43,12 +43,13 @@ En Chibcho sistemas somos una empresa especializada en el desarrollo de solucion
       <span>Ingeniero Mecatronico - </span>
     </td>
     <td align="center">
-      <img src="images/team/" width="250"/><br/>
+      <img src="images/team/JuanDelgado.png" width="250"/><br/>
       <b>Juan José Delgado Estrada </b><br/>
       <span>Ingeniero Mecatronico - </span>
     </td>
   </tr>
 </table>
+
 ## 🦾Nuestros Expertos 
 <table>
   <tr>
