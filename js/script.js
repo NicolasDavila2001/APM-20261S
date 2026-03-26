@@ -149,6 +149,7 @@ $(document).ready(function() {
 		stopOnHover: true,
     	autoPlay: 3000,
         items: 4,
+        loop: true,
     	//singleItem:true,
         itemsMobile : [550,1],
         itemsDesktopSmall : [991,2],
