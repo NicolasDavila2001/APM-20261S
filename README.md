@@ -124,7 +124,7 @@ Línea de alto volumen con mínimo **3 productos diferentes**
 - [Modulo 5: Digital factory](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_5/)
 - [Modulo 6: Automatización discreta (PLC)](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_6/)
 - [Modulo 7: SCADA y comunicaciones](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_7/)
-- [Resultados](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Resultados/)
+- [Resultados -  Propuesta de automatización](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Resultados/)
 
 ## 💾Anexos 
  - [Pagina web](https://nicolasdavila2001.github.io/APM-20261S/)
