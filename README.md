@@ -16,17 +16,17 @@ En Chibcho sistemas somos una empresa especializada en el desarrollo de solucion
 <table>
   <tr>
     <td align="center">
-      <img src="images/Integrante/nicolas_davila.png" width="250"/><br/>
+      <img src="images/team/nicolas.png" width="250"/><br/>
       <b>Nicolas Fernando Davila Peñuela</b><br/>
       <span>Ingeniero Mecatronico - </span>
     </td>
     <td align="center">
-      <img src="images/team/JuanMeza.jpeg" width="250"/><br/>
+      <img src="images/team/juan_david.png" width="220"/><br/>
       <b>Juan David Meza Criollo</b><br/>
       <span>Ingeniero Mecatronico -</span>
     </td>
     <td align="center">
-      <img src="images/team/" width="250"/><br/>
+      <img src="images/team/cristian.png" width="250"/><br/>
       <b>Cristian Fabián Martínez Bohorquez</b><br/>
       <span>Ingeniero Mecatronico -</span>
     </td>
@@ -38,7 +38,7 @@ En Chibcho sistemas somos una empresa especializada en el desarrollo de solucion
       <span>Ingeniero Mecatronico -</span>
     </td>
     <td align="center">
-      <img src="images/team/Santiago_Avila.jpg" width="250"/><br/>
+      <img src="images/team/santiago.png" width="250"/><br/>
       <b>Santiago Avila Corredor</b><br/>
       <span>Ingeniero Mecatronico - </span>
     </td>
@@ -53,34 +53,34 @@ En Chibcho sistemas somos una empresa especializada en el desarrollo de solucion
 <table>
   <tr>
     <td align="center">
-      <img src="images/expertos/Luis.jpeg" width="150"/><br/>
+      <img src="images/expertos/luis_miguel.png" width="150"/><br/>
       <b>Luis Miguel Méndez M.</b><br/>
       <span>Dr.-Ing.|Ingeniería Mecánica, Biomecánica & PrecisiónMantenimiento Hospitalario |HVAC · Máquinas Térmicas & Hidráulicas |Docente UNAL</span>
     </td>
     <td align="center">
-      <img src="images/expertos/Carlos.png" width="250"/><br/>
+      <img src="images/expertos/carlos_julio.png" width="250"/><br/>
       <b>Carlos Julio Cortés R.</b><br/>
       <span>Dr.-Ing|Ingeniería Mecánica-Biomecánica-Precisión-Fabricación|Docente UNAL</span>
     </td>
     <td align="center">
-      <img src="images/expertos/Ubaldo.png" width="250"/><br/>
+      <img src="images/expertos/ubaldo.png" width="250"/><br/>
       <b>Ubaldo García Zaragoza</b><br/>
       <span>Ing. Mecánico | Lic. Innovación & Diseño | Concepto a Prototipo Validación | PLM Producción alto volumen|Docente UNAL</span>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="images/expertos/Ricardo.png" width="220"/><br/>
+      <img src="images/expertos/ricardo.png" width="220"/><br/>
       <b>Ricardo Ramirez H.</b><br/>
       <span>Ing. Mecánico & Electrónico | MSc. Automatización Industrial | PhD. Ciencias de Ingeniería Mecánica|Docente UNAL </span>
     </td>
     <td align="center">
-      <img src="images/expertos/Victor.png" width="250"/><br/>
+      <img src="images/expertos/victor.png" width="250"/><br/>
       <b>Víctor Hugo Grisales P.</b><br/>
       <span>PhD. Mecatrónica, Robótica & Automatización| PhD. Sistemas Automáticos | Consultor Senior |Docente UNAL</span>
     </td>
     <td align="center">
-      <img src="images/expertos/Eduardo.png" width="250"/><br/>
+      <img src="images/expertos/eduardo.png" width="250"/><br/>
       <b>Eduardo Barrera Gualdron</b><br/>
       <span>Ing. Electrónico | MSc. Control · Beijing · China | Automatización & SCADA |Docente UNAL  </span>
     </td>
