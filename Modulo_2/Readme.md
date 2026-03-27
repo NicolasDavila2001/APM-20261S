@@ -157,7 +157,7 @@ donde
 
 Por lo que  
 
-PC = 4 * 7 * 8 * 52.000 = 11'648.000 botellas/semana
+PC = 1 * 7 * 8 * 52.000 = 2'912.000 botellas/semana
 
 ---
 
