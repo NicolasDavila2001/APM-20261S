@@ -2,7 +2,9 @@
 La planeación de proyectos es una etapa fundamental para garantizar el éxito de cualquier iniciativa, ya que permite estructurar de manera ordenada los recursos, los tiempos y las responsabilidades involucradas. En este módulo se abordan las principales herramientas y metodologías utilizadas en la gestión de proyectos, donde se utilizo la metodología EDT. Dando como resultado la definición de distintas herramientas de análisis como EDT, Cronograma (Diagrama de Gantt),etc
 
 ## Diagrama de EDT
-> **Nota** Se realizo el EDT de proceso de produccion con el fin de tener un mejor conocimiento de las distintas tareas que componene cada una de las etapas del procesos de producir bebidas
+El EDT es una herramienta de análisis que permite representar gráficamente cada una de las tareas que componen las etapas
+                    de un proyecto y asi poder facilitar la comprensión de las actividades necesarias para cumplir los objetivos de este, por ello no solo se realiza el EDT del proyecto si no 
+                    tambien el EDT del proceso con el fin de tener un mejor conocimiento de las distintas tareas que componene cada una de las etapas de este.
 ### EDT de proceso 
 <p align="center">
   <img src="edt_proceso.png" width="45%"/>

@@ -172,7 +172,14 @@
     <div class="modulo-header">
         <div class="container text-center">
             <h2>Módulo 2 –  Gestión de producción</h2>
-            <p>En el presente módulo se aborda de manera integral el estudio del proceso de embotellamiento analizado en el <a href="../Modulo_1/index.html">Módulo 1</a>, a partir de la información investigada y recopilada durante una visita técnica. Se presentan herramientas clave de análisis como el diagrama de operaciones de proceso, el diagrama de análisis, el layout,flujo de materiales y el Value Stream Mapping (VSM), Adicional se hace el calculo de indicadores y parametros de produccion de la planta inicial los cuales son la base para presentar la propuesta de automatización para mejorar estos.Adicionalmente La propuesta final se enfoca únicamente en el proceso de producción de bebidas. El tratamiento de agua se incluye en este módulo debido a la relevancia que se le atribuyó durante la visita técnica, sin que forme parte del alcance de la propuesta.</p>
+            <p class="justified-text">En el presente módulo se aborda de manera integral el estudio del proceso de 
+                embotellamiento presentado en el <a href="../Modulo_1/index.html">Módulo 1</a>, a partir de la información 
+                investigada y recopilada durante la visita técnica. Se presentan herramientas clave de análisis como el diagrama de 
+                operaciones de proceso, el diagrama de análisis, el layout,flujo de materiales y el Value Stream Mapping (VSM) de la planta inicial, Ademas
+                se hace el calculo de indicadores y parametros de produccion de la planta, los cuales son la base para presentar 
+                la propuesta de automatización.Cabe resaltar que La propuesta final se enfoca únicamente en el proceso de producción 
+                de bebidas. El tratamiento de agua se incluye en este módulo debido a la relevancia que se le atribuyó durante la visita técnica, sin 
+                que forme parte del alcance de la propuesta.</p>
         </div>
     </div>
 
@@ -190,6 +197,110 @@
                     <i class="fa fa-arrow-left"></i>&nbsp; Volver a Módulos
                 </a>
             </div>
+            <br>
+            <h2 class="text-center">Diagrama de Operaciones de Proceso  </h2>
+            <p class="justified-text">Se presentan los diagramas de operaciones de proceso de dos etapas 
+                importantes para la produccion de bebidas, el tratamiento de agua y producion de bebidas con sus 
+                respectivas operaciones para tener compresión completa del flujo de trabajo.</p>
+            <!-- Diagrama de operaciones de Proceso -->
+            <h3 class="text-center">Diagrama de Operaciones de Proceso</h3>
+            <div style="background: #f9f9f9; padding: 20px; border-radius: 10px; margin: 20px 0; text-align: center;">
+                <pre class="mermaid">
+                    flowchart TD
+                        A[Inicio] --> B[Inspeccionar Botella]
+                        
+                        B --> C{¿Botella Funcional?}
+                        
+                        C -- No --> X[Desecho de Botella]
+                        C -- Sí --> E[Retirar Etiqueta y Residuos]
+                        
+                        E --> F[Lavar Botellas]
+                        
+                        F--> H{¿Botella Limpia ?}
+                        H -- No --> F
+                        H -- Sí --> I[Dosificar Producto]
+                    
+                        I --> K[Tapar y Sellar Botellas]
+                        K --> L[Etiquetar Producto]
+                        
+                        L --> N{¿Sellado y Etiquetado Correcto?}
+                        
+                        N -- No --> Y[Reproceso o Desecho de Producto]
+                        N -- Sí --> O[Inspeccionar Calidad del Lote]
+                        
+                        O --> P{¿Lote Cumple Calidad?}
+                        P -- No --> Y
+                        P -- Sí --> Q[Empacar Botellas en Paquetes]
+                        
+                        Q --> S[Inspeccionar Empaque]
+                        
+                        S --> T{¿Empaque Correcto?}
+                        T -- No --> Q
+                        T -- Sí --> U[Paletizar paquetes]
+                        
+                        U --> V[Embalar en Carros]
+                        V --> Z[Fin]
+                        
+                        style A fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style B fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style C fill:#e74c3c,stroke:#222,stroke-width:2px,color:#fff
+                        style X fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style E fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style F fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style H fill:#e74c3c,stroke:#222,stroke-width:2px,color:#fff
+                        style I fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style K fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style L fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style N fill:#e74c3c,stroke:#222,stroke-width:2px,color:#fff
+                        style Y fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style O fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style P fill:#e74c3c,stroke:#222,stroke-width:2px,color:#fff
+                        style Q fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style S fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style T fill:#e74c3c,stroke:#222,stroke-width:2px,color:#fff
+                        style U fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style V fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style Z fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                </pre>
+            </div>
+
+            <br>
+
+            <!-- Diagrama de Tratamiento de Agua -->
+            <h3 class="text-center">Diagrama de Tratamiento de Agua</h3>
+            <div style="background: #f9f9f9; padding: 20px; border-radius: 10px; margin: 20px 0; text-align: center;">
+                <pre class="mermaid">
+                    flowchart TD
+                        A[Inicio] --> B[Inspeccionar Características Químicas]
+                    
+                        B --> C{¿Cumple?}
+                        C -- No --> E[Tratar Agua con Cloro]
+                        E --> F[Filtrar con Carbón y Filtros Pulidores]
+                        F --> G[Inspeccionar pH y Micropartículas]
+                    
+                        G --> H{¿Cumple?}
+                        H -- No --> E
+                        H -- Sí --> I[Almacenar Agua Tratada]
+                    
+                        C -- Sí --> I
+                    
+                        I --> J[Fin]
+                        
+                        style A fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style B fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style C fill:#e74c3c,stroke:#222,stroke-width:2px,color:#fff
+                        style E fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style F fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style G fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style H fill:#e74c3c,stroke:#222,stroke-width:2px,color:#fff
+                        style I fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style J fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                </pre>
+            </div>
+
+            <p >Nota: Para ver los diagramas DOP con su respectiva nomenclatura, revisar <a href="Diagrama_DOP.pdf">diagramas DOPs</a> .</p>
+
+
             <br>
             <br>
             <div style="display: flex; justify-content: center; gap: 20px;">

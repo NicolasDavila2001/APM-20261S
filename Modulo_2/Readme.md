@@ -1,8 +1,16 @@
 # Modulo 2 : Gestión de producción
-En el presente módulo se aborda de manera integral el estudio del proceso de embotellamiento analizado en el [modulo 1](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_1), a partir de la información investigada y recopilada durante una visita técnica. Se presentan herramientas clave de análisis como el diagrama de operaciones de proceso, el diagrama de análisis, el layout,flujo de materiales y el Value Stream Mapping (VSM), Adicional se hace el calculo de indicadores  y parametros de produccion  de la planta inicial los cuales son la base para presentar la propuesta de automatización para mejorar estos.Adicionalmente La propuesta final se enfoca únicamente en el proceso de producción de bebidas. El tratamiento de agua se incluye en este módulo debido a la relevancia que se le atribuyó durante la visita técnica, sin que forme parte del alcance de la propuesta.
+
+En el presente módulo se aborda de manera integral el estudio del proceso de 
+                embotellamiento presentado en el [Modulo 1](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_1), a partir de la información 
+                investigada y recopilada durante la visita técnica. Se presentan herramientas clave de análisis como el diagrama de 
+                operaciones de proceso, el diagrama de análisis, el layout,flujo de materiales y el Value Stream Mapping (VSM) de la planta inicial, Ademas
+                se hace el calculo de indicadores y parametros de produccion de la planta, los cuales son la base para presentar 
+                la propuesta de automatización.Cabe resaltar La propuesta final se enfoca únicamente en el proceso de producción 
+                de bebidas. El tratamiento de agua se incluye en este módulo debido a la relevancia que se le atribuyó durante la visita técnica, sin 
+                que forme parte del alcance de la propuesta.
 
 ## Diagrama de Operaciones de Proceso 
-Se presentan los diagramas de operaciones de proceso de dos etapas importantes para la produccion de bebida el tratamiento de agua y producion de bebidas con sus respectivas operaciones para tener mejor compresión del flujo de trabajo.
+Se presentan los diagramas de operaciones de proceso de dos etapas importantes para la produccion de bebidas, el tratamiento de agua y producion de bebidas con sus respectivas operaciones para tener mejor compresión del flujo de trabajo.
 ### Diagrama de operaciones de Proceso
 
 ```mermaid 
