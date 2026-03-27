@@ -182,47 +182,56 @@
          CONTENIDO PRINCIPAL DEL MÓDULO
          Reemplaza esta sección con el contenido real de cada módulo
     ====================================================== -->
-<div class="modulo-content">
-        <div class="container">
+            <div class="modulo-content">
+                    <div class="container">
 
-            <!-- Botón de regreso -->
-            <div class="btn-back">
-                <a href="../index.html#portfolio" class="btn btn-default">
-                    <i class="fa fa-arrow-left"></i>&nbsp; Volver a Módulos
-                </a>
-            </div>
+                        <!-- Botón de regreso -->
+                        <div class="btn-back">
+                            <a href="../index.html#portfolio" class="btn btn-default">
+                                <i class="fa fa-arrow-left"></i>&nbsp; Volver a Módulos
+                            </a>
+                        </div>
 
             <div class="text-center" style="margin-bottom: 40px;">
                 <h2>Propuesta de automatización</h2>
                 <p class="justified-text">
-                    La propuesta de automatización se planteó a partir de una arquitectura compuesta
-                    por robótica industrial, control mediante PLC, SCADA y incluyendo un sistema de visión artificial.
-                    Para la etapa final de la línea se propuso la impementación de un sistema de clasificación robotico,
-                    el cual se encargaría de separar los productos defectuosos de los productos aptos para su comercialización. 
-                    Evaluando esta función se consideró un robot paletizador ABB IRB 660, ya que es un equipo diseñado específicamente 
-                    para aplicaciones de paletizado y cuenta con una capacidad de carga cercana a los 250 kg y un gran alcance,
-                    lo cual lo hace adecuado para manipular canastas o agrupaciones de botellas al final del proceso. 
-                    Para las tareas de manipulación asociadas a inspección y manejo de unidades individuales se tomó en cuenta también
-                    el robot ABB IRB 140 M2000, el cual tiene una capacidad de carga cercana a 6 kg y una buena precisión, lo que lo 
-                    hace apropiado para trabajar junto con un sistema de visión de máquina para retirar o manipular botellas 
-                    detectadas como defectuosas.
+                    La propuesta de automatización se diseñó a partir de una arquitectura integrada por robótica industrial, 
+                    control mediante PLC, un sistema SCADA y visión artificial. Para la etapa final de la línea se planteó 
+                    la implementación de un sistema robótico de clasificación, encargado de separar los productos defectuosos 
+                    de aquellos aptos para su comercialización.
+                </p>
 
+                <p class="justified-text">
+                    Para esta función se consideró el robot paletizador ABB IRB 660, ya que es un equipo diseñado específicamente 
+                    para aplicaciones de paletizado, con una capacidad de carga cercana a los 250 kg y un amplio alcance. Estas 
+                    características lo hacen adecuado para manipular canastas o agrupaciones de botellas al final del proceso. 
+                    Adicionalmente, para tareas de manipulación asociadas a inspección y manejo de unidades individuales, se tuvo 
+                    en cuenta el robot ABB IRB 140 M2000, el cual cuenta con una capacidad de carga aproximada de 6 kg y una buena 
+                    precisión, lo que lo convierte en una opción apropiada para trabajar en conjunto con un sistema de visión 
+                    artificial y retirar o manipular botellas detectadas como defectuosas.
+                </p>
 
-                    Es necesario también la elección de un PLC que se encargará de coordinar las operaciones de los robots y 
-                    otros equipos en la línea. Para ello se planteó utilizar el PLC Siemens S7-1200 CPU 1214C, debido a que es 
-                    un controlador ampliamente utilizado en aplicaciones industriales, con suficientes entradas y salidas para 
-                    este tipo de sistema y buena compatibilidad con redes industriales. Junto con el PLC se debe incluir una HMI 
-                    que permita visualizar las varibales del proceso, estados del sistema y alarmas, además de realizar ajustes 
-                    básicos de operación. Para esto se propuso la HMI Siemens KTP700 Basic, que es compatible con el PLC 
-                    seleccionado y ofrece una interfaz gráfica intuitiva para los operadores.
+                <p class="justified-text">
+                    También es necesaria la selección de un PLC encargado de coordinar las operaciones de los robots y de los demás 
+                    equipos presentes en la línea. Para ello, se propuso el PLC Siemens S7-1200 CPU 1214C, debido a que es un 
+                    controlador ampliamente utilizado en aplicaciones industriales, con suficientes entradas y salidas para este tipo 
+                    de sistema y buena compatibilidad con redes industriales. Junto con el PLC, se planteó incorporar una HMI que 
+                    permita visualizar las variables del proceso, los estados del sistema y las alarmas, además de realizar ajustes 
+                    básicos de operación. Para esta función se seleccionó la HMI Siemens KTP700 Basic, compatible con el PLC elegido 
+                    y con una interfaz gráfica adecuada para la interacción del operador.
+                </p>
 
+                <p class="justified-text">
+                    Finalmente, para implementar la detección de objetos en la línea, se contempló el sensor de visión ifm O2D550, 
+                    capaz de identificar la posición y la presencia de objetos mediante procesamiento de imagen integrado. Esta 
+                    información puede ser utilizada posteriormente por el PLC o por el robot para ejecutar acciones de manipulación, 
+                    clasificación o rechazo.
+                </p>
 
-                    Finalmente, para implementar la detección de objetos en la línea se contempló el sensor de visión ifm O2D550, 
-                    que permite identificar posiciones y presencia de objetos mediante procesamiento de imagen integrado, información 
-                    que posteriormente puede ser utilizada por el PLC o el robot para ejecutar acciones de manipulación o rechazo. 
-                    En general, la selección de estos componentes se realizó buscando equipos industriales reales, disponibles en 
-                    el mercado y que permitan construir una propuesta de automatización coherente con las necesidades del proceso 
-                    de envasado de botellas en Coca Cola.
+                <p class="justified-text">
+                    En conjunto, la selección de estos componentes se realizó buscando equipos industriales reales, disponibles en 
+                    el mercado, y que permitan construir una propuesta de automatización coherente, técnica y viable para las 
+                    necesidades del proceso de envasado de botellas.
                 </p>
             </div>
 
