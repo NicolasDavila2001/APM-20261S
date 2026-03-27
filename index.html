@@ -60,7 +60,7 @@
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
-        #contact a {
+    #contact a {
         color: #ffffff;
     }
 
@@ -69,17 +69,178 @@
         text-decoration: underline;
     }
     .portfolio-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
     }
     .justified-text {
-    max-width: 900px;
-    margin: auto;
-    font-size: 16px;
-    line-height: 1.8;
-    text-align: justify;
-}
+        max-width: 900px;
+        margin: auto;
+        font-size: 16px;
+        line-height: 1.8;
+        text-align: justify;
+    }
+
+    /* ===== Requerimientos Section ===== */
+    #requerimientos {
+        background-color: #f8f5f5;
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+    
+    .req-table {
+        border-collapse: separate !important;
+        border-spacing: 0;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        width: 100%;
+    }
+    .req-table thead th {
+        background-color: #c0392b;
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        border: none !important;
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+    .req-table tbody tr td {
+        border-color: #f0dada !important;
+        font-size: 14px;
+        padding: 10px 18px;
+        color: #444;
+    }
+    .req-table tbody tr:nth-child(even) td {
+        background-color: #fdf7f7;
+    }
+    
+    /* Estilos profesionales para productos */
+    .products-row {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    
+    .product-col {
+        text-align: center;
+        padding: 25px 20px 20px 20px;
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        width: 260px;
+        cursor: default;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .product-col::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #c0392b, #e67e22, #c0392b);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+    
+    .product-col:hover::before {
+        transform: scaleX(1);
+    }
+    
+    .product-col:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(192,57,43,0.15);
+    }
+    
+    .product-image {
+        width: 180px;
+        height: 200px;
+        object-fit: contain;
+        margin-bottom: 15px;
+        filter: drop-shadow(0 6px 12px rgba(0,0,0,0.1));
+        transition: all 0.3s ease;
+    }
+    
+    .product-col:hover .product-image {
+        transform: scale(1.05);
+        filter: drop-shadow(0 12px 20px rgba(0,0,0,0.15));
+    }
+    
+    .product-col h4 {
+        color: #333;
+        font-size: 18px;
+        margin-top: 8px;
+        margin-bottom: 5px;
+        font-weight: 700;
+        letter-spacing: -0.3px;
+    }
+    
+    .product-col p {
+        color: #666;
+        font-size: 13px;
+        margin: 0 0 8px 0;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        font-weight: 500;
+    }
+    
+    .volume-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+        color: white;
+        font-size: 11px;
+        font-weight: bold;
+        padding: 5px 14px;
+        border-radius: 30px;
+        margin-top: 8px;
+        letter-spacing: 0.5px;
+        box-shadow: 0 2px 5px rgba(192,57,43,0.3);
+    }
+    
+    .req-note {
+        font-style: italic;
+        color: #999;
+        font-size: 13px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        display: block;
+    }
+    
+    /* Asegurar que otras imágenes no se vean afectadas */
+    .team-member img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    .clients img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+    }
+    
+    /* Responsive para productos */
+    @media (max-width: 768px) {
+        .products-row {
+            gap: 20px;
+        }
+        .product-col {
+            width: 240px;
+            padding: 20px 15px;
+        }
+        .product-image {
+            width: 150px;
+            height: 170px;
+        }
+    }
 </style>
 
 </head>
@@ -377,7 +538,7 @@
 
 
 <!-- ===== START: Requerimientos del Proyecto ===== -->
-    <section id="requerimientos" class="feature-section" style="padding-top: 50px; padding-bottom: 60px;">
+    <section id="requerimientos">
         <div class="container">
 
             <!-- Section title -->
@@ -456,7 +617,7 @@
                 </div>
             </div>
 
-            <!-- Product images row - IMÁGENES PNG REALES -->
+            <!-- Product images row - IMÁGENES PNG REALES CON ESTÉTICA PROFESIONAL -->
             <div class="products-row">
 
                 <!-- Producto 1: Monster Energy Lata 473 mL -->
@@ -466,7 +627,7 @@
                          onerror="this.src='https://placehold.co/180x200/e67e22/white?text=Monster+Energy'">
                     <h4>Monster Energy</h4>
                     <p>Lata 473 mL</p>
-                    <span class="volume-badge">Bajo volumen • Energizante</span>
+                    <span class="volume-badge">⚡ Bajo volumen • Energizante</span>
                 </div>
 
                 <!-- Producto 2: Coca-Cola Botella 2L Retornable -->
@@ -476,7 +637,7 @@
                          onerror="this.src='https://placehold.co/180x200/c0392b/white?text=Coca-Cola+2L'">
                     <h4>Coca-Cola</h4>
                     <p>Botella 2 L Retornable</p>
-                    <span class="volume-badge">Medio volumen • Gaseosa</span>
+                    <span class="volume-badge">🥤 Medio volumen • Gaseosa</span>
                 </div>
 
                 <!-- Producto 3: Brisa Agua Purificada 5 Galones -->
@@ -486,7 +647,7 @@
                          onerror="this.src='https://placehold.co/180x200/3498db/white?text=Brisa+5+Galones'">
                     <h4>Brisa</h4>
                     <p>Botellón 5 Galones (≈18.9 L)</p>
-                    <span class="volume-badge">Gran volumen • Agua purificada</span>
+                    <span class="volume-badge">💧 Gran volumen • Agua purificada</span>
                 </div>
 
             </div>
@@ -496,8 +657,8 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <p style="font-size: 12px; color: #999; margin-top: 20px;">
-                        <i class="fa fa-info-circle"></i> Para visualizar correctamente los productos, coloca las imágenes PNG en la carpeta <strong>images/productos/</strong><br>
-                        con los nombres: <strong>monster-energy-can.png</strong>, <strong>cocacola-2l.png</strong> y <strong>brisa-5galones.png</strong>
+                        <i class="fa fa-info-circle"></i> Para visualizar correctamente los productos, coloca las imágenes PNG en la carpeta principal <strong>images/</strong><br>
+                        con los nombres: <strong>monster.png</strong>, <strong>coke.png</strong> y <strong>brisa.png</strong>
                     </p>
                 </div>
             </div>
@@ -505,7 +666,7 @@
         </div>
     </section>
     <!-- ===== END: Requerimientos del Proyecto ===== -->
-	
+    
     <!-- Start Portfolio Section -->
 <section id="portfolio" class="portfolio-section-1">
     <style>
@@ -741,132 +902,4 @@
                     </div>
                     
                     <div class="col-md-12">
-                        <img src="images/logos/rockwell.jpg" class="img-responsive" alt="...">
-                    </div>
-
-                    <div class="col-md-12">
-                        <img src="images/logos/texas.jpg" class="img-responsive" alt="...">
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
-    
-    
-    <section id="contact" class="contact">
-    <div class="container">
-        
-        <div class="row">
-            
-            <!-- Info del Proyecto -->
-            <div class="col-md-6">
-                <div class="footer-contact-info">
-                    <h4>Proyecto Académico</h4>
-                    <ul>
-                        <li><strong>Curso:</strong> APM 2026-1</li>
-                        <li><strong>Empresa:</strong> Chibcho Sistemas</li>
-                        <li><strong>Enfoque:</strong> Automatización de procesos de manufactura</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Links -->
-            <div class="col-md-6">
-                <div class="footer-contact-info">
-                    <h4>Recursos</h4>
-                    <ul>
-                        <li>
-                            <strong>Repositorio:</strong><br>
-                            <a href="https://github.com/NicolasDavila2001/APM-20261S" target="_blank">
-                                GitHub del proyecto
-                            </a>
-                        </li>
-                        <li>
-                            <strong>Documentación:</strong><br>
-                            <a href="https://drive.google.com/drive/folders/1QVZhY7u8GsLHCyEWJAowoTUEtw_0oujM?usp=sharing" target="_blank">
-                                Drive del proyecto
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Footer inferior -->
-    <footer class="style-1">
-        <div class="container">
-            <div class="row">              
-                <div class="col-md-6 col-xs-12">
-                    <span class="copyright">
-                        © 2026 Chibcho Sistemas | Proyecto académico APM
-                    </span>
-                </div>
-
-                <div class="col-md-6 col-xs-12">
-                    <div class="footer-social text-right">
-                        <ul>
-                            <li>
-                                <a href="https://github.com/NicolasDavila2001/APM-20261S" target="_blank">
-                                    <i class="fa fa-github"></i>
-                                </a>
-                            </li>
-                            <li>
-                                    <a href="https://drive.google.com/drive/folders/1QVZhY7u8GsLHCyEWJAowoTUEtw_0oujM?usp=sharing" target="_blank" style="display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px;">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.3 78" width="20" height="20">
-                                            <path d="M6.6 66.85l3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8H.1c0 1.55.4 3.1 1.2 4.5z" fill="#fff"/>
-                                            <path d="M43.65 25L29.9 1.2C28.55 2 27.4 3.1 26.6 4.5L1.3 49.15c-.8 1.4-1.2 2.95-1.2 4.5h27.5z" fill="#fff"/>
-                                            <path d="M73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5H59.8l5.85 11.5z" fill="#fff"/>
-                                            <path d="M43.65 25L57.4 1.2C56.05.4 54.5 0 52.9 0H34.4c-1.6 0-3.1.45-4.5 1.2z" fill="#fff"/>
-                                            <path d="M59.8 53.65H27.5L13.75 77.45c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.1-.45 4.5-1.2z" fill="#fff"/>
-                                            <path d="M73.4 26.35l-12.65-21.9C59.95 3.05 58.8 2 57.4 1.2L43.65 25l16.15 28.65H87.2c0-1.55-.4-3.1-1.2-4.5z" fill="#fff"/>
-                                        </svg>
-                                    </a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    <div id="loader">
-        <div class="spinner">
-            <div class="dot1"></div>
-            <div class="dot2"></div>
-        </div>
-    </div>
-
-    
-
-    <!-- jQuery Version 2.1.1 -->
-    <script src="js/jquery-2.1.1.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="asset/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/count-to.js"></script>
-    <script src="js/jquery.appear.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.fitvids.js"></script>
-	<script src="js/styleswitcher.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/script.js"></script>
-
-</body>
-
-</html>
+                        <img src="
