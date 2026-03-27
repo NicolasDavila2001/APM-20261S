@@ -12,7 +12,7 @@ Modelo de una planta de bebidas con tres etapas:
 3. Líneas de envasado
 <img width="801" height="541" alt="Line350" src="https://github.com/user-attachments/assets/c994582f-3a67-4b87-a843-b2938016b095" />
 
-
+### Estadísticas
 <img width="520" height="470" alt="Chart" src="https://github.com/user-attachments/assets/3da69887-73b1-4378-b068-c51f074b2a15" />
 
 
