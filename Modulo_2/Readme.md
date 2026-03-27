@@ -191,7 +191,7 @@ OEE = 0.90 * 0.95 * 0.99 = 0.846 = 84.6 %
 | **Tiempo de ciclo (Tc)** | Tiempo de operación por unidad producida. | **0.069 s** |
 | **Tiempo de alistamiento (Tsu)**| Tiempo requerido para preparar la línea (cambio de referencia, limpieza). | **20 min** |
 | **Tasa de producción (Rp)** | Número de unidades producidas por hora. | **52.000 botellas/h** |
-| **Capacidad (PC)** | Capacidad total (turnos × horas × estaciones × tasa de producción). | **11.648.000 botellas/sem** |
+| **Capacidad (PC)** | Capacidad total (turnos × horas × estaciones × tasa de producción). | **2.912.000 botellas/sem** |
 | **Lead Time (MLT)** | Tiempo total desde el inicio hasta la finalización de la fabricación. | **98 min** |
 | **OEE** | Efectividad Total de los Equipos (Disponibilidad × Eficiencia × Calidad). | **84.6 %** |
 
