@@ -80,138 +80,6 @@
     line-height: 1.8;
     text-align: justify;
 }
-
-    /* ===== Requerimientos Section ===== */
-    #requerimientos {
-        background-color: #f8f5f5;
-        padding-top: 50px;
-        padding-bottom: 60px;
-    }
-    .req-table {
-        border-collapse: separate !important;
-        border-spacing: 0;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        width: 100%;
-    }
-    .req-table thead th {
-        background-color: #c0392b;
-        color: #fff;
-        font-weight: 600;
-        letter-spacing: 0.3px;
-        border: none !important;
-        padding: 12px 18px;
-        font-size: 14px;
-    }
-    .req-table tbody tr td {
-        border-color: #f0dada !important;
-        font-size: 14px;
-        padding: 10px 18px;
-        color: #444;
-    }
-    .req-table tbody tr:nth-child(even) td {
-        background-color: #fdf7f7;
-    }
-    .products-row {
-        display: flex;
-        align-items: stretch;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 30px;
-        padding-top: 30px;
-        padding-bottom: 20px;
-    }
-    .product-col {
-        text-align: center;
-        padding: 25px 20px 20px 20px;
-        background: #ffffff;
-        border-radius: 16px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-        transition: all 0.3s ease;
-        width: 260px;
-        cursor: default;
-        position: relative;
-        overflow: hidden;
-    }
-    .product-col::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(90deg, #c0392b, #e67e22, #c0392b);
-        transform: scaleX(0);
-        transition: transform 0.3s ease;
-    }
-    .product-col:hover::before {
-        transform: scaleX(1);
-    }
-    .product-col:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 35px rgba(192,57,43,0.15);
-    }
-    .product-image {
-        width: 180px;
-        height: 200px;
-        object-fit: contain;
-        margin-bottom: 15px;
-        filter: drop-shadow(0 6px 12px rgba(0,0,0,0.1));
-        transition: all 0.3s ease;
-    }
-    .product-col:hover .product-image {
-        transform: scale(1.05);
-        filter: drop-shadow(0 12px 20px rgba(0,0,0,0.15));
-    }
-    .product-col h4 {
-        color: #333;
-        font-size: 18px;
-        margin-top: 8px;
-        margin-bottom: 5px;
-        font-weight: 700;
-    }
-    .product-col p {
-        color: #666;
-        font-size: 13px;
-        margin: 0 0 8px 0;
-        text-transform: uppercase;
-        letter-spacing: 0.8px;
-        font-weight: 500;
-    }
-    .volume-badge {
-        display: inline-block;
-        background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
-        color: white;
-        font-size: 11px;
-        font-weight: bold;
-        padding: 5px 14px;
-        border-radius: 30px;
-        margin-top: 8px;
-        letter-spacing: 0.5px;
-        box-shadow: 0 2px 5px rgba(192,57,43,0.3);
-    }
-    .req-note {
-        font-style: italic;
-        color: #999;
-        font-size: 13px;
-        margin-top: 10px;
-        margin-bottom: 30px;
-        display: block;
-    }
-    @media (max-width: 768px) {
-        .products-row {
-            gap: 20px;
-        }
-        .product-col {
-            width: 240px;
-            padding: 20px 15px;
-        }
-        .product-image {
-            width: 150px;
-            height: 170px;
-        }
-    }
 </style>
 
 </head>
@@ -253,9 +121,6 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="#proyecto">Proyectos</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#requerimientos">Requerimientos</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#portfolio">Modulos</a>
@@ -509,193 +374,6 @@
         </div>
     </div>
     </section>
-
-    <!-- ===== START: Requerimientos del Proyecto ===== -->
-    <section id="requerimientos">
-        <div class="container">
-
-            <!-- Section title -->
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <div class="section-title">
-                        <h3>Requerimientos del Proyecto</h3>
-                    </div>
-                    <p style="font-size: 16px; margin-bottom: 30px;">
-                        <strong>Línea de alto volumen con mínimo 3 productos diferentes</strong>
-                    </p>
-                </div>
-            </div>
-
-            <!-- Two tables side by side -->
-            <div class="row" style="margin-bottom: 10px;">
-                <!-- Table 1: Tipo de Envase -->
-                <div class="col-md-5 col-md-offset-1 col-sm-6">
-                    <table class="req-table">
-                        <thead>
-                            <tr>
-                                <th>Tipo de Envase</th>
-                                <th style="text-align:center;">Volumen</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                             <tr>
-                                <td>Bajo volumen</td>
-                                <td style="text-align:center;">150 – 600 mL</td>
-                             </tr>
-                             <tr>
-                                <td>Medio volumen</td>
-                                <td style="text-align:center;">1 – 3 L</td>
-                             </tr>
-                             <tr>
-                                <td>Gran volumen (Garrafones)</td>
-                                <td style="text-align:center;">12 o 20 L</td>
-                             </tr>
-                        </tbody>
-                     </table>
-                </div>
-
-                <!-- Table 2: Aspectos de Diferenciación -->
-                <div class="col-md-4 col-sm-6">
-                    <table class="req-table">
-                        <thead>
-                             <tr>
-                                <th>Aspecto de Diferenciación</th>
-                             </tr>
-                        </thead>
-                        <tbody>
-                             <tr><td>Capacidad y geometría del envase</td></tr>
-                             <tr><td>Sabores o ingredientes</td></tr>
-                             <tr><td>Velocidad de producción</td></tr>
-                             <tr><td>Secuencia lógica de operación</td></tr>
-                             <tr><td>Estrategia de inspección y calidad</td></tr>
-                             <tr><td>Trazabilidad y toma de decisiones</td></tr>
-                        </tbody>
-                     </table>
-                </div>
-            </div>
-
-            <!-- Footnote -->
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1 text-center">
-                    <span class="req-note">Los productos deben diferenciarse en al menos dos aspectos de la tabla anterior.</span>
-                </div>
-            </div>
-
-            <!-- Sub-title for products -->
-            <div class="row" style="margin-top: 20px;">
-                <div class="col-md-12 text-center">
-                    <div class="section-title">
-                        <h3>Productos de la Línea</h3>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product images row - SVG PROFESIONALES -->
-            <div class="products-row">
-
-                <!-- Producto 1: Monster Energy Lata 473 mL -->
-                <div class="product-col">
-                    <svg class="product-image" viewBox="0 0 120 200" width="180" height="200">
-                        <defs>
-                            <linearGradient id="metalGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#1a1a2e"/>
-                                <stop offset="30%" stop-color="#2d2d44"/>
-                                <stop offset="70%" stop-color="#1a1a2e"/>
-                                <stop offset="100%" stop-color="#0f0f1a"/>
-                            </linearGradient>
-                            <linearGradient id="shineGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="rgba(255,255,255,0)"/>
-                                <stop offset="50%" stop-color="rgba(255,255,255,0.25)"/>
-                                <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
-                            </linearGradient>
-                        </defs>
-                        <ellipse cx="60" cy="188" rx="28" ry="5" fill="#aaa" opacity="0.25"/>
-                        <rect x="28" y="28" width="64" height="145" fill="url(#metalGrad1)" rx="6"/>
-                        <rect x="28" y="28" width="64" height="145" fill="url(#shineGrad1)" rx="6"/>
-                        <ellipse cx="60" cy="28" rx="28" ry="6" fill="#d35400"/>
-                        <ellipse cx="60" cy="28" rx="24" ry="4" fill="#e67e22"/>
-                        <rect x="38" y="70" width="44" height="65" fill="#c0392b" rx="3"/>
-                        <text x="60" y="98" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold" font-family="Arial">MONSTER</text>
-                        <text x="60" y="115" text-anchor="middle" fill="#f1c40f" font-size="8" font-family="Arial">ENERGY</text>
-                        <text x="60" y="142" text-anchor="middle" fill="#ecf0f1" font-size="8" font-family="Arial">473 mL</text>
-                    </svg>
-                    <h4>Monster Energy</h4>
-                    <p>Lata 473 mL</p>
-                    <span class="volume-badge">⚡ Bajo volumen</span>
-                </div>
-
-                <!-- Producto 2: Coca-Cola Botella 2L Retornable -->
-                <div class="product-col">
-                    <svg class="product-image" viewBox="0 0 120 240" width="180" height="200">
-                        <defs>
-                            <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#9bb7d4"/>
-                                <stop offset="40%" stop-color="#c0d4ec"/>
-                                <stop offset="100%" stop-color="#7c9bc0"/>
-                            </linearGradient>
-                            <linearGradient id="cokeLiquid" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#4a2a1a"/>
-                                <stop offset="50%" stop-color="#6b3e2a"/>
-                                <stop offset="100%" stop-color="#3a1e12"/>
-                            </linearGradient>
-                        </defs>
-                        <ellipse cx="60" cy="232" rx="34" ry="5" fill="#aaa" opacity="0.25"/>
-                        <path d="M28,210 Q24,195 24,180 L24,100 Q24,85 30,78 L90,78 Q96,85 96,100 L96,180 Q96,195 92,210 Z" fill="url(#glassGrad)"/>
-                        <path d="M32,190 Q28,175 28,160 L28,110 Q28,95 32,90 L88,90 Q92,95 92,110 L92,160 Q92,175 88,190 Z" fill="url(#cokeLiquid)"/>
-                        <path d="M30,78 Q34,65 40,58 L80,58 Q86,65 90,78 Z" fill="url(#glassGrad)"/>
-                        <rect x="44" y="42" width="32" height="18" rx="3" fill="url(#glassGrad)"/>
-                        <rect x="46" y="28" width="28" height="16" rx="4" fill="#d4af37"/>
-                        <ellipse cx="60" cy="28" rx="14" ry="4" fill="#f1c40f"/>
-                        <rect x="28" y="110" width="64" height="55" fill="#c0392b" rx="3"/>
-                        <text x="60" y="140" text-anchor="middle" font-family="Brush Script MT, cursive" font-size="15" fill="#fff">Coca-Cola</text>
-                        <text x="60" y="158" text-anchor="middle" fill="#fff" font-size="10" font-family="Arial">2 L Retornable</text>
-                        <rect x="75" y="65" width="8" height="120" fill="rgba(255,255,255,0.25)"/>
-                    </svg>
-                    <h4>Coca-Cola</h4>
-                    <p>Botella 2 L Retornable</p>
-                    <span class="volume-badge">🥤 Medio volumen</span>
-                </div>
-
-                <!-- Producto 3: Brisa Agua Purificada 5 Galones -->
-                <div class="product-col">
-                    <svg class="product-image" viewBox="0 0 160 250" width="180" height="200">
-                        <defs>
-                            <linearGradient id="waterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#7fc7e8"/>
-                                <stop offset="50%" stop-color="#4aa3cf"/>
-                                <stop offset="100%" stop-color="#2c7cb0"/>
-                            </linearGradient>
-                            <linearGradient id="plasticGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#e8f4fc"/>
-                                <stop offset="50%" stop-color="#d4eaf8"/>
-                                <stop offset="100%" stop-color="#b8def0"/>
-                            </linearGradient>
-                        </defs>
-                        <ellipse cx="75" cy="240" rx="50" ry="6" fill="#aaa" opacity="0.2"/>
-                        <rect x="24" y="68" width="102" height="150" fill="url(#plasticGrad)" rx="18"/>
-                        <rect x="28" y="90" width="94" height="125" fill="url(#waterGrad)" rx="14"/>
-                        <rect x="58" y="32" width="34" height="38" fill="url(#plasticGrad)" rx="6"/>
-                        <rect x="62" y="20" width="26" height="18" fill="url(#plasticGrad)" rx="4"/>
-                        <rect x="64" y="8" width="22" height="14" fill="#2980b9" rx="3"/>
-                        <ellipse cx="75" cy="8" rx="12" ry="3" fill="#3498db"/>
-                        <rect x="44" y="130" width="62" height="45" fill="rgba(255,255,255,0.9)" rx="6"/>
-                        <text x="75" y="155" text-anchor="middle" fill="#1f618d" font-size="14" font-weight="bold" font-family="Arial">brisa</text>
-                        <text x="75" y="170" text-anchor="middle" fill="#2c3e50" font-size="9" font-family="Arial">AGUA PURIFICADA</text>
-                        <text x="75" y="195" text-anchor="middle" fill="#3498db" font-size="10" font-weight="bold" font-family="Arial">5 Galones</text>
-                        <rect x="95" y="75" width="12" height="130" fill="rgba(255,255,255,0.4)"/>
-                    </svg>
-                    <h4>Brisa</h4>
-                    <p>Botellón 5 Galones (≈18.9 L)</p>
-                    <span class="volume-badge">💧 Gran volumen</span>
-                </div>
-
-            </div>
-            <!-- End products row -->
-
-        </div>
-    </section>
-    <!-- ===== END: Requerimientos del Proyecto ===== -->
-    
     <!-- Start Portfolio Section -->
 <section id="portfolio" class="portfolio-section-1">
     <style>
@@ -775,4 +453,288 @@
                             <div class="portfolio-caption">
                                 <h4>Módulo 6</h4>
                                 <a href="Modulo_6/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                <a href="https://github.com/NicolasDavila2001/
+                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_6" class="link-2"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio/img8.jpg" class="img-responsive" alt="" />
+                            <div class="portfolio-caption">
+                                <h4>Módulo 7</h4>
+                                <a href="Modulo_7/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
+                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_7" class="link-2"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio/img7.jpg" class="img-responsive" alt="" />
+                            <div class="portfolio-caption">
+                                <h4>Propuesta</h4>
+                                <a href="Resultados/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
+                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Resultados" class="link-2"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    
+                </ul>
+                <!-- End Portfolio items -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Portfolio Section -->
+     <!-- Start Testimonial Section -->
+    <section id="reflexiones" class="feature-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                
+                <h1>Reflexiones Grupales</h1>
+                <br>
+                <br>
+
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    </section>
+    <div id="reflexiones2" class="testimonial-section">
+        <div class="container">
+            <h2 class="text-center">Reflexiones Individuales</h2>
+            <!-- Start Testimonials Carousel -->
+            <div id="testimonial-carousel" class="testimonials-carousel">
+                <!-- Testimonial 1 -->
+                <div class="testimonials item">
+                    <div class="testimonial-content">
+                        <img src="images/team/nicolas.png" alt="" >
+                        <div class="testimonial-author">
+                            <div class="author">Nicolas Davila</div>
+                            <div class="designation"></div>
+                        </div>
+                        <p><!-- Colocar Aqui su reflexion--></p>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonials item">
+                    <div class="testimonial-content">
+                        <img src="images/team/juan_david.png" alt="" >
+                        <div class="testimonial-author">
+                            <div class="author">Juan Meza</div>
+                            <div class="designation"></div>
+                        </div>
+                        <p><!-- Colocar Aqui su reflexion--></p>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonials item">
+                    <div class="testimonial-content">
+                        <img src="images/team/cristian.png" alt="" >
+                        <div class="testimonial-author">
+                            <div class="author">Cristian Martínez</div>
+                            <div class="designation">CCO</div>
+                        </div>
+                        <p><!-- Colocar Aqui su reflexion--></p>
+                    </div>
+                </div>
+                <!-- Testimonial 4 -->
+                <div class="testimonials item">
+                    <div class="testimonial-content">
+                        <img src="images/team/andres.png" alt="" >
+                        <div class="testimonial-author">
+                            <div class="author">Andres Avilan</div>
+                            <div class="designation">COO</div>
+                        </div>
+                        <p><!-- Colocar Aqui su reflexion--></p>
+                        </div>
+                </div>
+                <!-- Testimonial 5 -->
+                <div class="testimonials item">
+                    <div class="testimonial-content">
+                        <img src="images/team/santiago.png" alt="" >
+                        <div class="testimonial-author">
+                            <div class="author">Santiago Avila</div>
+                            <div class="designation">CTO</div>
+                        </div>
+                        <p><!-- Colocar Aqui su reflexion--></p>
+                    </div>
+                </div>
+                <!-- Testimonial 6 -->  
+                <div class="testimonials item">
+                    <div class="testimonial-content">
+                        <img src="images/team/JuanDelgado.png" alt="" >
+                        <div class="testimonial-author">
+                            <div class="author">Juan Delgado</div>
+                            <div class="designation">CFO</div>
+                        </div>
+                        <p><!-- Colocar Aqui su reflexion--></p>
+                    </div>
+                </div>
+            </div>
+            <!-- End Testimonials Carousel -->
+        </div>
+    </div>
+    <!-- End Testimonial Section -->   
+
+    <!-- Clients Aside -->
+    <section id="partner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <h3>Nuestros provedores</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="clients">
+                    
+                    <div class="col-md-12">
+                        <img src="images/logos/allen.jpg" class="img-responsive" alt="...">
+                    </div>
+                    
+                    <div class="col-md-12">
+                        <img src="images/logos/siemens.jpg" class="img-responsive" alt="...">
+                    </div>
+                    
+                    <div class="col-md-12">
+                        <img src="images/logos/abb.jpg" class="img-responsive" alt="...">
+                    </div>
+                    
+                    <div class="col-md-12">
+                        <img src="images/logos/skf.jpg" class="img-responsive" alt="...">
+                    </div>
+                    
+                    <div class="col-md-12">
+                        <img src="images/logos/rockwell.jpg" class="img-responsive" alt="...">
+                    </div>
+
+                    <div class="col-md-12">
+                        <img src="images/logos/texas.jpg" class="img-responsive" alt="...">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    <section id="contact" class="contact">
+    <div class="container">
+        
+        <div class="row">
+            
+            <!-- Info del Proyecto -->
+            <div class="col-md-6">
+                <div class="footer-contact-info">
+                    <h4>Proyecto Académico</h4>
+                    <ul>
+                        <li><strong>Curso:</strong> APM 2026-1</li>
+                        <li><strong>Empresa:</strong> Chibcho Sistemas</li>
+                        <li><strong>Enfoque:</strong> Automatización de procesos de manufactura</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="col-md-6">
+                <div class="footer-contact-info">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li>
+                            <strong>Repositorio:</strong><br>
+                            <a href="https://github.com/NicolasDavila2001/APM-20261S" target="_blank">
+                                GitHub del proyecto
+                            </a>
+                        </li>
+                        <li>
+                            <strong>Documentación:</strong><br>
+                            <a href="https://drive.google.com/drive/folders/1QVZhY7u8GsLHCyEWJAowoTUEtw_0oujM?usp=sharing" target="_blank">
+                                Drive del proyecto
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer inferior -->
+    <footer class="style-1">
+        <div class="container">
+            <div class="row">              
+                <div class="col-md-6 col-xs-12">
+                    <span class="copyright">
+                        © 2026 Chibcho Sistemas | Proyecto académico APM
+                    </span>
+                </div>
+
+                <div class="col-md-6 col-xs-12">
+                    <div class="footer-social text-right">
+                        <ul>
+                            <li>
+                                <a href="https://github.com/NicolasDavila2001/APM-20261S" target="_blank">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                            </li>
+                            <li>
+                                    <a href="https://drive.google.com/drive/folders/1QVZhY7u8GsLHCyEWJAowoTUEtw_0oujM?usp=sharing" target="_blank" style="display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.3 78" width="20" height="20">
+                                            <path d="M6.6 66.85l3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8H.1c0 1.55.4 3.1 1.2 4.5z" fill="#fff"/>
+                                            <path d="M43.65 25L29.9 1.2C28.55 2 27.4 3.1 26.6 4.5L1.3 49.15c-.8 1.4-1.2 2.95-1.2 4.5h27.5z" fill="#fff"/>
+                                            <path d="M73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5H59.8l5.85 11.5z" fill="#fff"/>
+                                            <path d="M43.65 25L57.4 1.2C56.05.4 54.5 0 52.9 0H34.4c-1.6 0-3.1.45-4.5 1.2z" fill="#fff"/>
+                                            <path d="M59.8 53.65H27.5L13.75 77.45c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.1-.45 4.5-1.2z" fill="#fff"/>
+                                            <path d="M73.4 26.35l-12.65-21.9C59.95 3.05 58.8 2 57.4 1.2L43.65 25l16.15 28.65H87.2c0-1.55-.4-3.1-1.2-4.5z" fill="#fff"/>
+                                        </svg>
+                                    </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    <div id="loader">
+        <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+        </div>
+    </div>
+
+    
+
+    <!-- jQuery Version 2.1.1 -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="asset/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/count-to.js"></script>
+    <script src="js/jquery.appear.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.fitvids.js"></script>
+	<script src="js/styleswitcher.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
