@@ -131,3 +131,6 @@ Línea de alto volumen con mínimo **3 productos diferentes**
  - [Pagina web](https://nicolasdavila2001.github.io/APM-20261S/)
  - [Drive](https://drive.google.com/drive/folders/1QVZhY7u8GsLHCyEWJAowoTUEtw_0oujM?usp=drive_link)
  - [Presentaciones](https://drive.google.com/drive/folders/1rmt_XTF3Gyx2ZOrqQg3J9glDm1CesLqV?usp=sharing)
+ - [Video sustentación intermedia](https://www.youtube.com/watch?v=L1uTU9dJ8d0)
+ - [Video sustentación final](https://www.youtube.com/watch?v=L1uTU9dJ8d0)
+
