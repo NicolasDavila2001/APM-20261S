@@ -1,691 +1,398 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Chibcho Sistemas</title>
+    <title>Chibcho Sistemas – Módulo 1</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="asset/css/bootstrap.min.css" rel="stylesheet">
-    
+    <!-- Bootstrap Core CSS (ruta relativa desde subcarpeta Modulo_N/) -->
+    <link href="../asset/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Font Awesome CSS -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    
-    
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+
     <!-- Animate CSS -->
-    <link href="css/animate.css" rel="stylesheet" >
-    
-    <!-- Owl-Carousel -->
-    <link rel="stylesheet" href="css/owl.carousel.css" >
-    <link rel="stylesheet" href="css/owl.theme.css" >
-    <link rel="stylesheet" href="css/owl.transitions.css" >
+    <link href="../css/animate.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
-    
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+
     <!-- Colors CSS -->
-    <link rel="stylesheet" type="text/css" href="css/color/light-red.css">
-    
-    <!-- Custom Fonts -->
+    <link rel="stylesheet" type="text/css" href="../css/color/light-red.css">
+
+    <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+
+    <!-- Modernizr -->
+    <script src="../js/modernizr.custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        body {
+            padding-top: 100px;
+        }
+        .modulo-header {
+            background-color: #f5f5f5;
+            padding: 40px 0 30px;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #e74c3c;
+        }
+        .modulo-header h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .modulo-header p {
+            font-size: 16px;
+            color: #222;
+        }
+        .modulo-content {
+            padding-bottom: 60px;
+        }
+        .btn-back {
+            margin-bottom: 30px;
+        }
+        .navbar-default {
+            background-color: #222 !important;
+            border-color: #222 !important;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+        .navbar-default .navbar-brand {
+            color: #e74c3c !important;
+            font-family: 'Kaushan Script', cursive !important;
+        }
+        .navbar-default .navbar-brand:hover {
+            color: #e74c3c !important;
+        }
+        .navbar-default .nav > li > a {
+            color: #fff !important;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        .navbar-default .nav > li > a:hover,
+        .navbar-default .nav > li.active > a {
+            color: #fff !important;
+            background-color: #e74c3c !important;
+        }
+        .justified-text {
+            max-width: 900px;
+            margin: auto;
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+            .tabla-personalizada {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 20px auto;
+    }
     
+    .tabla-personalizada th,
+    .tabla-personalizada td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
     
-    <!-- Modernizer js -->
-    <script src="js/modernizr.custom.js"></script>
-
-<style>
-    /* Contadores de borde a borde */
-    section.fun-facts {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+    .tabla-personalizada th {
+        background-color: #e74c3c;
+        color: white;
+        font-weight: bold;
     }
-    section.fun-facts .container {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+    
+    .tabla-personalizada tr:nth-child(even) {
+        background-color: #f2f2f2;
     }
-    section.fun-facts .row {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+    
+    .tabla-personalizada tr:hover {
+        background-color: #ddd;
     }
-    section.fun-facts .col-xs-12 {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-        #contact a {
-        color: #ffffff;
+            .diagram-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
     }
 
-    #contact a:hover {
-        color: #ffcccc;
-        text-decoration: underline;
-    }
-    .portfolio-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    }
-    .justified-text {
-    max-width: 900px;
-    margin: auto;
-    font-size: 16px;
-    line-height: 1.8;
-    text-align: justify;
-}
-</style>
-
+    </style>
+    
 </head>
 
-<body class="index">
-    
+<body>
 
-    <!-- Navigation -->
+    <!-- =====================================================
+         NAVBAR (idéntico al de index.html)
+    ====================================================== -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top" style="display: flex; align-items: center; gap: 10px;">
-                    <img src="images/logo_chibchoSF.png" alt="Chibcho Sistemas" style="height: 40px; width: auto;">
+                    <img src="../images/logo_chibchoSF.png" alt="Chibcho Sistemas" style="height: 40px; width: auto;">
                     <span>Chibcho Sistemas</span>
                 </a>
-                            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
+            </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#feature">Nuestra Empresa</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#team">Equipo de trabajo</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#expertos">Expertos</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#proyecto">Proyectos</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Modulos</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#reflexiones">Reflexiones</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#partner">Proveedores</a>
-                    </li>
-
+                    <li class="hidden"><a href="#page-top"></a></li>
+                    <li><a href="../index.html#feature">Nuestra Empresa</a></li>
+                    <li><a href="../index.html#portfolio">Modulos</a></li>
+                    <li><a href="../index.html#about-us">APM 2025-1</a></li>
+                    <li><a href="../index.html#service">Proyecto planta de bebidas</a></li>
+                    <li><a href="../index.html#team">Equipo de trabajo</a></li>
+                    <li><a href="../index.html#partner">Expertos y Proveedores</a></li>
+                    <li><a href="../index.html#Reflexiones">Reflexiones</a></li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
     </nav>
-
-    
-    
-    
-    <!-- Start Home Page Slider -->
-    <section id="page-top">
-        <!-- Carousel -->
-        <div id="main-slide" class="carousel slide" data-ride="carousel">
+    <!-- FIN NAVBAR -->
 
 
-            <!-- Carousel inner -->
-            <div class="carousel-inner">
-
-                <div class="item active">
-                    <img class="img-responsive" src="images/galaxy.jpg" alt="slider">
-                    <div class="slider-content" style="margin-top: -180px;">
-                        <div class="col-md-12 text-center">
-                            <img src="images/logo_chibcho.png" alt="Logo Chibcho Sistemas" style="width: 450px; height: auto;">
-                            <p class="animated2">
-                                Ingeniería colombiana enfocada en automatización industrial,<br>
-                                optimización de procesos y desarrollo de soluciones inteligentes<br>
-                                para sistemas de manufactura.
-                            </p>
-                             <a class="animated3 slider btn btn-primary btn-min-block" href="#feature">Conoce mas sobre nosotros</a>  
-                        </div>
-                    </div>
-                </div>
-                <!--/ Carousel item end -->
-            </div>
-            <!-- Carousel inner end-->
-
-
-        </div>
-        <!-- /carousel -->
-    </section>
-    <!-- End Home Page Slider -->
-
-    
-    
-    <!-- Start Feature Section -->
-<section id="feature" class="feature-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                
-                <div class="section-title">
-                    <h3>¿Quiénes Somos?</h3>
-                </div>
-
-                <p class="justified-text">
-                    En <strong>Chibcho Sistemas</strong> somos una empresa especializada en el desarrollo de soluciones integrales de automatización industrial, enfocadas en transformar y optimizar procesos de manufactura mediante el uso de tecnologías avanzadas. 
-                    Nuestro equipo combina conocimientos en control industrial, robótica, simulación y analítica de datos para diseñar sistemas eficientes, flexibles y escalables. 
-                    Acompañamos a nuestros clientes en cada etapa del proceso, desde el análisis y diseño hasta la implementación y validación, garantizando mejoras significativas en productividad, calidad y competitividad dentro de un entorno alineado con los principios de la Industria 4.0.
-                </p>
-                <br>
-                <br>
-            </div>
+    <!-- =====================================================
+         ENCABEZADO DEL MÓDULO
+    ====================================================== -->
+    <div class="modulo-header">
+        <div class="container text-center">
+            <h2>Módulo 1 –  Introducción a la automatización de manufactura</h2>
+            <p class="justified-text">El presente módulo aborda el análisis de una arquitectura de automatización industrial estructurada
+                 bajo el estándar ISA-95, mediante la evaluación de la línea de producción a partir de la pirámide de automatización, con el pro
+                 pósito de determinar qué capas se encuentran cubiertas y qué elementos componen cada una de ellas. Posteriormente, se establecen las etapas del 
+                 proceso de producción, construyendo un esquema conceptual que servirá como base para el planteamiento de los diagramas a desarrollar 
+                 en el <a href="../Modulo_2/index.html">Módulo 2</a>. El módulo concluye con la 
+                 presentación de los datos iniciales recopilados durante la visita técnica realizada a la planta de FEMSA Coca-Cola, 
+                 los cuales constituyen el punto de partida para el análisis y desarrollo de los módulos subsiguientes y la propuesta de automatizacion final.</p>
         </div>
     </div>
-</section>
-<!-- End Feature Section -->
-    
 
-<!-- Start Team Member Section -->
-    <section id="team" class="team-member-section">
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL DEL MÓDULO
+         Reemplaza esta sección con el contenido real de cada módulo
+    ====================================================== -->
+    <div class="modulo-content">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div class="section-title text-center">
-                            <h3>Equipo de trabajo</h3>
-                        </div>
-                </div>
-            </div>
-            
-            <div class="row">
                 <div class="col-md-12">
-                    <div id="team-section">
-
-                                <div class="our-team">
-
-                                    <div class="team-member">
-                                        <img src="images/team/nicolas.png" class="img-responsive" alt="">
-                                        <div class="team-details">
-                                            <h4>Nicolas Fernando Davila Peñuela</h4>
-                                            <p>Ingeniero Mecatronico</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="team-member">
-                                        <img src="images/team/juan_david.png" class="img-responsive" alt="">
-                                        <div class="team-details">
-                                            <h4>Juan David Meza Criollo</h4>
-                                            <p>Ingeniero Mecatronico</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="team-member">
-                                        <img src="images/team/cristian.png" class="img-responsive" alt="">
-                                        <div class="team-details">
-                                            <h4>Cristian Fabián Martínez Bohorquez</h4>
-                                            <p>Ingeniero Mecatronico</p>
-                                        </div>
-                                    </div>    
-
-                                    <div class="team-member">
-                                        <img src="images/team/andres.png" class="img-responsive" alt="">
-                                        <div class="team-details">
-                                            <h4>Andres Mauricio Avilan Herrera</h4>
-                                            <p>Ingeniero Mecatronico</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="team-member">
-                                        <img src="images/team/santiago.png" class="img-responsive" alt="">
-                                        <div class="team-details">
-                                            <h4>Santiago Avila Corredor</h4>
-                                            <p>Ingeniero Mecatronico</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="team-member">
-                                        <img src="images/team/JuanDelgado.png" class="img-responsive" alt="">
-                                        <div class="team-details">
-                                            <h4>Juan José Delgado Estrada</h4>
-                                            <p>Ingeniero Mecatronico</p>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-
-                    
+                    <br>
+                    <div class="btn-back">
+                        <a href="../index.html#portfolio" class="btn btn-default">
+                            <i class="fa fa-arrow-left"></i>&nbsp; Volver a Módulos
+                        </a>
                     </div>
-                </div>
-            </div>
-                
-        </div>
-    </section>
-    <!-- End Team Member Section -->
+                    <br>
+                    <h2 class="text-center">Análisis de la pirámide de automatización en la planta actual </h2>
+                    <img src="piramideisa.png" alt="Descripción de la imagen" class="img-responsive center-block" style="max-width: 600px; margin: 20px auto;">
+                    <p class="justified-text">Durante la visita técnica a la planta de FEMSA Coca-Cola, se pudo determinar que en toda la linea de produccion 
+                        estan cubiertos los niveles 0, 1 y 2; con esta información se espera que alcance del proyecto por minimo pueda cubrir hasta la de gestion de 
+                        operacioenes de manufactura (MES). A continuación se describen los elementos identificados en cada nivel de la pirámide.</p>
+                    <br>
+                    <br>
+                    <table class="tabla-personalizada">
+                        <thead>
+                            <tr>
+                                <th>Nivel</th>
+                                <th>Elementos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nivel 0</td>
+                                <td>Sensores detectores,Bombas hidraulicas,Motores electricos,variadores de velocidad</td>
+                            </tr>
+                            <tr>
+                                <td>Nivel 1</td>
+                                <td>Controladores lógicos, sistemas de control discretos y regulatorio </td>
 
-
-<!-- Start Expertos Section -->
-    <section id="expertos" class="team-member-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div class="section-title text-center">
-                            <h3>Nuestros Expertos</h3>
-                        </div>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="team-section">
-
-                                <div class="our-team">
-
-                                    <div class="team-member">
-                                        <img src="images/expertos/luis_miguel.png" class="img-responsive" alt="">
-                                        <div class="team-details">
-                                            <h4>Luis Miguel Méndez M.</h4>
-                                            <p>Dr.-Ing.|Ingeniería Mecánica, Biomecánica & PrecisiónMantenimiento Hospitalario |HVAC · Máquinas Térmicas & Hidráulicas |Docente UNAL</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="team-member">
-                                        <img src="images/expertos/carlos_julio.png" class="img-responsive" alt="">
-                                        <div class="team-details">
-                                            <h4>Carlos Julio Cortés R.</h4>
-                                            <p>Dr.-Ing|Ingeniería Mecánica-Biomecánica-Precisión-Fabricación|Docente UNAL</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="team-member">
-                                        <img src="images/expertos/ubaldo.png" class="img-responsive" alt="">
-                                        <div class="team-details">
-                                            <h4>Ubaldo García Zaragoza</h4>
-                                            <p>Ing. Mecánico | Lic. Innovación & Diseño | Concepto a Prototipo Validación | PLM Producción alto volumen|Docente UNAL</p>
-                                        </div>
-                                    </div>    
-
-                                    <div class="team-member">
-                                        <img src="images/expertos/ricardo.png" class="img-responsive" alt="">
-                                        <div class="team-details">
-                                            <h4>Ricardo Ramirez H.</h4>
-                                            <p>Ing. Mecánico & Electrónico | MSc. Automatización Industrial | PhD. Ciencias de Ingeniería Mecánica|Docente UNAL</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="team-member">
-                                        <img src="images/expertos/victor.png" class="img-responsive" alt="">
-                                        <div class="team-details">
-                                            <h4>Víctor Hugo Grisales P.</h4>
-                                            <p>PhD. Mecatrónica, Robótica & Automatización| PhD. Sistemas Automáticos | Consultor Senior |Docente UNAL</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="team-member">
-                                        <img src="images/expertos/eduardo.png" class="img-responsive" alt="">
-                                        <div class="team-details">
-                                            <h4>Eduardo Barrera Gualdron</h4>
-                                            <p>Ing. Electrónico | MSc. Control · Beijing · China | Automatización & SCADA |Docente UNAL</p>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-
-                    
+                            </tr>
+                            <tr>
+                                <td>Nivel 2</td>
+                                <td>Sistemas de supervisión sobre líneas </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2 class="text-center">Etapas del proceso de producción</h2>
+                    <p class="justified-text">Se presenta un diagrama de flujo superfical sobre el proceso de embotellamiento de bebidas el cual muestra el orden 
+                        de las etapas identificadas en la visita tecnica y complementada con investigacion por parte del equipo.</p>
+                    <div class="diagram-container">
+                        <pre class="mermaid">
+                            flowchart TD
+                                A[Inicio] --> B[Tratar Agua]
+                                B --> C[Limpiar Botellas Recuperadas]
+                                C --> D[Embotellar Producto]
+                                D --> E[Empacar Producto]
+                                E --> F[Embalar para Distribución]
+                                F --> G[Fin]
+                                
+                                style A fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                                style B fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                                style C fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                                style D fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                                style E fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                                style F fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                                style G fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        </pre>
                     </div>
+                    <p >Para ver el desarrollo del VSM , Diagrama DOP,layaouts y calculo de indicadores dirigirse al <a href="../Modulo_2/index.html">Módulo 2</a>.</p> 
+                    <h2 class="text-center">Datos Establecidos segun investigación y visita Técnica </h2> 
+                    <br>
+                    <!-- Tabla 1: Líneas y Productos -->
+                    <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">Líneas y Productos</h3>
+                    <div class="contenedor-tabla">
+                        <table class="tabla-personalizada">
+                            <thead>
+                                <tr>
+                                    <th>Línea</th>
+                                    <th>Producto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>Coca Cola 237 mL (retornable)</td></tr>
+                                <tr><td>2</td><td>350 mL distintos productos (retornable)</td></tr>
+                                <tr><td>3</td><td>2L (retornable)</td></tr>
+                                <tr><td>5</td><td>No retornables (distintos tamaños)</td></tr>
+                                <tr><td>6</td><td>Latas</td></tr>
+                                <tr><td>7</td><td>Agua saborizada (Brisa)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <br>
+
+                    <!-- Tabla 2: Velocidades de Líneas -->
+                    <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">Velocidades de Líneas</h3>
+                    <div class="contenedor-tabla">
+                        <table class="tabla-personalizada">
+                            <thead>
+                                <tr>
+                                    <th>Línea</th>
+                                    <th>Velocidad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Línea 1</td><td>15k/h</td></tr>
+                                <tr><td>Línea 2</td><td>60k/h</td></tr>
+                                <tr><td>Línea 3</td><td>52k/h</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <br>
+
+                    <!-- Tabla 3: Tiempo Total de Proceso -->
+                    <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">Tiempo Total de Proceso</h3>
+                    <div class="contenedor-tabla">
+                        <table class="tabla-personalizada">
+                            <thead>
+                                <tr>
+                                    <th>Descripción</th>
+                                    <th>Tiempo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Tiempo total del proceso</td><td>90 - 105 minutos</td></tr>
+                                <tr><td>Tiempo falla promedio</td><td>21 minutos</td></tr>
+                                <tr><td>Tiempo mantenimiento promedio</td><td>17 - 30 minutos</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <br>
+
+                    <!-- Tabla 4: Tiempos Estimados por Etapa de Proceso (Línea 3) -->
+                    <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">Tiempos Estimados por Etapa de Proceso (Línea 3)</h3>
+                    <div class="contenedor-tabla">
+                        <table class="tabla-personalizada">
+                            <thead>
+                                <tr>
+                                    <th>Etapa del Proceso</th>
+                                    <th>Tiempo Estimado (min)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Lavado y preparación</td><td>25</td></tr>
+                                <tr><td>Llenado y sellado</td><td>40</td></tr>
+                                <tr><td>Etiquetado e inspección</td><td>15</td></tr>
+                                <tr><td>Empaque y paletizado</td><td>25</td></tr>
+                                <tr><td style="font-weight: bold;">Tiempo Total Aproximado</td><td style="font-weight: bold;">105</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
-            </div>
-                
-        </div>
-    </section>
-    <!-- End Team Member Section -->
-
-<!-- Project Section -->
-    <section id="proyecto" class="feature-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                
-                <h1>Proyecto FEMSA - Coca Cola</h1>
-                <br>
-                <br>
-                <p style="max-width: 900px; margin: auto; font-size: 16px; line-height: 1.8;">
-                    En <strong>Chibcho Sistemas</strong> somos una empresa especializada en el desarrollo de soluciones integrales de automatización industrial, enfocadas en transformar y optimizar procesos de manufactura mediante el uso de tecnologías avanzadas. 
-                    Nuestro equipo combina conocimientos en control industrial, robótica, simulación y analítica de datos para diseñar sistemas eficientes, flexibles y escalables. 
-                    Acompañamos a nuestros clientes en cada etapa del proceso, desde el análisis y diseño hasta la implementación y validación, garantizando mejoras significativas en productividad, calidad y competitividad dentro de un entorno alineado con los principios de la Industria 4.0.
-                </p>
-                <br>
-                <br>
-            </div>
-        </div>
-    </div>
-    </section>
-    <!-- Start Portfolio Section -->
-<section id="portfolio" class="portfolio-section-1">
-    <style>
-        #portfolio-list li {
-            width: 25% !important;
-            float: left !important;
-        }
-    </style>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-title text-center">
-                    <h3>MODULOS</h3>
-                    <p>Módulos del proyecto</p>
-                </div>                        
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                
-                <!-- Start Portfolio items -->
-                <ul id="portfolio-list">
-                    <li>
-                        <div class="portfolio-item">
-                            <img src="images/portfolio/img1.jpg" class="img-responsive" alt="" />
-                            <div class="portfolio-caption">
-                                <h4>Módulo 1</h4>
-                                <a href="Modulo_1/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_1" class="link-2"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
+                <p >"Llenado y sellado" con 40 minutos representa el cuello de botella del sistema y determina la velocidad de la operación .Por otra parte, 
+                    se asumió una producción por turno de alrededor de 416.000 botellas por turno.</p> 
+                <h3>Referencias de búsqueda</h3>
+                <div>
+                <ul style="list-style-type: none; margin: 20px 0 20px auto; max-width: 800px; text-align: left; display: inline-block;">
+                    <li style="margin-bottom: 10px; line-height: 1.6; text-align: left;">
+                        <span style="margin-right: 8px;">—</span>
+                        <a href="https://www.youtube.com/watch?v=1VRI_r-YMjI" target="_blank" rel="noopener">https://www.youtube.com/watch?v=1VRI_r-YMjI</a>
                     </li>
-                    <li>
-                        <div class="portfolio-item">
-                            <img src="images/portfolio/img2.jpg" class="img-responsive" alt="" />
-                            <div class="portfolio-caption">
-                                <h4>Módulo 2</h4>
-                                <a href="Modulo_2/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_2" class="link-2"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
+                    <li style="margin-bottom: 10px; line-height: 1.6; text-align: left;">
+                        <span style="margin-right: 8px;">—</span>
+                        <a href="https://web.facebook.com/watch/?v=521596619874703" target="_blank" rel="noopener">https://web.facebook.com/watch/?v=521596619874703</a>
                     </li>
-                    <li>
-                        <div class="portfolio-item">
-                            <img src="images/portfolio/img3.jpg" class="img-responsive" alt="" />
-                            <div class="portfolio-caption">
-                                <h4>Módulo 3</h4>
-                                <a href="Modulo_3/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_3" class="link-2"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="portfolio-item">
-                            <img src="images/portfolio/img4.jpg" class="img-responsive" alt="" />
-                            <div class="portfolio-caption">
-                                <h4>Módulo 4</h4>
-                                <a href="Modulo_4/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_4" class="link-2"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="portfolio-item">
-                            <img src="images/portfolio/img5.jpg" class="img-responsive" alt="" />
-                            <div class="portfolio-caption">
-                                <h4>Módulo 5</h4>
-                                <a href="Modulo_5/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_5" class="link-2"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="portfolio-item">
-                            <img src="images/portfolio/img6.jpg" class="img-responsive" alt="" />
-                            <div class="portfolio-caption">
-                                <h4>Módulo 6</h4>
-                                <a href="Modulo_6/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_6" class="link-2"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="portfolio-item">
-                            <img src="images/portfolio/img8.jpg" class="img-responsive" alt="" />
-                            <div class="portfolio-caption">
-                                <h4>Módulo 7</h4>
-                                <a href="Modulo_7/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_7" class="link-2"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="portfolio-item">
-                            <img src="images/portfolio/img7.jpg" class="img-responsive" alt="" />
-                            <div class="portfolio-caption">
-                                <h4>Propuesta</h4>
-                                <a href="Resultados/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Resultados" class="link-2"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    
                 </ul>
-                <!-- End Portfolio items -->
+                </div>
             </div>
+
+            <!-- Botón de regreso -->
+            <br>
+            <br>
+            <div style="display: flex; justify-content: center; gap: 20px;">
+                <div class="btn-back">
+                    <a href="../index.html#portfolio" class="btn btn-default">
+                        <i class="fa fa-arrow-left"></i>&nbsp; Volver a Módulos
+                    </a>
+                </div>
+                <div class="btn-next">
+                    <a href="../Modulo_2/Index.html" class="btn btn-default">
+                        Siguiente Módulo &nbsp;<i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <br>
         </div>
     </div>
-</section>
-<!-- End Portfolio Section -->
-     <!-- Start Testimonial Section -->
-    <section id="reflexiones" class="feature-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                
-                <h1>Reflexiones Grupales</h1>
-                <br>
-                <br>
+    <!-- FIN CONTENIDO PRINCIPAL -->
 
-                <br>
-                <br>
-            </div>
-        </div>
-    </div>
-    </section>
-    <div id="reflexiones2" class="testimonial-section">
-        <div class="container">
-            <h2 class="text-center">Reflexiones Individuales</h2>
-            <!-- Start Testimonials Carousel -->
-            <div id="testimonial-carousel" class="testimonials-carousel">
-                <!-- Testimonial 1 -->
-                <div class="testimonials item">
-                    <div class="testimonial-content">
-                        <img src="images/team/nicolas.png" alt="" >
-                        <div class="testimonial-author">
-                            <div class="author">Nicolas Davila</div>
-                            <div class="designation"></div>
-                        </div>
-                        <p><!-- Colocar Aqui su reflexion--></p>
-                    </div>
-                </div>
-                <!-- Testimonial 2 -->
-                <div class="testimonials item">
-                    <div class="testimonial-content">
-                        <img src="images/team/juan_david.png" alt="" >
-                        <div class="testimonial-author">
-                            <div class="author">Juan Meza</div>
-                            <div class="designation"></div>
-                        </div>
-                        <p><!-- Colocar Aqui su reflexion--></p>
-                    </div>
-                </div>
-                <!-- Testimonial 3 -->
-                <div class="testimonials item">
-                    <div class="testimonial-content">
-                        <img src="images/team/cristian.png" alt="" >
-                        <div class="testimonial-author">
-                            <div class="author">Cristian Martínez</div>
-                            <div class="designation">CCO</div>
-                        </div>
-                        <p><!-- Colocar Aqui su reflexion--></p>
-                    </div>
-                </div>
-                <!-- Testimonial 4 -->
-                <div class="testimonials item">
-                    <div class="testimonial-content">
-                        <img src="images/team/andres.png" alt="" >
-                        <div class="testimonial-author">
-                            <div class="author">Andres Avilan</div>
-                            <div class="designation">COO</div>
-                        </div>
-                        <p><!-- Colocar Aqui su reflexion--></p>
-                        </div>
-                </div>
-                <!-- Testimonial 5 -->
-                <div class="testimonials item">
-                    <div class="testimonial-content">
-                        <img src="images/team/santiago.png" alt="" >
-                        <div class="testimonial-author">
-                            <div class="author">Santiago Avila</div>
-                            <div class="designation">CTO</div>
-                        </div>
-                        <p><!-- Colocar Aqui su reflexion--></p>
-                    </div>
-                </div>
-                <!-- Testimonial 6 -->  
-                <div class="testimonials item">
-                    <div class="testimonial-content">
-                        <img src="images/team/JuanDelgado.png" alt="" >
-                        <div class="testimonial-author">
-                            <div class="author">Juan Delgado</div>
-                            <div class="designation">CFO</div>
-                        </div>
-                        <p><!-- Colocar Aqui su reflexion--></p>
-                    </div>
-                </div>
-            </div>
-            <!-- End Testimonials Carousel -->
-        </div>
-    </div>
-    <!-- End Testimonial Section -->   
 
-    <!-- Clients Aside -->
-    <section id="partner">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title text-center">
-                        <h3>Nuestros provedores</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="clients">
-                    
-                    <div class="col-md-12">
-                        <img src="images/logos/allen.jpg" class="img-responsive" alt="...">
-                    </div>
-                    
-                    <div class="col-md-12">
-                        <img src="images/logos/siemens.jpg" class="img-responsive" alt="...">
-                    </div>
-                    
-                    <div class="col-md-12">
-                        <img src="images/logos/abb.jpg" class="img-responsive" alt="...">
-                    </div>
-                    
-                    <div class="col-md-12">
-                        <img src="images/logos/skf.jpg" class="img-responsive" alt="...">
-                    </div>
-                    
-                    <div class="col-md-12">
-                        <img src="images/logos/rockwell.jpg" class="img-responsive" alt="...">
-                    </div>
-
-                    <div class="col-md-12">
-                        <img src="images/logos/texas.jpg" class="img-responsive" alt="...">
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
-    
-    
+    <!-- =====================================================
+         SECCIÓN DE CONTACTO Y FOOTER
+         (idéntica a la del index.html)
+    ====================================================== -->
     <section id="contact" class="contact">
-    <div class="container">
-        
-        <div class="row">
-            
-            <!-- Info del Proyecto -->
-            <div class="col-md-6">
-                <div class="footer-contact-info">
-                    <h4>Proyecto Académico</h4>
-                    <ul>
-                        <li><strong>Curso:</strong> APM 2026-1</li>
-                        <li><strong>Empresa:</strong> Chibcho Sistemas</li>
-                        <li><strong>Enfoque:</strong> Automatización de procesos de manufactura</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Links -->
-            <div class="col-md-6">
-                <div class="footer-contact-info">
-                    <h4>Recursos</h4>
-                    <ul>
-                        <li>
-                            <strong>Repositorio:</strong><br>
-                            <a href="https://github.com/NicolasDavila2001/APM-20261S" target="_blank">
-                                GitHub del proyecto
-                            </a>
-                        </li>
-                        <li>
-                            <strong>Documentación:</strong><br>
-                            <a href="https://drive.google.com/drive/folders/1QVZhY7u8GsLHCyEWJAowoTUEtw_0oujM?usp=sharing" target="_blank">
-                                Drive del proyecto
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Footer inferior -->
-    <footer class="style-1">
-        <div class="container">
-            <div class="row">              
-                <div class="col-md-6 col-xs-12">
-                    <span class="copyright">
-                        © 2026 Chibcho Sistemas | Proyecto académico APM
-                    </span>
-                </div>
-
-                <div class="col-md-6 col-xs-12">
-                    <div class="footer-social text-right">
-                        <ul>
-                            <li>
-                                <a href="https://github.com/NicolasDavila2001/APM-20261S" target="_blank">
-                                    <i class="fa fa-github"></i>
-                                </a>
-                            </li>
-                            <li>
+        <!-- Footer con redes sociales -->
+        <footer class="style-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-xs-12">
+                        <span class="copyright">Copyright &copy; Chibcho Sistemas 2025</span>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="footer-social text-center">
+                            <ul>
+                                <li><a href="https://github.com/NicolasDavila2001/APM-20261S.git" target="_blank"><i class="fa fa-github"></i></a></li>
+                                <li>
                                     <a href="https://drive.google.com/drive/folders/1QVZhY7u8GsLHCyEWJAowoTUEtw_0oujM?usp=sharing" target="_blank" style="display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px;">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.3 78" width="20" height="20">
                                             <path d="M6.6 66.85l3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8H.1c0 1.55.4 3.1 1.2 4.5z" fill="#fff"/>
@@ -696,47 +403,33 @@
                                             <path d="M73.4 26.35l-12.65-21.9C59.95 3.05 58.8 2 57.4 1.2L43.65 25l16.15 28.65H87.2c0-1.55-.4-3.1-1.2-4.5z" fill="#fff"/>
                                         </svg>
                                     </a>
-                            </li>
-
-                        </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="footer-link">
+                            <ul class="pull-right">
+                                <li><a href="#">Política de Privacidad</a></li>
+                                <li><a href="#">Términos de Uso</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-
             </div>
-        </div>
+        </footer>
+    </section>
+    <!-- FIN CONTACTO Y FOOTER -->
 
-    <div id="loader">
-        <div class="spinner">
-            <div class="dot1"></div>
-            <div class="dot2"></div>
-        </div>
-    </div>
 
-    
-
-    <!-- jQuery Version 2.1.1 -->
-    <script src="js/jquery-2.1.1.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="asset/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/count-to.js"></script>
-    <script src="js/jquery.appear.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.fitvids.js"></script>
-	<script src="js/styleswitcher.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/script.js"></script>
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../asset/js/bootstrap.min.js"></script>
+    <script src="../js/jquery.easing.1.3.js"></script>
+    <script src="../js/classie.js"></script>
+    <script src="../js/cbpAnimatedHeader.js"></script>
 
 </body>
-
 </html>
