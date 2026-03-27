@@ -118,7 +118,7 @@ Línea de alto volumen con mínimo **3 productos diferentes**
 
 ## 🗂️Modulos del Proyecto
 
-- [Modulo 1: Introducción a la automatización de manufactura ](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_1/)
+- [Modulo 1: Introducción a la automatización de manufactura ](Modulo_1)
 - [Modulo 2: Gestión de producción ](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_2/)
 - [Modulo 3: Planeación de proyectos](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_3/)
 - [Modulo 4: Celdas robotizadas de manufactura](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_4/)
@@ -126,6 +126,7 @@ Línea de alto volumen con mínimo **3 productos diferentes**
 - [Modulo 6: Automatización discreta (PLC)](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_6/)
 - [Modulo 7: SCADA y comunicaciones](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_7/)
 - [Resultados -  Propuesta de automatización](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Resultados/)
+- [Reflexiones]()
 
 ## 💾Anexos 
  - [Pagina web](https://nicolasdavila2001.github.io/APM-20261S/)
