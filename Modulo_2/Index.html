@@ -2,176 +2,177 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
 
-    <title>Chibcho Sistemas – Módulo 2</title>
+<title>Chibcho Sistemas – Módulo 2</title>
 
-    <!-- Bootstrap Core CSS (ruta relativa desde subcarpeta Modulo_N/) -->
-    <link href="../asset/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Core CSS (ruta relativa desde subcarpeta Modulo_N/) -->
+<link href="../asset/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Font Awesome CSS -->
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
+<!-- Font Awesome CSS -->
+<link href="../css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- Animate CSS -->
-    <link href="../css/animate.css" rel="stylesheet">
+<!-- Animate CSS -->
+<link href="../css/animate.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="../css/style.css" rel="stylesheet">
-    <link href="../css/responsive.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="../css/style.css" rel="stylesheet">
+<link href="../css/responsive.css" rel="stylesheet">
 
-    <!-- Colors CSS -->
-    <link rel="stylesheet" type="text/css" href="../css/color/light-red.css">
+<!-- Colors CSS -->
+<link rel="stylesheet" type="text/css" href="../css/color/light-red.css">
 
-    <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+<!-- Google Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 
-    <!-- Modernizr -->
-    <script src="../js/modernizr.custom.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <style>
-        body {
-            padding-top: 100px;
-        }
-        .modulo-header {
-            background-color: #f5f5f5;
-            padding: 40px 0 30px;
-            margin-bottom: 40px;
-            border-bottom: 3px solid #e74c3c;
-        }
-        .modulo-header h2 {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        .modulo-header p {
-            font-size: 16px;
-            color: #222;
-        }
-        .modulo-content {
-            padding-bottom: 60px;
-        }
-        .btn-back {
-            margin-bottom: 30px;
-        }
-        .navbar-default {
-            background-color: #222 !important;
-            border-color: #222 !important;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-        }
-        .navbar-default .navbar-brand {
-            color: #e74c3c !important;
-            font-family: 'Kaushan Script', cursive !important;
-        }
-        .navbar-default .navbar-brand:hover {
-            color: #e74c3c !important;
-        }
-        .navbar-default .nav > li > a {
-            color: #fff !important;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-size: 12px;
-        }
-        .navbar-default .nav > li > a:hover,
-        .navbar-default .nav > li.active > a {
-            color: #fff !important;
-            background-color: #e74c3c !important;
-        }
-        .justified-text {
-            max-width: 900px;
-            margin: auto;
-            font-size: 16px;
-            line-height: 1.8;
-            text-align: justify;
-        }
-            .tabla-personalizada {
-        width: 80%;
-        border-collapse: collapse;
-        margin: 20px auto;
-    }
-    
-    .tabla-personalizada th,
-    .tabla-personalizada td {
-        border: 1px solid #ddd;
-        padding: 12px;
-        text-align: left;
-    }
-    
-    .tabla-personalizada th {
-        background-color: #e74c3c;
-        color: white;
-        font-weight: bold;
-    }
-    
-    .tabla-personalizada tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-    
-    .tabla-personalizada tr:hover {
-        background-color: #ddd;
-    }
-            .diagram-container {
-            text-align: center;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-    }
+<!-- Modernizr -->
+<script src="../js/modernizr.custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<!--[if lt IE 9]>
+       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+   <![endif]-->
+<style>
+body {
+padding-top: 100px;
+}
+.modulo-header {
+background-color: #f5f5f5;
+padding: 40px 0 30px;
+margin-bottom: 40px;
+border-bottom: 3px solid #e74c3c;
+}
+.modulo-header h2 {
+font-size: 32px;
+font-weight: 700;
+margin-bottom: 10px;
+}
+.modulo-header p {
+font-size: 16px;
+color: #222;
+}
+.modulo-content {
+padding-bottom: 60px;
+}
+.btn-back {
+margin-bottom: 30px;
+}
+.navbar-default {
+background-color: #222 !important;
+border-color: #222 !important;
+box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+.navbar-default .navbar-brand {
+color: #e74c3c !important;
+font-family: 'Kaushan Script', cursive !important;
+}
+.navbar-default .navbar-brand:hover {
+color: #e74c3c !important;
+}
+.navbar-default .nav > li > a {
+color: #fff !important;
+font-weight: 600;
+letter-spacing: 1px;
+text-transform: uppercase;
+font-size: 12px;
+}
+.navbar-default .nav > li > a:hover,
+.navbar-default .nav > li.active > a {
+color: #fff !important;
+background-color: #e74c3c !important;
+}
+.justified-text {
+max-width: 900px;
+margin: auto;
+font-size: 16px;
+line-height: 1.8;
+text-align: justify;
+}
+.tabla-personalizada {
+width: 80%;
+border-collapse: collapse;
+margin: 20px auto;
+}
 
-    </style>
-    
+.tabla-personalizada th,
+.tabla-personalizada td {
+border: 1px solid #ddd;
+padding: 12px;
+text-align: left;
+}
+
+.tabla-personalizada th {
+background-color: #e74c3c;
+color: white;
+font-weight: bold;
+}
+
+.tabla-personalizada tr:nth-child(even) {
+background-color: #f2f2f2;
+}
+
+.tabla-personalizada tr:hover {
+background-color: #ddd;
+}
+.diagram-container {
+text-align: center;
+padding: 20px;
+background-color: #fff;
+border-radius: 8px;
+}
+
+</style>
+
 </head>
 
 <body>
 
-    <!-- =====================================================
-         NAVBAR (idéntico al de index.html)
-    ====================================================== -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top" style="display: flex; align-items: center; gap: 10px;">
-                    <img src="../images/logo_chibchoSF.png" alt="Chibcho Sistemas" style="height: 40px; width: auto;">
-                    <span>Chibcho Sistemas</span>
-                </a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden"><a href="#page-top"></a></li>
-                    <li><a href="../index.html#feature">Nuestra Empresa</a></li>
-                    <li><a href="../index.html#portfolio">Modulos</a></li>
-                    <li><a href="../index.html#about-us">APM 2025-1</a></li>
-                    <li><a href="../index.html#service">Proyecto planta de bebidas</a></li>
-                    <li><a href="../index.html#team">Equipo de trabajo</a></li>
-                    <li><a href="../index.html#partner">Expertos y Proveedores</a></li>
-                    <li><a href="../index.html#Reflexiones">Reflexiones</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- FIN NAVBAR -->
+<!-- =====================================================
+        NAVBAR (idéntico al de index.html)
+   ====================================================== -->
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class="container">
+<div class="navbar-header page-scroll">
+<button type="button" class="navbar-toggle" data-toggle="collapse"
+data-target="#bs-example-navbar-collapse-1">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand page-scroll" href="#page-top" style="display: flex; align-items: center; gap: 10px;">
+<img src="../images/logo_chibchoSF.png" alt="Chibcho Sistemas" style="height: 40px; width: auto;">
+<span>Chibcho Sistemas</span>
+</a>
+</div>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav navbar-right">
+<li class="hidden"><a href="#page-top"></a></li>
+<li><a href="../index.html#feature">Nuestra Empresa</a></li>
+<li><a href="../index.html#portfolio">Modulos</a></li>
+<li><a href="../index.html#about-us">APM 2025-1</a></li>
+<li><a href="../index.html#service">Proyecto planta de bebidas</a></li>
+<li><a href="../index.html#team">Equipo de trabajo</a></li>
+<li><a href="../index.html#partner">Expertos y Proveedores</a></li>
+<li><a href="../index.html#Reflexiones">Reflexiones</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- FIN NAVBAR -->
 
 
-    <!-- =====================================================
-         ENCABEZADO DEL MÓDULO
-    ====================================================== -->
-    <div class="modulo-header">
-        <div class="container text-center">
-            <h2>Módulo 2 –  Gestión de producción</h2>
+<!-- =====================================================
+        ENCABEZADO DEL MÓDULO
+   ====================================================== -->
+<div class="modulo-header">
+<div class="container text-center">
+<h2>Módulo 2 –  Gestión de producción</h2>
+            <p>En el presente módulo se aborda de manera integral el estudio del proceso de embotellamiento analizado en el <a href="../Modulo_1/index.html">Módulo 1</a>, a partir de la información investigada y recopilada durante una visita técnica. Se presentan herramientas clave de análisis como el diagrama de operaciones de proceso, el diagrama de análisis, el layout,flujo de materiales y el Value Stream Mapping (VSM), Adicional se hace el calculo de indicadores y parametros de produccion de la planta inicial los cuales son la base para presentar la propuesta de automatización para mejorar estos.Adicionalmente La propuesta final se enfoca únicamente en el proceso de producción de bebidas. El tratamiento de agua se incluye en este módulo debido a la relevancia que se le atribuyó durante la visita técnica, sin que forme parte del alcance de la propuesta.</p>
             <p class="justified-text">En el presente módulo se aborda de manera integral el estudio del proceso de 
                 embotellamiento presentado en el <a href="../Modulo_1/index.html">Módulo 1</a>, a partir de la información 
                 investigada y recopilada durante la visita técnica. Se presentan herramientas clave de análisis como el diagrama de 
@@ -180,23 +181,23 @@
                 la propuesta de automatización.Cabe resaltar que La propuesta final se enfoca únicamente en el proceso de producción 
                 de bebidas. El tratamiento de agua se incluye en este módulo debido a la relevancia que se le atribuyó durante la visita técnica, sin 
                 que forme parte del alcance de la propuesta.</p>
-        </div>
-    </div>
+</div>
+</div>
 
 
-    <!-- =====================================================
-         CONTENIDO PRINCIPAL DEL MÓDULO
-         Reemplaza esta sección con el contenido real de cada módulo
-    ====================================================== -->
-    <div class="modulo-content">
-        <div class="container">
+<!-- =====================================================
+        CONTENIDO PRINCIPAL DEL MÓDULO
+        Reemplaza esta sección con el contenido real de cada módulo
+   ====================================================== -->
+<div class="modulo-content">
+<div class="container">
 
-            <!-- Botón de regreso -->
-            <div class="btn-back">
-                <a href="../index.html#portfolio" class="btn btn-default">
-                    <i class="fa fa-arrow-left"></i>&nbsp; Volver a Módulos
-                </a>
-            </div>
+<!-- Botón de regreso -->
+<div class="btn-back">
+<a href="../index.html#portfolio" class="btn btn-default">
+<i class="fa fa-arrow-left"></i>&nbsp; Volver a Módulos
+</a>
+</div>
             <br>
             <h2 class="text-center">Diagrama de Operaciones de Proceso  </h2>
             <p class="justified-text">Se presentan los diagramas de operaciones de proceso de dos etapas 
@@ -301,79 +302,79 @@
             <p >Nota: Para ver los diagramas DOP con su respectiva nomenclatura, revisar <a href="Diagrama_DOP.pdf">diagramas DOPs</a> .</p>
 
 
-            <br>
-            <br>
-            <div style="display: flex; justify-content: center; gap: 20px;">
-                <div class="btn-back">
-                    <a href="../Modulo_1/Index.html" class="btn btn-default">
-                        <i class="fa fa-arrow-left"></i>&nbsp; Módulo Anterior
-                    </a>
-                </div>
-                <div class="btn-next">
-                    <a href="../Modulo_3/Index.html" class="btn btn-default">
-                        Siguiente Módulo &nbsp;<i class="fa fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- FIN CONTENIDO PRINCIPAL -->
+<br>
+<br>
+<div style="display: flex; justify-content: center; gap: 20px;">
+<div class="btn-back">
+<a href="../Modulo_1/Index.html" class="btn btn-default">
+<i class="fa fa-arrow-left"></i>&nbsp; Módulo Anterior
+</a>
+</div>
+<div class="btn-next">
+<a href="../Modulo_3/Index.html" class="btn btn-default">
+Siguiente Módulo &nbsp;<i class="fa fa-arrow-right"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- FIN CONTENIDO PRINCIPAL -->
 
 
-    <!-- =====================================================
-         SECCIÓN DE CONTACTO Y FOOTER
-         (idéntica a la del index.html)
-    ====================================================== -->
-    <section id="contact" class="contact">
-        <!-- Footer con redes sociales -->
-        <footer class="style-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-xs-12">
-                        <span class="copyright">Copyright &copy; Chibcho Sistemas 2025</span>
-                    </div>
-                    <div class="col-md-4 col-xs-12">
-                        <div class="footer-social text-center">
-                            <ul>
-                                <li><a href="https://github.com/NicolasDavila2001/APM-20261S.git" target="_blank"><i class="fa fa-github"></i></a></li>
-                                <li>
-                                    <a href="https://drive.google.com/drive/folders/1QVZhY7u8GsLHCyEWJAowoTUEtw_0oujM?usp=sharing" target="_blank" style="display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px;">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.3 78" width="20" height="20">
-                                            <path d="M6.6 66.85l3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8H.1c0 1.55.4 3.1 1.2 4.5z" fill="#fff"/>
-                                            <path d="M43.65 25L29.9 1.2C28.55 2 27.4 3.1 26.6 4.5L1.3 49.15c-.8 1.4-1.2 2.95-1.2 4.5h27.5z" fill="#fff"/>
-                                            <path d="M73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5H59.8l5.85 11.5z" fill="#fff"/>
-                                            <path d="M43.65 25L57.4 1.2C56.05.4 54.5 0 52.9 0H34.4c-1.6 0-3.1.45-4.5 1.2z" fill="#fff"/>
-                                            <path d="M59.8 53.65H27.5L13.75 77.45c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.1-.45 4.5-1.2z" fill="#fff"/>
-                                            <path d="M73.4 26.35l-12.65-21.9C59.95 3.05 58.8 2 57.4 1.2L43.65 25l16.15 28.65H87.2c0-1.55-.4-3.1-1.2-4.5z" fill="#fff"/>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-xs-12">
-                        <div class="footer-link">
-                            <ul class="pull-right">
-                                <li><a href="#">Política de Privacidad</a></li>
-                                <li><a href="#">Términos de Uso</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </section>
-    <!-- FIN CONTACTO Y FOOTER -->
+<!-- =====================================================
+        SECCIÓN DE CONTACTO Y FOOTER
+        (idéntica a la del index.html)
+   ====================================================== -->
+<section id="contact" class="contact">
+<!-- Footer con redes sociales -->
+<footer class="style-1">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-xs-12">
+<span class="copyright">Copyright &copy; Chibcho Sistemas 2025</span>
+</div>
+<div class="col-md-4 col-xs-12">
+<div class="footer-social text-center">
+<ul>
+<li><a href="https://github.com/NicolasDavila2001/APM-20261S.git" target="_blank"><i class="fa fa-github"></i></a></li>
+<li>
+<a href="https://drive.google.com/drive/folders/1QVZhY7u8GsLHCyEWJAowoTUEtw_0oujM?usp=sharing" target="_blank" style="display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.3 78" width="20" height="20">
+<path d="M6.6 66.85l3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8H.1c0 1.55.4 3.1 1.2 4.5z" fill="#fff"/>
+<path d="M43.65 25L29.9 1.2C28.55 2 27.4 3.1 26.6 4.5L1.3 49.15c-.8 1.4-1.2 2.95-1.2 4.5h27.5z" fill="#fff"/>
+<path d="M73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5H59.8l5.85 11.5z" fill="#fff"/>
+<path d="M43.65 25L57.4 1.2C56.05.4 54.5 0 52.9 0H34.4c-1.6 0-3.1.45-4.5 1.2z" fill="#fff"/>
+<path d="M59.8 53.65H27.5L13.75 77.45c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.1-.45 4.5-1.2z" fill="#fff"/>
+<path d="M73.4 26.35l-12.65-21.9C59.95 3.05 58.8 2 57.4 1.2L43.65 25l16.15 28.65H87.2c0-1.55-.4-3.1-1.2-4.5z" fill="#fff"/>
+</svg>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-md-4 col-xs-12">
+<div class="footer-link">
+<ul class="pull-right">
+<li><a href="#">Política de Privacidad</a></li>
+<li><a href="#">Términos de Uso</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</section>
+<!-- FIN CONTACTO Y FOOTER -->
 
 
-    <!-- =====================================================
-         SCRIPTS
-    ====================================================== -->
-    <script src="../js/jquery-2.1.1.min.js"></script>
-    <script src="../asset/js/bootstrap.min.js"></script>
-    <script src="../js/jquery.easing.1.3.js"></script>
-    <script src="../js/classie.js"></script>
-    <script src="../js/cbpAnimatedHeader.js"></script>
+<!-- =====================================================
+        SCRIPTS
+   ====================================================== -->
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../asset/js/bootstrap.min.js"></script>
+<script src="../js/jquery.easing.1.3.js"></script>
+<script src="../js/classie.js"></script>
+<script src="../js/cbpAnimatedHeader.js"></script>
 
 </body>
 </html>
