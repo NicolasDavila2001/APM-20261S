@@ -60,7 +60,7 @@
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
-    #contact a {
+        #contact a {
         color: #ffffff;
     }
 
@@ -69,125 +69,17 @@
         text-decoration: underline;
     }
     .portfolio-item img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
     }
     .justified-text {
-        max-width: 900px;
-        margin: auto;
-        font-size: 16px;
-        line-height: 1.8;
-        text-align: justify;
-    }
-
-    /* ===== Requerimientos Section ===== */
-    #requerimientos {
-        background-color: #f8f5f5;
-    }
-    .req-table {
-        border-collapse: separate !important;
-        border-spacing: 0;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        width: 100%;
-    }
-    .req-table thead th {
-        background-color: #c0392b;
-        color: #fff;
-        font-weight: 600;
-        letter-spacing: 0.3px;
-        border: none !important;
-        padding: 12px 18px;
-        font-size: 14px;
-    }
-    .req-table tbody tr td {
-        border-color: #f0dada !important;
-        font-size: 14px;
-        padding: 10px 18px;
-        color: #444;
-    }
-    .req-table tbody tr:nth-child(even) td {
-        background-color: #fdf7f7;
-    }
-    .product-card {
-        transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1);
-        display: inline-block;
-        cursor: default;
-    }
-    .product-card:hover {
-        transform: translateY(-10px);
-    }
-    .product-card h4 {
-        color: #333;
-        font-size: 15px;
-        margin-top: 12px;
-        margin-bottom: 4px;
-        font-weight: 600;
-    }
-    .product-card p {
-        color: #888;
-        font-size: 12px;
-        margin: 0;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-    .products-row {
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 40px;
-        padding-top: 30px;
-        padding-bottom: 20px;
-    }
-    .product-col {
-        text-align: center;
-        padding: 20px 30px;
-        background: #fff;
-        border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        transition: all 0.3s ease;
-        width: 240px;
-    }
-    .product-col:hover {
-        box-shadow: 0 12px 30px rgba(192,57,43,0.15);
-        transform: translateY(-5px);
-    }
-    .product-image {
-        width: 180px;
-        height: 200px;
-        object-fit: contain;
-        margin-bottom: 15px;
-        filter: drop-shadow(0 6px 12px rgba(0,0,0,0.1));
-        transition: all 0.3s ease;
-    }
-    .product-col:hover .product-image {
-        transform: scale(1.05);
-        filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
-    }
-    .req-note {
-        font-style: italic;
-        color: #999;
-        font-size: 13px;
-        margin-top: 10px;
-        margin-bottom: 30px;
-        display: block;
-    }
-    
-    /* Badge de volumen */
-    .volume-badge {
-        display: inline-block;
-        background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
-        color: white;
-        font-size: 11px;
-        font-weight: bold;
-        padding: 4px 12px;
-        border-radius: 20px;
-        margin-top: 8px;
-        letter-spacing: 0.5px;
-    }
+    max-width: 900px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+}
 </style>
 
 </head>
@@ -210,7 +102,7 @@
                     <img src="images/logo_chibchoSF.png" alt="Chibcho Sistemas" style="height: 40px; width: auto;">
                     <span>Chibcho Sistemas</span>
                 </a>
-            </div>
+                            </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -239,6 +131,7 @@
                     <li>
                         <a class="page-scroll" href="#partner">Proveedores</a>
                     </li>
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -246,13 +139,18 @@
         <!-- /.container-fluid -->
     </nav>
 
+    
+    
+    
     <!-- Start Home Page Slider -->
     <section id="page-top">
         <!-- Carousel -->
         <div id="main-slide" class="carousel slide" data-ride="carousel">
 
+
             <!-- Carousel inner -->
             <div class="carousel-inner">
+
                 <div class="item active">
                     <img class="img-responsive" src="images/galaxy.jpg" alt="slider">
                     <div class="slider-content" style="margin-top: -180px;">
@@ -270,433 +168,340 @@
                 <!--/ Carousel item end -->
             </div>
             <!-- Carousel inner end-->
+
+
         </div>
         <!-- /carousel -->
     </section>
     <!-- End Home Page Slider -->
 
+    
+    
     <!-- Start Feature Section -->
-    <section id="feature" class="feature-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <div class="section-title">
-                        <h3>¿Quiénes Somos?</h3>
-                    </div>
-                    <p class="justified-text">
-                        En <strong>Chibcho Sistemas</strong> somos una empresa especializada en el desarrollo de soluciones integrales de automatización industrial, enfocadas en transformar y optimizar procesos de manufactura mediante el uso de tecnologías avanzadas. 
-                        Nuestro equipo combina conocimientos en control industrial, robótica, simulación y analítica de datos para diseñar sistemas eficientes, flexibles y escalables. 
-                        Acompañamos a nuestros clientes en cada etapa del proceso, desde el análisis y diseño hasta la implementación y validación, garantizando mejoras significativas en productividad, calidad y competitividad dentro de un entorno alineado con los principios de la Industria 4.0.
-                    </p>
-                    <br>
-                    <br>
+<section id="feature" class="feature-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                
+                <div class="section-title">
+                    <h3>¿Quiénes Somos?</h3>
                 </div>
+
+                <p class="justified-text">
+                    En <strong>Chibcho Sistemas</strong> somos una empresa especializada en el desarrollo de soluciones integrales de automatización industrial, enfocadas en transformar y optimizar procesos de manufactura mediante el uso de tecnologías avanzadas. 
+                    Nuestro equipo combina conocimientos en control industrial, robótica, simulación y analítica de datos para diseñar sistemas eficientes, flexibles y escalables. 
+                    Acompañamos a nuestros clientes en cada etapa del proceso, desde el análisis y diseño hasta la implementación y validación, garantizando mejoras significativas en productividad, calidad y competitividad dentro de un entorno alineado con los principios de la Industria 4.0.
+                </p>
+                <br>
+                <br>
             </div>
         </div>
-    </section>
-    <!-- End Feature Section -->
+    </div>
+</section>
+<!-- End Feature Section -->
+    
 
-    <!-- Start Team Member Section -->
+<!-- Start Team Member Section -->
     <section id="team" class="team-member-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="section-title text-center">
-                        <h3>Equipo de trabajo</h3>
-                    </div>
+                            <h3>Equipo de trabajo</h3>
+                        </div>
                 </div>
             </div>
             
             <div class="row">
                 <div class="col-md-12">
                     <div id="team-section">
-                        <div class="our-team">
-                            <div class="team-member">
-                                <img src="images/team/nicolas.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>Nicolas Fernando Davila Peñuela</h4>
-                                    <p>Ingeniero Mecatronico</p>
+
+                                <div class="our-team">
+
+                                    <div class="team-member">
+                                        <img src="images/team/nicolas.png" class="img-responsive" alt="">
+                                        <div class="team-details">
+                                            <h4>Nicolas Fernando Davila Peñuela</h4>
+                                            <p>Ingeniero Mecatronico</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="team-member">
+                                        <img src="images/team/juan_david.png" class="img-responsive" alt="">
+                                        <div class="team-details">
+                                            <h4>Juan David Meza Criollo</h4>
+                                            <p>Ingeniero Mecatronico</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="team-member">
+                                        <img src="images/team/cristian.png" class="img-responsive" alt="">
+                                        <div class="team-details">
+                                            <h4>Cristian Fabián Martínez Bohorquez</h4>
+                                            <p>Ingeniero Mecatronico</p>
+                                        </div>
+                                    </div>    
+
+                                    <div class="team-member">
+                                        <img src="images/team/andres.png" class="img-responsive" alt="">
+                                        <div class="team-details">
+                                            <h4>Andres Mauricio Avilan Herrera</h4>
+                                            <p>Ingeniero Mecatronico</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="team-member">
+                                        <img src="images/team/santiago.png" class="img-responsive" alt="">
+                                        <div class="team-details">
+                                            <h4>Santiago Avila Corredor</h4>
+                                            <p>Ingeniero Mecatronico</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="team-member">
+                                        <img src="images/team/JuanDelgado.png" class="img-responsive" alt="">
+                                        <div class="team-details">
+                                            <h4>Juan José Delgado Estrada</h4>
+                                            <p>Ingeniero Mecatronico</p>
+                                        </div>
+                                    </div>
+
+
                                 </div>
-                            </div>
-                            <div class="team-member">
-                                <img src="images/team/juan_david.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>Juan David Meza Criollo</h4>
-                                    <p>Ingeniero Mecatronico</p>
-                                </div>
-                            </div>
-                            <div class="team-member">
-                                <img src="images/team/cristian.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>Cristian Fabián Martínez Bohorquez</h4>
-                                    <p>Ingeniero Mecatronico</p>
-                                </div>
-                            </div>    
-                            <div class="team-member">
-                                <img src="images/team/andres.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>Andres Mauricio Avilan Herrera</h4>
-                                    <p>Ingeniero Mecatronico</p>
-                                </div>
-                            </div>
-                            <div class="team-member">
-                                <img src="images/team/santiago.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>Santiago Avila Corredor</h4>
-                                    <p>Ingeniero Mecatronico</p>
-                                </div>
-                            </div>
-                            <div class="team-member">
-                                <img src="images/team/JuanDelgado.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>Juan José Delgado Estrada</h4>
-                                    <p>Ingeniero Mecatronico</p>
-                                </div>
-                            </div>
-                        </div>
+
+                    
                     </div>
                 </div>
             </div>
+                
         </div>
     </section>
     <!-- End Team Member Section -->
 
-    <!-- Start Expertos Section -->
+
+<!-- Start Expertos Section -->
     <section id="expertos" class="team-member-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="section-title text-center">
-                        <h3>Nuestros Expertos</h3>
-                    </div>
+                            <h3>Nuestros Expertos</h3>
+                        </div>
                 </div>
             </div>
             
             <div class="row">
                 <div class="col-md-12">
                     <div id="team-section">
-                        <div class="our-team">
-                            <div class="team-member">
-                                <img src="images/expertos/luis_miguel.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>Luis Miguel Méndez M.</h4>
-                                    <p>Dr.-Ing.|Ingeniería Mecánica, Biomecánica & PrecisiónMantenimiento Hospitalario |HVAC · Máquinas Térmicas & Hidráulicas |Docente UNAL</p>
+
+                                <div class="our-team">
+
+                                    <div class="team-member">
+                                        <img src="images/expertos/luis_miguel.png" class="img-responsive" alt="">
+                                        <div class="team-details">
+                                            <h4>Luis Miguel Méndez M.</h4>
+                                            <p>Dr.-Ing.|Ingeniería Mecánica, Biomecánica & PrecisiónMantenimiento Hospitalario |HVAC · Máquinas Térmicas & Hidráulicas |Docente UNAL</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="team-member">
+                                        <img src="images/expertos/carlos_julio.png" class="img-responsive" alt="">
+                                        <div class="team-details">
+                                            <h4>Carlos Julio Cortés R.</h4>
+                                            <p>Dr.-Ing|Ingeniería Mecánica-Biomecánica-Precisión-Fabricación|Docente UNAL</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="team-member">
+                                        <img src="images/expertos/ubaldo.png" class="img-responsive" alt="">
+                                        <div class="team-details">
+                                            <h4>Ubaldo García Zaragoza</h4>
+                                            <p>Ing. Mecánico | Lic. Innovación & Diseño | Concepto a Prototipo Validación | PLM Producción alto volumen|Docente UNAL</p>
+                                        </div>
+                                    </div>    
+
+                                    <div class="team-member">
+                                        <img src="images/expertos/ricardo.png" class="img-responsive" alt="">
+                                        <div class="team-details">
+                                            <h4>Ricardo Ramirez H.</h4>
+                                            <p>Ing. Mecánico & Electrónico | MSc. Automatización Industrial | PhD. Ciencias de Ingeniería Mecánica|Docente UNAL</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="team-member">
+                                        <img src="images/expertos/victor.png" class="img-responsive" alt="">
+                                        <div class="team-details">
+                                            <h4>Víctor Hugo Grisales P.</h4>
+                                            <p>PhD. Mecatrónica, Robótica & Automatización| PhD. Sistemas Automáticos | Consultor Senior |Docente UNAL</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="team-member">
+                                        <img src="images/expertos/eduardo.png" class="img-responsive" alt="">
+                                        <div class="team-details">
+                                            <h4>Eduardo Barrera Gualdron</h4>
+                                            <p>Ing. Electrónico | MSc. Control · Beijing · China | Automatización & SCADA |Docente UNAL</p>
+                                        </div>
+                                    </div>
+
+
                                 </div>
-                            </div>
-                            <div class="team-member">
-                                <img src="images/expertos/carlos_julio.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>Carlos Julio Cortés R.</h4>
-                                    <p>Dr.-Ing|Ingeniería Mecánica-Biomecánica-Precisión-Fabricación|Docente UNAL</p>
-                                </div>
-                            </div>
-                            <div class="team-member">
-                                <img src="images/expertos/ubaldo.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>Ubaldo García Zaragoza</h4>
-                                    <p>Ing. Mecánico | Lic. Innovación & Diseño | Concepto a Prototipo Validación | PLM Producción alto volumen|Docente UNAL</p>
-                                </div>
-                            </div>    
-                            <div class="team-member">
-                                <img src="images/expertos/ricardo.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>Ricardo Ramirez H.</h4>
-                                    <p>Ing. Mecánico & Electrónico | MSc. Automatización Industrial | PhD. Ciencias de Ingeniería Mecánica|Docente UNAL</p>
-                                </div>
-                            </div>
-                            <div class="team-member">
-                                <img src="images/expertos/victor.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>Víctor Hugo Grisales P.</h4>
-                                    <p>PhD. Mecatrónica, Robótica & Automatización| PhD. Sistemas Automáticos | Consultor Senior |Docente UNAL</p>
-                                </div>
-                            </div>
-                            <div class="team-member">
-                                <img src="images/expertos/eduardo.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>Eduardo Barrera Gualdron</h4>
-                                    <p>Ing. Electrónico | MSc. Control · Beijing · China | Automatización & SCADA |Docente UNAL</p>
-                                </div>
-                            </div>
-                        </div>
+
+                    
                     </div>
                 </div>
             </div>
+                
         </div>
     </section>
     <!-- End Team Member Section -->
 
-    <!-- Project Section -->
+<!-- Project Section -->
     <section id="proyecto" class="feature-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h1>Proyecto FEMSA - Coca Cola</h1>
-                    <br>
-                    <br>
-                    <p style="max-width: 900px; margin: auto; font-size: 16px; line-height: 1.8;">
-                        Este proyecto consiste en el diseño e implementación de una planta automatizada para la producción de bebidas, orientada a mejorar los índices de desempeño de la planta actual mediante la integración de diferentes etapas del proceso, como el procesamiento, llenado, empaque y despacho. La solución propone el uso de tecnologías industriales como PLC, sistemas SCADA, celdas robotizadas y simulación digital, con el fin de optimizar la eficiencia operativa, garantizar la calidad del producto y fortalecer la toma de decisiones en el proceso productivo.
-                    </p>
-                    <br>
-                    <br>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                
+                <h1>Proyecto FEMSA - Coca Cola</h1>
+                <br>
+                <br>
+                <p style="max-width: 900px; margin: auto; font-size: 16px; line-height: 1.8;">
+                    Este proyecto consiste en el diseño e implementación de una planta automatizada para la producción de bebidas, orientada a mejorar los índices de desempeño de la planta actual mediante la integración de diferentes etapas del proceso, como el procesamiento, llenado, empaque y despacho. La solución propone el uso de tecnologías industriales como PLC, sistemas SCADA, celdas robotizadas y simulación digital, con el fin de optimizar la eficiencia operativa, garantizar la calidad del producto y fortalecer la toma de decisiones en el proceso productivo.
+                </p>
+                <br>
+                <br>
             </div>
         </div>
+    </div>
     </section>
-
-    <!-- ===== START: Requerimientos del Proyecto ===== -->
-    <section id="requerimientos" class="feature-section" style="padding-top: 50px; padding-bottom: 60px;">
-        <div class="container">
-
-            <!-- Section title -->
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <div class="section-title">
-                        <h3>Requerimientos del Proyecto</h3>
-                    </div>
-                    <p style="font-size: 16px; margin-bottom: 30px;">
-                        <strong>Línea de alto volumen con mínimo 3 productos diferentes</strong>
-                    </p>
-                </div>
-            </div>
-
-            <!-- Two tables side by side -->
-            <div class="row" style="margin-bottom: 10px;">
-                <!-- Table 1: Tipo de Envase -->
-                <div class="col-md-5 col-md-offset-1 col-sm-6">
-                    <table class="req-table">
-                        <thead>
-                            <tr>
-                                <th>Tipo de Envase</th>
-                                <th style="text-align:center;">Volumen</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Bajo volumen</td>
-                                <td style="text-align:center;">150 – 600 mL</td>
-                            </tr>
-                            <tr>
-                                <td>Medio volumen</td>
-                                <td style="text-align:center;">1 – 3 L</td>
-                            </tr>
-                            <tr>
-                                <td>Gran volumen (Garrafones)</td>
-                                <td style="text-align:center;">12 o 20 L</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Table 2: Aspectos de Diferenciación -->
-                <div class="col-md-4 col-sm-6">
-                    <table class="req-table">
-                        <thead>
-                            <tr>
-                                <th>Aspecto de Diferenciación</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Capacidad y geometría del envase</td></tr>
-                            <tr><td>Sabores o ingredientes</td></tr>
-                            <tr><td>Velocidad de producción</td></tr>
-                            <tr><td>Secuencia lógica de operación</td></tr>
-                            <tr><td>Estrategia de inspección y calidad</td></tr>
-                            <tr><td>Trazabilidad y toma de decisiones</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Footnote -->
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1 text-center">
-                    <span class="req-note">Los productos deben diferenciarse en al menos dos aspectos de la tabla anterior.</span>
-                </div>
-            </div>
-
-            <!-- Sub-title for products -->
-            <div class="row" style="margin-top: 20px;">
-                <div class="col-md-12 text-center">
-                    <div class="section-title">
-                        <h3>Productos de la Línea</h3>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product images row - IMÁGENES PNG REALES -->
-            <div class="products-row">
-
-                <!-- Producto 1: Monster Energy Lata 473 mL -->
-                <div class="product-col">
-                    <img class="product-image" src="images/monster.png" 
-                         alt="Monster Energy Lata 473 mL"
-                         onerror="this.src='https://placehold.co/180x200/e67e22/white?text=Monster+Energy'">
-                    <h4>Monster Energy</h4>
-                    <p>Lata 473 mL</p>
-                    <span class="volume-badge">Bajo volumen • Energizante</span>
-                </div>
-
-                <!-- Producto 2: Coca-Cola Botella 2L Retornable -->
-                <div class="product-col">
-                    <img class="product-image" src="images/coke.png" 
-                         alt="Coca-Cola 2 Litros Retornable"
-                         onerror="this.src='https://placehold.co/180x200/c0392b/white?text=Coca-Cola+2L'">
-                    <h4>Coca-Cola</h4>
-                    <p>Botella 2 L Retornable</p>
-                    <span class="volume-badge">Medio volumen • Gaseosa</span>
-                </div>
-
-                <!-- Producto 3: Brisa Agua Purificada 5 Galones -->
-                <div class="product-col">
-                    <img class="product-image" src="images/brisa.png" 
-                         alt="Brisa Agua Purificada 5 Galones"
-                         onerror="this.src='https://placehold.co/180x200/3498db/white?text=Brisa+5+Galones'">
-                    <h4>Brisa</h4>
-                    <p>Botellón 5 Galones (≈18.9 L)</p>
-                    <span class="volume-badge">Gran volumen • Agua purificada</span>
-                </div>
-
-            </div>
-            <!-- End products row -->
-
-            <!-- Nota sobre imágenes -->
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p style="font-size: 12px; color: #999; margin-top: 20px;">
-                        <i class="fa fa-info-circle"></i> Para visualizar correctamente los productos, coloca las imágenes PNG en la carpeta <strong>images/productos/</strong><br>
-                        con los nombres: <strong>monster-energy-can.png</strong>, <strong>cocacola-2l.png</strong> y <strong>brisa-5galones.png</strong>
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- ===== END: Requerimientos del Proyecto ===== -->
-
     <!-- Start Portfolio Section -->
-    <section id="portfolio" class="portfolio-section-1">
-        <style>
-            #portfolio-list li {
-                width: 25% !important;
-                float: left !important;
-            }
-        </style>
+<section id="portfolio" class="portfolio-section-1">
+    <style>
+        #portfolio-list li {
+            width: 25% !important;
+            float: left !important;
+        }
+    </style>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title text-center">
-                        <h3>MODULOS</h3>
-                        <p>Módulos del proyecto</p>
-                    </div>                        
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <ul id="portfolio-list">
-                        <li>
-                            <div class="portfolio-item">
-                                <img src="images/portfolio/img1.jpg" class="img-responsive" alt="" />
-                                <div class="portfolio-caption">
-                                    <h4>Módulo 1</h4>
-                                    <a href="Modulo_1/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                    <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_1" class="link-2"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="portfolio-item">
-                                <img src="images/portfolio/img2.jpg" class="img-responsive" alt="" />
-                                <div class="portfolio-caption">
-                                    <h4>Módulo 2</h4>
-                                    <a href="Modulo_2/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                    <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_2" class="link-2"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="portfolio-item">
-                                <img src="images/portfolio/img3.jpg" class="img-responsive" alt="" />
-                                <div class="portfolio-caption">
-                                    <h4>Módulo 3</h4>
-                                    <a href="Modulo_3/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                    <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_3" class="link-2"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="portfolio-item">
-                                <img src="images/portfolio/img4.jpg" class="img-responsive" alt="" />
-                                <div class="portfolio-caption">
-                                    <h4>Módulo 4</h4>
-                                    <a href="Modulo_4/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                    <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_4" class="link-2"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="portfolio-item">
-                                <img src="images/portfolio/img5.jpg" class="img-responsive" alt="" />
-                                <div class="portfolio-caption">
-                                    <h4>Módulo 5</h4>
-                                    <a href="Modulo_5/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                    <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_5" class="link-2"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="portfolio-item">
-                                <img src="images/portfolio/img6.jpg" class="img-responsive" alt="" />
-                                <div class="portfolio-caption">
-                                    <h4>Módulo 6</h4>
-                                    <a href="Modulo_6/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                    <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_6" class="link-2"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="portfolio-item">
-                                <img src="images/portfolio/img8.jpg" class="img-responsive" alt="" />
-                                <div class="portfolio-caption">
-                                    <h4>Módulo 7</h4>
-                                    <a href="Modulo_7/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                    <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_7" class="link-2"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="portfolio-item">
-                                <img src="images/portfolio/img7.jpg" class="img-responsive" alt="" />
-                                <div class="portfolio-caption">
-                                    <h4>Propuesta</h4>
-                                    <a href="Resultados/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                    <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Resultados" class="link-2"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title text-center">
+                    <h3>MODULOS</h3>
+                    <p>Módulos del proyecto</p>
+                </div>                        
             </div>
         </div>
-    </section>
-    <!-- End Portfolio Section -->
-    
-    <!-- Start Testimonial Section -->
+        <div class="row">
+            <div class="col-md-12">
+                
+                <!-- Start Portfolio items -->
+                <ul id="portfolio-list">
+                    <li>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio/img1.jpg" class="img-responsive" alt="" />
+                            <div class="portfolio-caption">
+                                <h4>Módulo 1</h4>
+                                <a href="Modulo_1/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
+                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_1" class="link-2"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio/img2.jpg" class="img-responsive" alt="" />
+                            <div class="portfolio-caption">
+                                <h4>Módulo 2</h4>
+                                <a href="Modulo_2/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
+                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_2" class="link-2"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio/img3.jpg" class="img-responsive" alt="" />
+                            <div class="portfolio-caption">
+                                <h4>Módulo 3</h4>
+                                <a href="Modulo_3/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
+                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_3" class="link-2"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio/img4.jpg" class="img-responsive" alt="" />
+                            <div class="portfolio-caption">
+                                <h4>Módulo 4</h4>
+                                <a href="Modulo_4/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
+                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_4" class="link-2"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio/img5.jpg" class="img-responsive" alt="" />
+                            <div class="portfolio-caption">
+                                <h4>Módulo 5</h4>
+                                <a href="Modulo_5/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
+                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_5" class="link-2"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio/img6.jpg" class="img-responsive" alt="" />
+                            <div class="portfolio-caption">
+                                <h4>Módulo 6</h4>
+                                <a href="Modulo_6/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
+                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_6" class="link-2"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio/img8.jpg" class="img-responsive" alt="" />
+                            <div class="portfolio-caption">
+                                <h4>Módulo 7</h4>
+                                <a href="Modulo_7/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
+                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_7" class="link-2"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio/img7.jpg" class="img-responsive" alt="" />
+                            <div class="portfolio-caption">
+                                <h4>Propuesta</h4>
+                                <a href="Resultados/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
+                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Resultados" class="link-2"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    
+                </ul>
+                <!-- End Portfolio items -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Portfolio Section -->
+     <!-- Start Testimonial Section -->
     <section id="reflexiones" class="feature-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h1>Reflexiones Grupales</h1>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                
+                <h1>Reflexiones Grupales</h1>
+                <br>
+                <br>
+
+                <br>
+                <br>
             </div>
         </div>
+    </div>
     </section>
-    
     <div id="reflexiones2" class="testimonial-section">
         <div class="container">
             <h2 class="text-center">Reflexiones Individuales</h2>
@@ -744,7 +549,7 @@
                             <div class="designation">COO</div>
                         </div>
                         <p><!-- Colocar Aqui su reflexion--></p>
-                    </div>
+                        </div>
                 </div>
                 <!-- Testimonial 5 -->
                 <div class="testimonials item">
@@ -786,44 +591,150 @@
             </div>
             <div class="row">
                 <div class="clients">
+                    
                     <div class="col-md-12">
                         <img src="images/logos/allen.jpg" class="img-responsive" alt="...">
                     </div>
+                    
                     <div class="col-md-12">
                         <img src="images/logos/siemens.jpg" class="img-responsive" alt="...">
                     </div>
+                    
                     <div class="col-md-12">
                         <img src="images/logos/abb.jpg" class="img-responsive" alt="...">
                     </div>
+                    
                     <div class="col-md-12">
                         <img src="images/logos/skf.jpg" class="img-responsive" alt="...">
                     </div>
+                    
                     <div class="col-md-12">
                         <img src="images/logos/rockwell.jpg" class="img-responsive" alt="...">
                     </div>
+
                     <div class="col-md-12">
                         <img src="images/logos/texas.jpg" class="img-responsive" alt="...">
                     </div>
+                    
                 </div>
             </div>
         </div>
     </section>
     
+    
+    
+    
     <section id="contact" class="contact">
+    <div class="container">
+        
+        <div class="row">
+            
+            <!-- Info del Proyecto -->
+            <div class="col-md-6">
+                <div class="footer-contact-info">
+                    <h4>Proyecto Académico</h4>
+                    <ul>
+                        <li><strong>Curso:</strong> APM 2026-1</li>
+                        <li><strong>Empresa:</strong> Chibcho Sistemas</li>
+                        <li><strong>Enfoque:</strong> Automatización de procesos de manufactura</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="col-md-6">
+                <div class="footer-contact-info">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li>
+                            <strong>Repositorio:</strong><br>
+                            <a href="https://github.com/NicolasDavila2001/APM-20261S" target="_blank">
+                                GitHub del proyecto
+                            </a>
+                        </li>
+                        <li>
+                            <strong>Documentación:</strong><br>
+                            <a href="https://drive.google.com/drive/folders/1QVZhY7u8GsLHCyEWJAowoTUEtw_0oujM?usp=sharing" target="_blank">
+                                Drive del proyecto
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer inferior -->
+    <footer class="style-1">
         <div class="container">
-            <div class="row">
-                <!-- Info del Proyecto -->
-                <div class="col-md-6">
-                    <div class="footer-contact-info">
-                        <h4>Proyecto Académico</h4>
+            <div class="row">              
+                <div class="col-md-6 col-xs-12">
+                    <span class="copyright">
+                        © 2026 Chibcho Sistemas | Proyecto académico APM
+                    </span>
+                </div>
+
+                <div class="col-md-6 col-xs-12">
+                    <div class="footer-social text-right">
                         <ul>
-                            <li><strong>Curso:</strong> APM 2026-1</li>
-                            <li><strong>Empresa:</strong> Chibcho Sistemas</li>
-                            <li><strong>Enfoque:</strong> Automatización de procesos de manufactura</li>
+                            <li>
+                                <a href="https://github.com/NicolasDavila2001/APM-20261S" target="_blank">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                            </li>
+                            <li>
+                                    <a href="https://drive.google.com/drive/folders/1QVZhY7u8GsLHCyEWJAowoTUEtw_0oujM?usp=sharing" target="_blank" style="display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.3 78" width="20" height="20">
+                                            <path d="M6.6 66.85l3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8H.1c0 1.55.4 3.1 1.2 4.5z" fill="#fff"/>
+                                            <path d="M43.65 25L29.9 1.2C28.55 2 27.4 3.1 26.6 4.5L1.3 49.15c-.8 1.4-1.2 2.95-1.2 4.5h27.5z" fill="#fff"/>
+                                            <path d="M73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5H59.8l5.85 11.5z" fill="#fff"/>
+                                            <path d="M43.65 25L57.4 1.2C56.05.4 54.5 0 52.9 0H34.4c-1.6 0-3.1.45-4.5 1.2z" fill="#fff"/>
+                                            <path d="M59.8 53.65H27.5L13.75 77.45c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.1-.45 4.5-1.2z" fill="#fff"/>
+                                            <path d="M73.4 26.35l-12.65-21.9C59.95 3.05 58.8 2 57.4 1.2L43.65 25l16.15 28.65H87.2c0-1.55-.4-3.1-1.2-4.5z" fill="#fff"/>
+                                        </svg>
+                                    </a>
+                            </li>
+
                         </ul>
                     </div>
                 </div>
 
-                <!-- Links -->
-                <div class="col-md-6">
-                    <div class="footer
+            </div>
+        </div>
+
+    <div id="loader">
+        <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+        </div>
+    </div>
+
+    
+
+    <!-- jQuery Version 2.1.1 -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="asset/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/count-to.js"></script>
+    <script src="js/jquery.appear.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.fitvids.js"></script>
+	<script src="js/styleswitcher.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
