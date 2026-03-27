@@ -54,7 +54,7 @@ En Chibcho sistemas somos una empresa especializada en el desarrollo de solucion
 <table>
   <tr>
     <td align="center">
-      <img src="images/expertos/luis_miguel.png" width="150"/><br/>
+      <img src="images/expertos/luis_miguel.png" width="220"/><br/>
       <b>Luis Miguel Méndez M.</b><br/>
       <span>Dr.-Ing.|Ingeniería Mecánica, Biomecánica & PrecisiónMantenimiento Hospitalario |HVAC · Máquinas Térmicas & Hidráulicas |Docente UNAL</span>
     </td>
