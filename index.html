@@ -84,10 +84,7 @@
     /* ===== Requerimientos Section ===== */
     #requerimientos {
         background-color: #f8f5f5;
-        padding-top: 50px;
-        padding-bottom: 60px;
     }
-    
     .req-table {
         border-collapse: separate !important;
         border-spacing: 0;
@@ -115,7 +112,7 @@
         background-color: #fdf7f7;
     }
     
-    /* Estilos profesionales para productos */
+    /* ===== SOLO ESTILOS PARA PRODUCTOS (NO AFECTA OTRAS SECCIONES) ===== */
     .products-row {
         display: flex;
         align-items: stretch;
@@ -212,19 +209,6 @@
         margin-top: 10px;
         margin-bottom: 30px;
         display: block;
-    }
-    
-    /* Asegurar que otras imágenes no se vean afectadas */
-    .team-member img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-    
-    .clients img {
-        width: auto;
-        height: auto;
-        max-width: 100%;
     }
     
     /* Responsive para productos */
@@ -538,7 +522,7 @@
 
 
 <!-- ===== START: Requerimientos del Proyecto ===== -->
-    <section id="requerimientos">
+    <section id="requerimientos" class="feature-section" style="padding-top: 50px; padding-bottom: 60px;">
         <div class="container">
 
             <!-- Section title -->
@@ -617,7 +601,7 @@
                 </div>
             </div>
 
-            <!-- Product images row - IMÁGENES PNG REALES CON ESTÉTICA PROFESIONAL -->
+            <!-- Product images row - SOLO ESTA SECCIÓN USA LOS NUEVOS ESTILOS -->
             <div class="products-row">
 
                 <!-- Producto 1: Monster Energy Lata 473 mL -->
@@ -657,7 +641,7 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <p style="font-size: 12px; color: #999; margin-top: 20px;">
-                        <i class="fa fa-info-circle"></i> Para visualizar correctamente los productos, coloca las imágenes PNG en la carpeta principal <strong>images/</strong><br>
+                        <i class="fa fa-info-circle"></i> Para visualizar correctamente los productos, coloca las imágenes PNG en la carpeta <strong>images/</strong><br>
                         con los nombres: <strong>monster.png</strong>, <strong>coke.png</strong> y <strong>brisa.png</strong>
                     </p>
                 </div>
@@ -894,12 +878,4 @@
                     </div>
                     
                     <div class="col-md-12">
-                        <img src="images/logos/abb.jpg" class="img-responsive" alt="...">
-                    </div>
-                    
-                    <div class="col-md-12">
-                        <img src="images/logos/skf.jpg" class="img-responsive" alt="...">
-                    </div>
-                    
-                    <div class="col-md-12">
-                        <img src="
+                        <img src="images/logos/abb.jpg" class="img-responsive" alt="...
