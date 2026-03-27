@@ -31,7 +31,7 @@
 
     <!-- Modernizr -->
     <script src="../js/modernizr.custom.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -85,6 +85,46 @@
             color: #fff !important;
             background-color: #e74c3c !important;
         }
+        .justified-text {
+            max-width: 900px;
+            margin: auto;
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+            .tabla-personalizada {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 20px auto;
+    }
+    
+    .tabla-personalizada th,
+    .tabla-personalizada td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+    
+    .tabla-personalizada th {
+        background-color: #e74c3c;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .tabla-personalizada tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    
+    .tabla-personalizada tr:hover {
+        background-color: #ddd;
+    }
+            .diagram-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+    }
+
     </style>
     
 </head>
@@ -104,7 +144,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="../index.html">Chibcho Sistemas</a>
+                <a class="navbar-brand page-scroll" href="#page-top" style="display: flex; align-items: center; gap: 10px;">
+                    <img src="../images/logo_chibchoSF.png" alt="Chibcho Sistemas" style="height: 40px; width: auto;">
+                    <span>Chibcho Sistemas</span>
+                </a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -129,9 +172,16 @@
     <div class="modulo-header">
         <div class="container text-center">
             <h2>Módulo 1 –  Introducción a la automatización de manufactura</h2>
-            <p>El presente módulo aborda el análisis de una arquitectura de automatización industrial estructurada bajo el estándar ISA-95, mediante la evaluación de la línea de producción a partir de la pirámide de automatización, con el propósito de determinar qué capas se encuentran cubiertas y qué elementos componen cada una de ellas. Posteriormente, se establecen las etapas del proceso de producción, construyendo un esquema conceptual que servirá como base para el planteamiento de los diagramas a desarrollar en el <a href="../Modulo_2/index.html">Módulo 2</a>. El módulo concluye con la presentación de los datos iniciales recopilados durante la visita técnica realizada a la planta de FEMSA Coca-Cola, los cuales constituyen el punto de partida para el análisis y desarrollo de los módulos subsiguientes y la propuesta de automatizacion final.</p>
+            <p class="justified-text">El presente módulo aborda el análisis de una arquitectura de automatización industrial estructurada
+                 bajo el estándar ISA-95, mediante la evaluación de la línea de producción a partir de la pirámide de automatización, con el pro
+                 pósito de determinar qué capas se encuentran cubiertas y qué elementos componen cada una de ellas. Posteriormente, se establecen las etapas del 
+                 proceso de producción, construyendo un esquema conceptual que servirá como base para el planteamiento de los diagramas a desarrollar 
+                 en el <a href="../Modulo_2/index.html">Módulo 2</a>. El módulo concluye con la 
+                 presentación de los datos iniciales recopilados durante la visita técnica realizada a la planta de FEMSA Coca-Cola, 
+                 los cuales constituyen el punto de partida para el análisis y desarrollo de los módulos subsiguientes y la propuesta de automatizacion final.</p>
         </div>
     </div>
+
 
 
     <!-- =====================================================
@@ -140,14 +190,187 @@
     ====================================================== -->
     <div class="modulo-content">
         <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <br>
+                    <div class="btn-back">
+                        <a href="../index.html#portfolio" class="btn btn-default">
+                            <i class="fa fa-arrow-left"></i>&nbsp; Volver a Módulos
+                        </a>
+                    </div>
+                    <br>
+                    <h2 class="text-center">Análisis de la pirámide de automatización en la planta actual </h2>
+                    <img src="piramideisa.png" alt="Descripción de la imagen" class="img-responsive center-block" style="max-width: 600px; margin: 20px auto;">
+                    <p class="justified-text">Durante la visita técnica a la planta de FEMSA Coca-Cola, se pudo determinar que en toda la linea de produccion 
+                        estan cubiertos los niveles 0, 1 y 2; con esta información se espera que alcance del proyecto por minimo pueda cubrir hasta la de gestion de 
+                        operacioenes de manufactura (MES). A continuación se describen los elementos identificados en cada nivel de la pirámide.</p>
+                    <br>
+                    <br>
+                    <table class="tabla-personalizada">
+                        <thead>
+                            <tr>
+                                <th>Nivel</th>
+                                <th>Elementos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nivel 0</td>
+                                <td>Sensores detectores,Bombas hidraulicas,Motores electricos,variadores de velocidad</td>
+                            </tr>
+                            <tr>
+                                <td>Nivel 1</td>
+                                <td>Controladores lógicos, sistemas de control discretos y regulatorio </td>
 
-            <!-- Botón de regreso -->
-            <div class="btn-back">
-                <a href="../index.html#portfolio" class="btn btn-default">
-                    <i class="fa fa-arrow-left"></i>&nbsp; Volver a Módulos
-                </a>
+                            </tr>
+                            <tr>
+                                <td>Nivel 2</td>
+                                <td>Sistemas de supervisión sobre líneas </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2 class="text-center">Etapas del proceso de producción</h2>
+                    <p class="justified-text">Se presenta un diagrama de flujo superfical sobre el proceso de embotellamiento de bebidas el cual muestra el orden 
+                        de las etapas identificadas en la visita tecnica y complementada con investigacion por parte del equipo.</p>
+                    <div class="diagram-container">
+                        <pre class="mermaid">
+                            flowchart TD
+                                A[Inicio] --> B[Tratar Agua]
+                                B --> C[Limpiar Botellas Recuperadas]
+                                C --> D[Embotellar Producto]
+                                D --> E[Empacar Producto]
+                                E --> F[Embalar para Distribución]
+                                F --> G[Fin]
+                                
+                                style A fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                                style B fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                                style C fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                                style D fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                                style E fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                                style F fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                                style G fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        </pre>
+                    </div>
+                    <p >Para ver el desarrollo del VSM , Diagrama DOP,layaouts y calculo de indicadores dirigirse al <a href="../Modulo_2/index.html">Módulo 2</a>.</p> 
+                    <h2 class="text-center">Datos Establecidos segun investigación y visita Técnica </h2> 
+                    <br>
+                    <!-- Tabla 1: Líneas y Productos -->
+                    <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">Líneas y Productos</h3>
+                    <div class="contenedor-tabla">
+                        <table class="tabla-personalizada">
+                            <thead>
+                                <tr>
+                                    <th>Línea</th>
+                                    <th>Producto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>Coca Cola 237 mL (retornable)</td></tr>
+                                <tr><td>2</td><td>350 mL distintos productos (retornable)</td></tr>
+                                <tr><td>3</td><td>2L (retornable)</td></tr>
+                                <tr><td>5</td><td>No retornables (distintos tamaños)</td></tr>
+                                <tr><td>6</td><td>Latas</td></tr>
+                                <tr><td>7</td><td>Agua saborizada (Brisa)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <br>
+
+                    <!-- Tabla 2: Velocidades de Líneas -->
+                    <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">Velocidades de Líneas</h3>
+                    <div class="contenedor-tabla">
+                        <table class="tabla-personalizada">
+                            <thead>
+                                <tr>
+                                    <th>Línea</th>
+                                    <th>Velocidad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Línea 1</td><td>15k/h</td></tr>
+                                <tr><td>Línea 2</td><td>60k/h</td></tr>
+                                <tr><td>Línea 3</td><td>52k/h</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <br>
+
+                    <!-- Tabla 3: Tiempo Total de Proceso -->
+                    <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">Tiempo Total de Proceso</h3>
+                    <div class="contenedor-tabla">
+                        <table class="tabla-personalizada">
+                            <thead>
+                                <tr>
+                                    <th>Descripción</th>
+                                    <th>Tiempo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Tiempo total del proceso</td><td>90 - 105 minutos</td></tr>
+                                <tr><td>Tiempo falla promedio</td><td>21 minutos</td></tr>
+                                <tr><td>Tiempo mantenimiento promedio</td><td>17 - 30 minutos</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <br>
+
+                    <!-- Tabla 4: Tiempos Estimados por Etapa de Proceso (Línea 3) -->
+                    <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">Tiempos Estimados por Etapa de Proceso (Línea 3)</h3>
+                    <div class="contenedor-tabla">
+                        <table class="tabla-personalizada">
+                            <thead>
+                                <tr>
+                                    <th>Etapa del Proceso</th>
+                                    <th>Tiempo Estimado (min)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Lavado y preparación</td><td>25</td></tr>
+                                <tr><td>Llenado y sellado</td><td>40</td></tr>
+                                <tr><td>Etiquetado e inspección</td><td>15</td></tr>
+                                <tr><td>Empaque y paletizado</td><td>25</td></tr>
+                                <tr><td style="font-weight: bold;">Tiempo Total Aproximado</td><td style="font-weight: bold;">105</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <p >"Llenado y sellado" con 40 minutos representa el cuello de botella del sistema y determina la velocidad de la operación .Por otra parte, 
+                    se asumió una producción por turno de alrededor de 416.000 botellas por turno.</p> 
+                <h3>Referencias de búsqueda</h3>
+                <div>
+                <ul style="list-style-type: none; margin: 20px 0 20px auto; max-width: 800px; text-align: left; display: inline-block;">
+                    <li style="margin-bottom: 10px; line-height: 1.6; text-align: left;">
+                        <span style="margin-right: 8px;">—</span>
+                        <a href="https://www.youtube.com/watch?v=1VRI_r-YMjI" target="_blank" rel="noopener">https://www.youtube.com/watch?v=1VRI_r-YMjI</a>
+                    </li>
+                    <li style="margin-bottom: 10px; line-height: 1.6; text-align: left;">
+                        <span style="margin-right: 8px;">—</span>
+                        <a href="https://web.facebook.com/watch/?v=521596619874703" target="_blank" rel="noopener">https://web.facebook.com/watch/?v=521596619874703</a>
+                    </li>
+                </ul>
+                </div>
             </div>
 
+            <!-- Botón de regreso -->
+            <br>
+            <br>
+            <div style="display: flex; justify-content: center; gap: 20px;">
+                <div class="btn-back">
+                    <a href="../index.html#portfolio" class="btn btn-default">
+                        <i class="fa fa-arrow-left"></i>&nbsp; Volver a Módulos
+                    </a>
+                </div>
+                <div class="btn-next">
+                    <a href="../Modulo_2/Index.html" class="btn btn-default">
+                        Siguiente Módulo &nbsp;<i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <br>
         </div>
     </div>
     <!-- FIN CONTENIDO PRINCIPAL -->

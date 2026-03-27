@@ -32,6 +32,7 @@
     <!-- Modernizr -->
     <script src="../js/modernizr.custom.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -85,6 +86,46 @@
             color: #fff !important;
             background-color: #e74c3c !important;
         }
+        .justified-text {
+            max-width: 900px;
+            margin: auto;
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+            .tabla-personalizada {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 20px auto;
+    }
+    
+    .tabla-personalizada th,
+    .tabla-personalizada td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+    
+    .tabla-personalizada th {
+        background-color: #e74c3c;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .tabla-personalizada tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    
+    .tabla-personalizada tr:hover {
+        background-color: #ddd;
+    }
+            .diagram-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+    }
+
     </style>
     
 </head>
@@ -104,7 +145,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="../index.html">Chibcho Sistemas</a>
+                <a class="navbar-brand page-scroll" href="#page-top" style="display: flex; align-items: center; gap: 10px;">
+                    <img src="../images/logo_chibchoSF.png" alt="Chibcho Sistemas" style="height: 40px; width: auto;">
+                    <span>Chibcho Sistemas</span>
+                </a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -146,6 +190,20 @@
                 <a href="../index.html#portfolio" class="btn btn-default">
                     <i class="fa fa-arrow-left"></i>&nbsp; Volver a Módulos
                 </a>
+            </div>
+            <br>
+            <br>
+            <div style="display: flex; justify-content: center; gap: 20px;">
+                <div class="btn-back">
+                    <a href="../Modulo_7/Index.html" class="btn btn-default">
+                        <i class="fa fa-arrow-left"></i>&nbsp; Módulo Anterior
+                    </a>
+                </div>
+                <div class="btn-next">
+                    <a href="../index.html#portfolio" class="btn btn-default">
+                        Volver a Módulos &nbsp;<i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
 
         </div>

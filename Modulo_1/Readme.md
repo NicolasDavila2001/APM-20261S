@@ -5,6 +5,15 @@ El presente módulo aborda el análisis de una arquitectura de automatización i
   <img src="piramideisa.png" width="45%"/>
 </p>
 
+Durante la visita técnica a la planta de FEMSA Coca-Cola, se pudo determinar que en toda la linea de produccion 
+                        estan cubiertos los niveles 0, 1 y 2; con esta información se espera que alcance del proyecto por minimo pueda cubrir hasta la de gestion de operacioenes de manufactura (MES). A continuación se describen los elementos identificados en cada nivel de la pirámide.
+
+| Nivel | Elementos |
+| :--- | :--- |
+| 0| Sensores detectores,Bombas hidraulicas,Motores electricos,variadores de velocidad |
+| 1 | Controladores lógicos, sistemas de control discretos y regulatorio |
+| 2 | Sistemas de supervisión sobre líneas |
+
 ## Etapas del Proceso de Produccion de bebidas
 
 Se presenta un diagrama de flujo superfical sobre el proceso de embotellamiento de bebidas el cual muestra el orden de las etapas identificadas en la visita tecnica y complementada con investigacion por parte del equipo.
