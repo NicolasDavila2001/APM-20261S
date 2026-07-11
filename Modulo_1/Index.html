@@ -288,12 +288,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td>Línea 1</td><td>15k/h</td></tr>
-                                <tr><td>Línea 2</td><td>60k/h</td></tr>
-                                <tr><td>Línea 3</td><td>52k/h</td></tr>
+                                <tr><td>Línea 1 (237 mL)</td><td>38.000 botellas/h</td></tr>
+                                <tr><td>Línea 2 (350 mL)</td><td>30.000 botellas/h</td></tr>
+                                <tr><td>Línea 3 (2 L)</td><td>12.000 botellas/h</td></tr>
                             </tbody>
                         </table>
                     </div>
+                    <p class="justified-text">A mayor volumen de envase, menor es la velocidad alcanzable por la llenadora (más líquido a dosificar, envase más pesado y de manejo más lento), por lo que la línea de menor formato (237 mL) es la más rápida y la de mayor formato (2 L) la más lenta. Estos valores se ajustaron tomando como referencia velocidades reales publicadas de líneas de envase retornable de tamaño comparable (líneas de vidrio retornable de gran formato en el rango de 8.000-15.000 botellas/h, frente a llenadoras retornables de formato pequeño que alcanzan 40.000-55.000 botellas/h).</p>
 
                     <br>
 
@@ -308,12 +309,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td>Tiempo total del proceso</td><td>90 - 105 minutos</td></tr>
+                                <tr><td>Tiempo total del proceso (dock-to-dock, Línea 3)</td><td>90 - 105 minutos</td></tr>
                                 <tr><td>Tiempo falla promedio</td><td>21 minutos</td></tr>
-                                <tr><td>Tiempo mantenimiento promedio</td><td>17 - 30 minutos</td></tr>
+                                <tr><td>Tiempo mantenimiento promedio</td><td>20 minutos</td></tr>
                             </tbody>
                         </table>
                     </div>
+                    <p class="justified-text">El tiempo total del proceso corresponde al tránsito completo del producto por la línea, incluyendo las esperas y acumulaciones (buffers) entre etapas — por eso es mayor que la simple suma de los tiempos de proceso activo de cada máquina que se detalla a continuación.</p>
 
                     <br>
 
@@ -324,22 +326,29 @@
                             <thead>
                                 <tr>
                                     <th>Etapa del Proceso</th>
-                                    <th>Tiempo Estimado (min)</th>
+                                    <th>Tiempo Estimado</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td>Lavado y preparación</td><td>25</td></tr>
-                                <tr><td>Llenado y sellado</td><td>40</td></tr>
-                                <tr><td>Etiquetado e inspección</td><td>15</td></tr>
-                                <tr><td>Empaque y paletizado</td><td>25</td></tr>
-                                <tr><td style="font-weight: bold;">Tiempo Total Aproximado</td><td style="font-weight: bold;">105</td></tr>
+                                <tr><td>Lavado y preparación</td><td>25 min</td></tr>
+                                <tr><td>Llenado y sellado</td><td>15 s</td></tr>
+                                <tr><td>Etiquetado e inspección</td><td>15 min</td></tr>
+                                <tr><td>Empaque y paletizado</td><td>25 min</td></tr>
+                                <tr><td style="font-weight: bold;">Tiempo Total Aproximado</td><td style="font-weight: bold;">~65 min</td></tr>
                             </tbody>
                         </table>
                     </div>
 
                 </div>
-                <p >"Llenado y sellado" con 40 minutos representa el cuello de botella del sistema y determina la velocidad de la operación .Por otra parte, 
-                    se asumió una producción por turno de alrededor de 416.000 botellas por turno.</p> 
+                <p class="justified-text">Estos cuatro valores no miden lo mismo, porque corresponden a fenómenos físicos distintos dentro de la línea:</p>
+                <ul class="justified-text" style="max-width:900px; margin:0 auto 20px; text-align:left;">
+                    <li><b>Lavado y preparación (25 min):</b> es el tiempo de permanencia real de una botella retornable dentro de la lavadora de cadena, que la hace recorrer varios tanques de remojo con soda cáustica, enjuague y enfriamiento antes de quedar lista para el llenado. Este tipo de lavadoras opera por diseño con tránsitos de decenas de minutos por botella para garantizar la sanitización del envase.</li>
+                    <li><b>Llenado y sellado (15 s):</b> es el tiempo que una botella permanece sujeta a la válvula en el carrusel de una llenadora rotativa (isobárica) como las que usa FEMSA, desde que entra hasta que sale tapada. Este tiempo se obtiene dividiendo el número de válvulas de llenado de la máquina entre la velocidad de la línea, y en una llenadora circular real está en el orden de segundos, no de minutos.</li>
+                    <li><b>Etiquetado e inspección (15 min):</b> incluye el tránsito por la etiquetadora y la acumulación en el buffer de inspección final antes de pasar a empaque.</li>
+                    <li><b>Empaque y paletizado (25 min):</b> incluye el tiempo de acumulación necesario para formar cada paquete/caja y cada capa de la estiba antes de que el paletizador mueva el conjunto completo.</li>
+                </ul>
+                <p class="justified-text">Aunque el llenado es, de las cuatro, la etapa con menor tiempo de permanencia por botella, sigue siendo el <b>cuello de botella de la línea</b> — no porque tarde más, sino porque su capacidad de producción por hora (determinada por el número de válvulas de la llenadora) es la más baja de las cuatro etapas, y es esa tasa la que termina marcando el ritmo de toda la línea.</p>
+                <p class="justified-text">Tomando la velocidad corregida de la Línea 3 (12.000 botellas/hora) y un turno de 8 horas, se asume una producción de alrededor de <b>96.000 botellas por turno</b>.</p>
                 <h3>Referencias de búsqueda</h3>
                 <div>
                 <ul style="list-style-type: none; margin: 20px 0 20px auto; max-width: 800px; text-align: left; display: inline-block;">
