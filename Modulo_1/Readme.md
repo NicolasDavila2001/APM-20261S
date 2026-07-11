@@ -1,6 +1,7 @@
 # Modulo 1 : Introducción a la automatización de manufactura
 
-El presente módulo aborda el análisis de una arquitectura de automatización industrial estructurada bajo el estándar ISA-95, mediante la evaluación de la línea de producción a partir de la pirámide de automatización, con el propósito de determinar qué capas se encuentran cubiertas y qué elementos componen cada una de ellas. Posteriormente, se establecen las etapas del proceso de producción, construyendo un esquema conceptual que servirá como base para el planteamiento de los diagramas a desarrollar en el [Módulo 2](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_2). El módulo concluye con la presentación de los datos iniciales recopilados durante la visita técnica realizada a la planta de FEMSA Coca-Cola, los cuales constituyen el punto de partida para el análisis y desarrollo de los módulos subsiguientes y la propuesta de automatizacion final.
+El presente módulo aborda el análisis de una arquitectura de automatización industrial estructurada bajo el estándar ISA-95, mediante la evaluación de la línea de producción a partir de la pirámide de automatización, con el propósito de determinar qué capas se encuentran cubiertas y qué elementos componen cada una de ellas. Posteriormente, se establecen las etapas del proceso de producción, construyendo un esquema conceptual que servirá como base para el planteamiento de los diagramas a desarrollar en el [Módulo 2](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_2). El módulo concluye con la presentación de los datos iniciales recopilados durante la visita técnica realizada a la planta de FEMSA Coca-Cola, complementados con referencias de la industria del envasado (fabricantes de línea como Krones, KHS y Sidel, y plantas embotelladoras publicadas) para dar coherencia a los valores donde la información de campo fue insuficiente. Estos datos constituyen el punto de partida para el análisis y desarrollo de los módulos subsiguientes y la propuesta de automatización final.
+
 <p align="center">
   <img src="piramideisa.png" width="45%"/>
 </p>
@@ -51,9 +52,11 @@ Para ver el desarrollo del VSM , Diagrama DOP,layaouts y calculo de indicadores 
 
 | Línea | Velocidad |
 | :--- | :--- |
-| Línea 1 | 15k/h |
-| Línea 2 | 60k/h |
-| Línea 3 | 52k/h |
+| Línea 1 (237 mL) | 38.000 botellas/h |
+| Línea 2 (350 mL) | 30.000 botellas/h |
+| Línea 3 (2 L) | 12.000 botellas/h |
+
+A mayor volumen de envase, menor es la velocidad alcanzable por la llenadora (más líquido a dosificar, envase más pesado y de manejo más lento), por lo que la línea de menor formato (237 mL) es la más rápida y la de mayor formato (2 L) la más lenta. Estos valores se ajustaron tomando como referencia velocidades reales publicadas de líneas de envase retornable de tamaño comparable (líneas de vidrio retornable de gran formato en el rango de 8.000-15.000 botellas/h, frente a llenadoras retornables de formato pequeño que alcanzan 40.000-55.000 botellas/h).
 
 ---
 
@@ -61,26 +64,29 @@ Para ver el desarrollo del VSM , Diagrama DOP,layaouts y calculo de indicadores 
 
 | Descripción | Tiempo |
 | :--- | :--- |
-| Tiempo total del proceso | 90 - 105 minutos |
-| Tiempo falla promedio|  21 minutos |
-| Tiempo mantenimiento promedio|  17 - 30 minutos |
+| Tiempo total del proceso (dock-to-dock, Línea 3) | 90 - 105 minutos |
+| Tiempo falla promedio | 21 minutos |
+| Tiempo mantenimiento promedio | 20 minutos |
+
+El tiempo total del proceso corresponde al tránsito completo del producto por la línea, incluyendo las esperas y acumulaciones (buffers) entre etapas — por eso es mayor que la simple suma de los tiempos de proceso activo de cada máquina que se detalla a continuación.
 
 ---
 
 ### Tiempos Estimados por Etapa de Proceso (Línea 3)
 
-| Etapa del Proceso | Tiempo Estimado (min) |
+| Etapa del Proceso | Tiempo Estimado |
 | :--- | :--- |
-| **Lavado y preparación** | 25 |
-| **Llenado y sellado** | 40 |
-| **Etiquetado e inspección** | 15 |
-| **Empaque y paletizado** | 25 |
-| **Tiempo Total Aproximado** | **105** |
+| **Lavado y preparación** | 25 min |
+| **Llenado y sellado** | 15 s |
+| **Etiquetado e inspección** | 15 min |
+| **Empaque y paletizado** | 25 min |
+| **Tiempo Total Aproximado** | **~65 min** |
 
-"Llenado y sellado" con 40 minutos representa el cuello de botella del sistema y determina la velocidad de la operación .Por otra parte, se asumió una producción por turno de alrededor de 416.000 botellas por turno.
+Aunque el llenado es, de las cuatro, la etapa con menor tiempo de permanencia por botella, sigue siendo el **cuello de botella de la línea** — no porque tarde más, sino porque su capacidad de producción por hora (determinada por el número de válvulas de la llenadora) es la más baja de las cuatro etapas, y es esa tasa la que termina marcando el ritmo de toda la línea.
+
+Tomando la velocidad corregida de la Línea 3 (12.000 botellas/hora) y un turno de 8 horas, se asume una producción de alrededor de **96.000 botellas por turno**.
 
 ## Referencias de Busqueda 
 - https://www.youtube.com/watch?v=1VRI_r-YMjI
 - https://web.facebook.com/watch/?v=521596619874703
-
-
+- Referencias de velocidades y tiempos de llenado de fabricantes de línea (Krones, KHS, Sidel) y plantas embotelladoras Coca-Cola FEMSA publicadas, usadas para dar coherencia a los valores donde la visita técnica no alcanzó a precisar el dato.

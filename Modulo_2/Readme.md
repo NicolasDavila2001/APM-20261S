@@ -81,7 +81,7 @@ Esta sección vincula los indicadores de producción con la organización físic
 La distribución de esta línea sigue un **flujo circular**. El proceso comienza con la recepción de envases vacíos que deben pasar por una limpieza profunda antes de ser reutilizados. 
 
 * **Lavado y Preparación:** Es la etapa inicial de desinfección.
-* **Llenado y Sellado:** Es el núcleo de la planta y el punto que determina la velocidad de toda la línea (cuello de botella).
+* **Llenado y Sellado:** Es el núcleo de la planta y el punto que determina la velocidad de toda la línea (cuello de botella), no por su tiempo de permanencia por botella —que es el más corto de la línea— sino por su capacidad de producción por hora.
 * **Inspección:** Se realiza de forma electrónica tras el lavado y el llenado para garantizar la inocuidad.
 
 #### 2. Planta de Tratamiento de Agua Potable (PTAP)
@@ -92,7 +92,7 @@ Es el sistema de soporte encargado de procesar el insumo principal. Su diseño e
 > **Nota:** La imagen superior integra la vista de planta de la Línea 3 y la infraestructura de la PTAP, facilitando la comprensión del flujo de materiales desde el tratamiento del recurso hídrico hasta el paletizado final.
 ## Diagrama VSM (Value Stream Mapping) 
 ## Indicadores y Parámetros de Producción (Línea 3 - Envase retornable 2L)
-Usando la informacion obtenida en la vista tecnica e investigacion con otras fuentes ([modulo 1](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_1))se obtuvieron los siguientes valores.
+Usando la informacion obtenida en la vista tecnica, complementada y corregida con referencias de la industria del envasado ([modulo 1](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_1)), se obtuvieron los siguientes valores.
 
 ---
 
@@ -107,9 +107,9 @@ donde
 
 Si la demanda coincide con la capacidad de la línea, se tiene que:
 
-Takt = 28.800 / 416.000 = 0.069 s/botella
+Takt = 28.800 / 96.000 = 0.3 s/botella
 
-Esto se puede interpretar como que se requiere producir una botella aproximadamente cada **0.7 segundos** para satisfacer la demanda.
+Esto se puede interpretar como que se requiere producir una botella aproximadamente cada **0.3 segundos** para satisfacer la demanda.
 
 ---
 
@@ -117,21 +117,17 @@ Esto se puede interpretar como que se requiere producir una botella aproximadame
 	
 El tiempo de ciclo por unidad puede calcularse como:
 
-Tc = Toperación / Q = 3.600 / 52.000 = 0.069 s
+Tc = Toperación / Q = 3.600 / 12.000 = 0.3 s
 
 ---
 
 ## Tiempo de alistamiento (Tsu):
 
-Durante la visita no se reportó el valor exacto de este tiempo, que corresponde al tiempo requerido para preparar la línea antes de producir un lote, por lo que se realiza una estimación basada en operaciones típicas de embotelladoras.
+Este tiempo corresponde a lo requerido para preparar la línea antes de producir un lote (cambio de referencia, ajustes de etiquetado, limpieza de línea). Dado que la línea todavía opera en los niveles 0-2 de la pirámide ISA-95 (ver [Módulo 1](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_1)), es decir, sin una gestión de cambios de formato optimizada:
 
-Tsu ≈ 20 min
+Tsu (estado actual) ≈ 60 min
 
-Esto incluye actividades como:
-
-- Cambio de referencia  
-- Ajustes de etiquetado  
-- Limpieza de la línea  
+Tsu (objetivo) ≈ 15-20 min
 
 ---
 
@@ -139,7 +135,7 @@ Esto incluye actividades como:
 
 Definida como número de unidades producida por hora, se tiene que:
 
-Rp = 52.000 botellas / h
+Rp = 12.000 botellas / h
 
 ---
 
@@ -157,15 +153,17 @@ donde
 
 Por lo que  
 
-PC = 1 * 7 * 8 * 52.000 = 2'912.000 botellas/semana
+PC = 1 * 7 * 8 * 12.000 = 672.000 botellas/semana
 
 ---
 
 ## Manufacturing Lead Time (MLT):
 
-Se define como el tiempo total desde el inicio hasta la finalización de la fabricación, como no tenemos un valor exacto, y solo contamos con un estimado de entre **90-105 minutos** para el tiempo total de producción, se realizó un promedio de forma que:
+Se define como el tiempo total desde el inicio hasta la finalización de la fabricación (tiempo dock-to-dock, incluyendo esperas y acumulación entre etapas). Tomando el rango de 90-105 minutos reportado para el tránsito completo del producto por la línea (ver [Módulo 1](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_1)), se promedia de forma que:
 
 MLT ≈ 98 min
+
+Este valor es mayor que la suma de los tiempos de proceso activo de cada etapa (~65 min, ver Módulo 1) porque incluye las esperas y acumulaciones entre estaciones, que son normales en cualquier línea continua.
 
 ---
 
@@ -177,26 +175,35 @@ OEE = A * PE * Q
 
 donde  
 
-- A = disponibilidad (valor típico industrial estimado de 0.9)  
-- PE = eficiencia de desempeño (se estima un valor de 0.95 para una línea de producción automatizada)  
-- Q = tasa de calidad (se toma un valor de 0.99 como valor típico de embotellado)  
+A = disponibilidad  
+PE = eficiencia de desempeño  
+Q = tasa de calidad  
 
-Por lo que se tiene:
+Se calculan dos escenarios, porque la planta analizada todavía no está automatizada:
 
-OEE = 0.90 * 0.95 * 0.99 = 0.846 = 84.6 %
+**OEE actual (línea base, antes de automatizar):**
+
+A = 0.90 (con base en el tiempo de falla y mantenimiento reportados: ~38-51 min de paro sobre un turno de 480 min)
+PE = 0.82 
+Q = 0.99 (valor típico de embotellado)
+
+OEE actual = 0.90 * 0.82 * 0.99 = 0.731 = **73.1 %**
+
+**OEE objetivo (una vez implementada la propuesta de automatización):**
+
+A = 0.90
+PE = 0.95 
+Q = 0.99
+
+OEE objetivo = 0.90 * 0.95 * 0.99 = 0.846 = **84.6 %**
 
 | Indicador | Definición / Fórmula | Valor Calculado |
 | :--- | :--- | :--- |
-| **Takt Time** | Tiempo requerido para producir una unidad y satisfacer la demanda. | **0.069 s/botella** |
-| **Tiempo de ciclo (Tc)** | Tiempo de operación por unidad producida. | **0.069 s** |
-| **Tiempo de alistamiento (Tsu)**| Tiempo requerido para preparar la línea (cambio de referencia, limpieza). | **20 min** |
-| **Tasa de producción (Rp)** | Número de unidades producidas por hora. | **52.000 botellas/h** |
-| **Capacidad (PC)** | Capacidad total (turnos × horas × estaciones × tasa de producción). | **2.912.000 botellas/sem** |
+| **Takt Time** | Tiempo requerido para producir una unidad y satisfacer la demanda. | **0.3 s/botella** |
+| **Tiempo de ciclo (Tc)** | Tiempo de operación por unidad producida. | **0.3 s** |
+| **Tiempo de alistamiento (Tsu)**| Tiempo requerido para preparar la línea (cambio de referencia, limpieza). | **60 min (actual) / 15-20 min (objetivo)** |
+| **Tasa de producción (Rp)** | Número de unidades producidas por hora. | **12.000 botellas/h** |
+| **Capacidad (PC)** | Capacidad total (turnos × horas × estaciones × tasa de producción). | **672.000 botellas/sem** |
 | **Lead Time (MLT)** | Tiempo total desde el inicio hasta la finalización de la fabricación. | **98 min** |
-| **OEE** | Efectividad Total de los Equipos (Disponibilidad × Eficiencia × Calidad). | **84.6 %** |
-
-se estima un valor de 0.95 para una línea de producción automatizada y se toma un valor de 0.99 como valor típico de embotellado. Seria lo ideal y se deconocen estos valores reales. 
-
-
-
+| **OEE** | Efectividad Total de los Equipos (Disponibilidad × Eficiencia × Calidad). | **73.1 % (actual) / 84.6 % (objetivo)** |
 
