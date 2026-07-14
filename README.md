@@ -18,34 +18,34 @@ En Chibcho sistemas somos una empresa especializada en el desarrollo de solucion
     <td align="center">
       <img src="images/team/nicolas.png" width="250"/><br/>
       <b>Nicolas Fernando Davila Peñuela</b><br/>
-      <span>Ingeniero Mecatronico - </span>
+      <span>Ingeniero Mecatronico - CEO </span>
     </td>
     <td align="center">
       <img src="images/team/juan_david.png" width="220"/><br/>
       <b>Juan David Meza Criollo</b><br/>
-      <span>Ingeniero Mecatronico -</span>
+      <span>Ingeniero Mecatronico - CIO </span>
     </td>
     <td align="center">
       <img src="images/team/cristian.png" width="250"/><br/>
       <b>Cristian Fabián Martínez Bohorquez</b><br/>
-      <span>Ingeniero Mecatronico -</span>
+      <span>Ingeniero Mecatronico - CCO</span>
     </td>
   </tr>
   <tr>
     <td align="center">
       <img src="images/team/andres.png" width="250"/><br/>
       <b>Andres Mauricio Avilan Herrera</b><br/>
-      <span>Ingeniero Mecatronico -</span>
+      <span>Ingeniero Mecatronico - CFO </span>
     </td>
     <td align="center">
       <img src="images/team/santiago.png" width="250"/><br/>
       <b>Santiago Avila Corredor</b><br/>
-      <span>Ingeniero Mecatronico - </span>
+      <span>Ingeniero Mecatronico - CTO </span>
     </td>
     <td align="center">
       <img src="images/team/JuanDelgado.png" width="250"/><br/>
       <b>Juan José Delgado Estrada </b><br/>
-      <span>Ingeniero Mecatronico - </span>
+      <span>Ingeniero Mecatronico - COO </span>
     </td>
   </tr>
 </table>
