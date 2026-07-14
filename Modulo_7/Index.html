@@ -173,7 +173,11 @@
     <div class="modulo-header">
         <div class="container text-center">
             <h2>Módulo 7 – SCADA y comunicaciones</h2>
-            <p></p>
+            <p class="justified-text">Esta sección documenta cómo se interconectan los gemelos digitales y controladores virtuales desarrollados en los
+                módulos anteriores para llegar a una única plataforma de visualización SCADA. No es un módulo aislado: reúne las
+                comunicaciones de la celda robotizada (<a href="../Modulo_4/Index.html">Módulo 4</a>), el gemelo digital en NX MCD
+                (<a href="../Modulo_5/Index.html">Módulo 5</a>) y el PLC virtual en Studio 5000
+                (<a href="../Modulo_6/Index.html">Módulo 6</a>).</p>
         </div>
     </div>
 
@@ -192,6 +196,76 @@
                 </a>
             </div>
             <br>
+
+            <h2 class="text-center">Arquitectura de comunicación del proyecto</h2>
+
+            <div class="diagram-container">
+                <pre class="mermaid">
+                    graph TD
+                        NX["Siemens NX (MCD)<br/>gemelo mecánico / I/O"]
+                        S5["Studio 5000<br/>lógica del PLC"]
+                        RS["ABB RobotStudio<br/>gemelo del robot"]
+                        LE["Logix Emulate (PLC)<br/>controlador virtual"]
+                        IOT["ABB IoT Gateway<br/>servidor OPC UA"]
+                        RSL["RSLinx Classic<br/>servidor OPC DA"]
+                        FTL["FT Linx Gateway<br/>puente DA a UA"]
+                        SCADA["Node-RED - SCADA<br/>visualización central"]
+
+                        S5 -->|programa| LE
+                        RS -->|señales| IOT
+                        LE <-->|I/O robot y PLC| IOT
+                        NX -->|OPC DA| RSL
+                        LE -->|backplane| RSL
+                        RSL --> FTL
+                        RSL -->|OPC DA| SCADA
+                        FTL -->|OPC UA| SCADA
+                        IOT -->|OPC UA| SCADA
+
+                        style NX fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style S5 fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style RS fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style LE fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style IOT fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style RSL fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style FTL fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style SCADA fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                </pre>
+            </div>
+            <br>
+
+            <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">Componentes y rol de cada uno</h3>
+            <table class="tabla-personalizada">
+                <thead>
+                    <tr><th>Componente</th><th>Rol</th><th>Módulo donde se desarrolla</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Siemens NX (MCD)</td><td>Gemelo mecánico de la llenadora rotativa; envía/recibe señales de E/S</td><td><a href="../Modulo_5/Index.html">Módulo 5</a></td></tr>
+                    <tr><td>Studio 5000</td><td>Programación ladder del PLC de la llenadora</td><td><a href="../Modulo_6/Index.html">Módulo 6</a></td></tr>
+                    <tr><td>Logix Emulate</td><td>Controlador virtual que ejecuta el programa de Studio 5000</td><td>Módulo 6</td></tr>
+                    <tr><td>ABB RobotStudio</td><td>Gemelo del robot paletizador IRB 660</td><td><a href="../Modulo_4/Index.html">Módulo 4</a></td></tr>
+                    <tr><td>ABB IoT Gateway</td><td>Servidor OPC UA que expone las señales del robot</td><td>Módulo 4 / Módulo 7</td></tr>
+                    <tr><td>RSLinx Classic</td><td>Servidor OPC DA; puente entre el controlador virtual y NX MCD</td><td>Módulo 7</td></tr>
+                    <tr><td>FT Linx Gateway</td><td>Puente que traduce OPC DA → OPC UA para unificar ambos protocolos</td><td>Módulo 7</td></tr>
+                    <tr><td>Node-RED (SCADA)</td><td>Nodo central de visualización; recibe OPC DA (línea de llenado) y OPC UA (celda robotizada)</td><td>Módulo 7</td></tr>
+                </tbody>
+            </table>
+            <br>
+
+            <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">Flujo de datos</h3>
+            <ul class="justified-text" style="max-width:900px; margin:0 auto 20px; text-align:left;">
+                <li><b>Studio 5000 → Logix Emulate:</b> se descarga el programa ladder al controlador virtual.</li>
+                <li><b>Logix Emulate ↔ RSLinx Classic:</b> comunicación por backplane virtual; RSLinx expone las tags del PLC como servidor OPC DA.</li>
+                <li><b>NX MCD ↔ RSLinx Classic:</b> el gemelo digital de la llenadora lee/escribe esas mismas tags vía OPC DA (ver tabla de señales detallada en el <a href="../Modulo_5/Index.html">Módulo 5</a>).</li>
+                <li><b>ABB RobotStudio → ABB IoT Gateway:</b> el gemelo del robot envía sus señales de E/S, expuestas como servidor OPC UA.</li>
+                <li><b>Logix Emulate ↔ ABB IoT Gateway:</b> intercambio de señales I/O robot–PLC para sincronizar la celda robotizada con la línea de llenado.</li>
+                <li><b>RSLinx Classic → FT Linx Gateway → Node-RED:</b> las tags OPC DA de la línea de llenado llegan al SCADA convertidas a OPC UA.</li>
+                <li><b>ABB IoT Gateway → Node-RED:</b> las señales del robot llegan directamente por OPC UA.</li>
+            </ul>
+
+            <p class="justified-text">De esta forma, Node-RED centraliza en una sola interfaz SCADA tanto el estado de la línea de
+                llenado (vía NX MCD/Studio 5000) como el de la celda robotizada (vía RobotStudio), aunque cada sistema use un
+                protocolo distinto en su origen (OPC DA vs. OPC UA).</p>
+
             <br>
             <div style="display: flex; justify-content: center; gap: 20px;">
                 <div class="btn-back">

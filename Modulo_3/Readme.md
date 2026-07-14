@@ -75,8 +75,6 @@ fuerte del proyecto es el beneficio potencial de cerrar la brecha de OEE (73,1% 
 **$4.581.158.400 COP/año** — este valor se muestra aparte porque depende de que el mercado absorba la producción
 adicional liberada, algo que no se puede confirmar por sí solo.
 
-> **Nota:** todos los supuestos del modelo (TRM, salarios, tasa de descuento, tiempo de dedicación del equipo,
-> precios de equipos, etc.) están centralizados y documentados en la hoja *Supuestos* del Excel, y son editables.
 
 <!-- 
 ## Matriz de adquisiciones

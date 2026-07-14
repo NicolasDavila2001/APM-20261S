@@ -173,7 +173,12 @@
     <div class="modulo-header">
         <div class="container text-center">
             <h2>Módulo 6 – Automatización discreta (PLC)</h2>
-            <p></p>
+            <p class="justified-text">Este módulo documenta el programa de control discreto desarrollado en Studio 5000 (Logix Designer) para la estación
+                de llenado rotativo (carrusel de 20 boquillas). El programa corre sobre un controlador virtual Logix Emulate 5570
+                y sus salidas se envían al gemelo digital construido en Siemens NX presentado en el
+                <a href="../Modulo_5/Index.html">Módulo 5</a>, conformando así el lazo entre la lógica de control y la simulación
+                del carrusel y el rechazador. Para el desarrollo de las pantallas de supervisión sobre esta misma lógica (SCADA en
+                Node-RED), se explica en el <a href="../Modulo_7/Index.html">Módulo 7</a>.</p>
         </div>
     </div>
 
@@ -192,6 +197,152 @@
                 </a>
             </div>
             <br>
+
+            <h2 class="text-center">Descripción general del controlador</h2>
+            <table class="tabla-personalizada">
+                <thead>
+                    <tr><th>Elemento</th><th>Valor</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Controlador</td><td>Emulate 5570 (Studio 5000 Logix Emulate)</td></tr>
+                    <tr><td>Tarea principal</td><td><code>MainTask</code>, tipo Continuous, Watchdog 500 ms</td></tr>
+                    <tr><td>Programa / Rutina</td><td><code>MainProgram</code> → <code>MainRoutine</code> (Ladder Diagram, 54 rungs)</td></tr>
+                    <tr><td>Integración</td><td>Entradas y salidas mapeadas al gemelo digital en NX (Módulo 5)</td></tr>
+                    <tr><td>Archivo de proyecto</td><td><code>APM_PROJECT.ACD</code></td></tr>
+                </tbody>
+            </table>
+            <br>
+
+            <h2 class="text-center">Arquitectura de Inputs/Outputs y variables principales</h2>
+
+            <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">Entradas (sensores y mandos)</h3>
+            <table class="tabla-personalizada">
+                <thead><tr><th>Tag</th><th>Descripción</th></tr></thead>
+                <tbody>
+                    <tr><td><code>I_Strt_PB</code></td><td>Pulsador físico de arranque (Start)</td></tr>
+                    <tr><td><code>I_Stp_PB</code></td><td>Pulsador físico de parada (Stop)</td></tr>
+                    <tr><td><code>I_NR_Stp</code></td><td>Parada virtual enviada desde Node-RED</td></tr>
+                    <tr><td><code>I_Inf_Cnt_Sens</code></td><td>Sensor 1: conteo de botellas a la entrada de la banda</td></tr>
+                    <tr><td><code>I_Rej_Sens</code></td><td>Sensor 2: sensor óptico de la zona de rechazo</td></tr>
+                    <tr><td><code>I_Swv_Fill_Sens</code></td><td>Sensor 3: presencia de botella a la entrada de la mesa circular (swivel)</td></tr>
+                </tbody>
+            </table>
+            <br>
+
+            <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">Salidas (hacia el gemelo digital en NX)</h3>
+            <table class="tabla-personalizada">
+                <thead><tr><th>Tag</th><th>Descripción</th></tr></thead>
+                <tbody>
+                    <tr><td><code>O_Master_Run</code></td><td>Bit maestro de habilitación de la máquina</td></tr>
+                    <tr><td><code>O_Conv_Speed</code></td><td>Velocidad de la banda (mm/s)</td></tr>
+                    <tr><td><code>O_Swiv_Speed</code></td><td>Velocidad de giro de la mesa circular (RPM)</td></tr>
+                    <tr><td><code>O_Rej_Pos</code></td><td>Posición del pistón de rechazo (mm)</td></tr>
+                    <tr><td><code>O_Noz_Vert_Pos[1..20]</code></td><td>Altura de cada una de las 20 boquillas de llenado (mm)</td></tr>
+                </tbody>
+            </table>
+            <br>
+
+            <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">Variables internas de control</h3>
+            <table class="tabla-personalizada">
+                <thead><tr><th>Tag</th><th>Descripción</th></tr></thead>
+                <tbody>
+                    <tr><td><code>C_Btl_Count</code></td><td>Contador de botellas totales procesadas</td></tr>
+                    <tr><td><code>ONS_Infeed</code></td><td>Bit auxiliar de flanco (one-shot) para el conteo de entrada</td></tr>
+                    <tr><td><code>V_Swiv_Run</code></td><td>Bit de giro de la mesa circular</td></tr>
+                    <tr><td><code>V_Noz_Index</code></td><td>Índice (1 a 20) de la boquilla actualmente sobre el Sensor 3</td></tr>
+                    <tr><td><code>V_Noz_Is_Down[1..20]</code></td><td>Bandera: la boquilla N está abajo, llenando</td></tr>
+                    <tr><td><code>T_Rej_Delay</code></td><td>Temporizador de movimiento de botella mala hasta el pistón (12 s)</td></tr>
+                    <tr><td><code>T_Rej_Pulse</code></td><td>Duración de la extensión del pistón de rechazo (400 ms)</td></tr>
+                    <tr><td><code>T_Swiv_Tick</code></td><td>Tiempo de avance de la mesa por boquilla, equivalente a 18° (2 s)</td></tr>
+                    <tr><td><code>T_Noz_Fill[1..20]</code></td><td>Temporizador de llenado individual por boquilla (3 s)</td></tr>
+                </tbody>
+            </table>
+            <br>
+
+            <h2 class="text-center">Lógica de control</h2>
+            <p class="justified-text">El programa se organiza en cinco bloques funcionales dentro de <code>MainRoutine</code>:</p>
+            <ul class="justified-text" style="max-width:900px; margin:0 auto 20px; text-align:left;">
+                <li><b>Arranque y parada:</b> <code>I_Strt_PB</code> enclava <code>O_Master_Run</code>; <code>I_Stp_PB</code> o la parada virtual <code>I_NR_Stp</code> lo desenclavan.</li>
+                <li><b>Consignas de actuadores:</b> con la máquina habilitada, se fijan 100 mm/s en la banda y 1.5 RPM en la mesa (si esta tiene permiso de giro); si la máquina se detiene, ambas velocidades se fuerzan a 0.</li>
+                <li><b>Conteo de botellas:</b> cada flanco del Sensor 1 incrementa el contador <code>C_Btl_Count</code>.</li>
+                <li><b>Estación de rechazo:</b> al detectar una botella defectuosa en el Sensor 2, se espera el tiempo de transporte (<code>T_Rej_Delay</code>, 12 s) hasta que llega al pistón, se extiende el pistón (<code>T_Rej_Pulse</code>, 400 ms) y se retrae.</li>
+                <li><b>Carrusel e indexado de boquillas:</b> al detectar botella en el Sensor 3 se habilita el giro (<code>V_Swiv_Run</code>); cada 2 s (<code>T_Swiv_Tick</code>, un paso de 18°) avanza el índice <code>V_Noz_Index</code> de forma circular (1 a 20); la boquilla indexada baja y comienza su propio temporizador de llenado de 3 s (<code>T_Noz_Fill[N]</code>), tras el cual sube y libera la bandera <code>V_Noz_Is_Down[N]</code> para el siguiente ciclo.</li>
+            </ul>
+
+            <div class="diagram-container">
+                <pre class="mermaid">
+                    flowchart TD
+                        A[Start / Stop] --> B{O_Master_Run activo?}
+                        B -- No --> Z[Banda y mesa a velocidad 0]
+                        B -- Sí --> C[Banda a 100 mm/s]
+
+                        C --> D[Sensor 1: ONS + CTU -> C_Btl_Count]
+
+                        C --> E{Botella en Sensor 2 rechazo?}
+                        E -- Sí --> F[T_Rej_Delay: 12 s de transporte]
+                        F --> G[Piston a 50 mm x 400 ms T_Rej_Pulse]
+                        G --> H[Piston retrae a 0 mm]
+
+                        C --> I{Botella en Sensor 3 swivel?}
+                        I -- Sí --> J[V_Swiv_Run = 1, mesa a 1.5 RPM]
+                        J --> K[T_Swiv_Tick 2 s: avanza V_Noz_Index 1-20 circular]
+                        K --> L[Boquilla indexada baja a 90 mm, V_Noz_Is_Down = 1]
+                        L --> M[T_Noz_Fill 3 s por boquilla]
+                        M --> N[Boquilla sube a 0 mm, V_Noz_Is_Down = 0]
+
+                        style A fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style B fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style C fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style D fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style E fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style F fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style G fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style H fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style I fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style J fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style K fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style L fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style M fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style N fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                        style Z fill:#222,stroke:#e74c3c,stroke-width:2px,color:#fff
+                </pre>
+            </div>
+
+            <p class="justified-text"><i>Nota:</i> las 20 boquillas se implementan como 20 pares de rungs independientes (uno por boquilla) en lugar de un único bloque indexado, ya que el direccionamiento indirecto dentro de una instrucción de temporizador (<code>TON</code>) no es práctico en ladder. Solo la activación (bajar la boquilla) usa indexado dinámico sobre <code>V_Noz_Index</code>; el llenado y la subida de cada boquilla están codificados de forma individual.</p>
+            <br>
+
+            <h2 class="text-center">Parámetros de tiempo del proceso</h2>
+            <table class="tabla-personalizada">
+                <thead><tr><th>Temporizador</th><th>Valor</th><th>Significado</th></tr></thead>
+                <tbody>
+                    <tr><td><code>T_Swiv_Tick</code></td><td>2 s</td><td>Avance de la mesa por boquilla (18° = 360°/20)</td></tr>
+                    <tr><td><code>T_Noz_Fill</code></td><td>3 s</td><td>Tiempo de llenado por boquilla</td></tr>
+                    <tr><td><code>T_Rej_Delay</code></td><td>12 s</td><td>Transporte de la botella mala hasta el pistón</td></tr>
+                    <tr><td><code>T_Rej_Pulse</code></td><td>400 ms</td><td>Duración del golpe del pistón de rechazo</td></tr>
+                </tbody>
+            </table>
+            <br>
+
+            <p class="justified-text">Con un avance de 2 s por boquilla y un llenado de 3 s, en régimen permanente hay simultáneamente más de una boquilla llenando a la vez (una nueva boquilla baja antes de que la anterior termine su llenado), lo cual es consistente con el comportamiento real de una llenadora rotativa descrito en el <a href="../Modulo_1/Index.html">Módulo 1</a> y el <a href="../Modulo_2/Index.html">Módulo 2</a>.</p>
+
+            <h3>Referencias</h3>
+            <div>
+                <ul style="list-style-type: none; margin: 20px 0 20px auto; max-width: 800px; text-align: left; display: inline-block;">
+                    <li style="margin-bottom: 10px; line-height: 1.6; text-align: left;">
+                        <span style="margin-right: 8px;">—</span>
+                        Reporte completo del proyecto en Studio 5000 (Controller Organizer, Tag Listing y Ladder Diagram): <code>Reporte_proyecto.pdf</code>
+                    </li>
+                    <li style="margin-bottom: 10px; line-height: 1.6; text-align: left;">
+                        <span style="margin-right: 8px;">—</span>
+                        <a href="../Modulo_5/Index.html">Módulo 5 — Digital Factory</a>: gemelo digital en NX MCD que recibe las salidas de este programa.
+                    </li>
+                    <li style="margin-bottom: 10px; line-height: 1.6; text-align: left;">
+                        <span style="margin-right: 8px;">—</span>
+                        <a href="../Modulo_7/Index.html">Módulo 7 — SCADA y comunicaciones</a>: supervisión y HMI sobre esta misma lógica.
+                    </li>
+                </ul>
+            </div>
+
             <br>
             <div style="display: flex; justify-content: center; gap: 20px;">
                 <div class="btn-back">
