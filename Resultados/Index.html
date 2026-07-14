@@ -389,45 +389,53 @@ section{
                         <section id="Propuesta" class="module-section">
                             <div class="text-center" style="margin-bottom: 40px;">
                                 <h2>Propuesta de automatización</h2>
-                                <p class="justified-text">
-                                    La propuesta de automatización se diseñó a partir de una arquitectura integrada por robótica industrial, 
-                                    control mediante PLC, un sistema SCADA y visión artificial. Para la etapa final de la línea se planteó 
-                                    la implementación de un sistema robótico de clasificación, encargado de separar los productos defectuosos 
-                                    de aquellos aptos para su comercialización.
-                                </p>
+                                    <p class="justified-text">
+                                        La propuesta de automatización se diseñó a partir de una arquitectura integrada por robótica industrial, 
+                                        control mediante PLC, supervisión SCADA y visión artificial, con el objetivo de mejorar la productividad, 
+                                        reducir la intervención manual y aumentar la confiabilidad del proceso de envasado y clasificación de botellas.
+                                    </p>
 
-                                <p class="justified-text">
-                                    Para esta función se consideró el robot paletizador ABB IRB 660, ya que es un equipo diseñado específicamente 
-                                    para aplicaciones de paletizado, con una capacidad de carga cercana a los 250 kg y un amplio alcance. Estas 
-                                    características lo hacen adecuado para manipular canastas o agrupaciones de botellas al final del proceso. 
-                                    Adicionalmente, para tareas de manipulación asociadas a inspección y manejo de unidades individuales, se tuvo 
-                                    en cuenta el robot ABB IRB 140 M2000, el cual cuenta con una capacidad de carga aproximada de 6 kg y una buena 
-                                    precisión, lo que lo convierte en una opción apropiada para trabajar en conjunto con un sistema de visión 
-                                    artificial y retirar o manipular botellas detectadas como defectuosas.
-                                </p>
+                                    <p class="justified-text">
+                                        Para las operaciones de manipulación y paletizado al final de la línea se propone la implementación del robot 
+                                        paletizador ABB IRB 660, seleccionado debido a que está diseñado específicamente para aplicaciones de final de 
+                                        línea y manejo de cargas. Este robot permite manipular cajas, canastas o agrupaciones de botellas de manera 
+                                        rápida, repetitiva y precisa, además de reducir riesgos ergonómicos y aumentar la capacidad de producción.
+                                    </p>
 
-                                <p class="justified-text">
-                                    También es necesaria la selección de un PLC encargado de coordinar las operaciones de los robots y de los demás 
-                                    equipos presentes en la línea. Para ello, se propuso el PLC Siemens S7-1200 CPU 1214C, debido a que es un 
-                                    controlador ampliamente utilizado en aplicaciones industriales, con suficientes entradas y salidas para este tipo 
-                                    de sistema y buena compatibilidad con redes industriales. Junto con el PLC, se planteó incorporar una HMI que 
-                                    permita visualizar las variables del proceso, los estados del sistema y las alarmas, además de realizar ajustes 
-                                    básicos de operación. Para esta función se seleccionó la HMI Siemens KTP700 Basic, compatible con el PLC elegido 
-                                    y con una interfaz gráfica adecuada para la interacción del operador.
-                                </p>
+                                    <p class="justified-text">
+                                        Para el control general del proceso se propone el PLC Siemens S7-1200 CPU 1214C, encargado de coordinar las 
+                                        operaciones de transporte, clasificación y rechazo de productos, además de la comunicación entre los distintos 
+                                        dispositivos de la línea. Como interfaz de supervisión se plantea la HMI Siemens KTP700 Basic, la cual permitirá 
+                                        visualizar variables del proceso, estados de operación y alarmas del sistema.
+                                    </p>
 
-                                <p class="justified-text">
-                                    Finalmente, para implementar la detección de objetos en la línea, se contempló el sensor de visión ifm O2D550, 
-                                    capaz de identificar la posición y la presencia de objetos mediante procesamiento de imagen integrado. Esta 
-                                    información puede ser utilizada posteriormente por el PLC o por el robot para ejecutar acciones de manipulación, 
-                                    clasificación o rechazo.
-                                </p>
+                                    <p class="justified-text">
+                                        Para la inspección de las botellas se propone el sensor de visión artificial ifm O2D550, capaz de detectar 
+                                        presencia, posición y posibles defectos en las botellas mediante procesamiento de imagen integrado. Con el fin 
+                                        de reducir desperdicios y mejorar el control de calidad, se plantean dos estaciones de inspección 
+                                        y rechazo distribuidas en diferentes etapas de la línea de producción.
+                                    </p>
 
-                                <p class="justified-text">
-                                    En conjunto, la selección de estos componentes se realizó buscando equipos industriales reales, disponibles en 
-                                    el mercado, y que permitan construir una propuesta de automatización coherente, técnica y viable para las 
-                                    necesidades del proceso de envasado de botellas.
-                                </p>
+                                    <p class="justified-text">
+                                        La primera estación de inspección estará ubicada antes del llenado, donde el sistema de visión verificará 
+                                        la correcta presencia y estado físico de las botellas vacías. En caso de detectar deformaciones o daños, el 
+                                        PLC activará un cilindro neumático lateral encargado de expulsar automáticamente la botella defectuosa antes 
+                                        de que ingrese al proceso de llenado, evitando pérdidas de producto y materiales.
+                                    </p>
+
+                                    <p class="justified-text">
+                                        La segunda estación de inspección estará ubicada después de las etapas de llenado, tapado y etiquetado, 
+                                        funcionando como un control de calidad final. En esta etapa se verificarán variables como el nivel de llenado, 
+                                        la presencia correcta de la tapa y el estado de la etiqueta. Cuando se detecte una botella defectuosa, el PLC 
+                                        activará un desviador lateral suave controlado neumáticamente, el cual dirigirá el producto hacia una línea 
+                                        secundaria o contenedor de rechazo sin generar impactos bruscos que puedan dañar el envase o provocar derrames.
+                                    </p>
+
+                                    <p class="justified-text">
+                                        Finalmente, toda la arquitectura será supervisada mediante un sistema SCADA, encargado de monitorear variables 
+                                        de producción, estados de los equipos, alarmas y estadísticas de rechazo en tiempo real, facilitando el análisis 
+                                        operativo y la detección temprana de fallas dentro del proceso automatizado.
+                                    </p>
                             </div>
                             <div class="module-divider"></div>
                         </section>
