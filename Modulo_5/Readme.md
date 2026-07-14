@@ -23,12 +23,40 @@ Siemens Tecnomatix Plant Simulation
 - modelo principal
 - imágenes del layout
 
-
-
-
 ## Supuestos
 - 3 productos
 - fallas por MTTR
+
+Simulación y optimización de un **Gemelo Digital** de una línea de envasado de botellas de vidrio de 330 mL, Botellas de plastico de 2L y Botellones de 20L utilizando **Siemens Tecnomatix Plant Simulation**. El objetivo principal es modelar el comportamiento dinámico de la planta y validar un **OEE global competitivo y superior** al estimado en la visita tecnica mediante la simulación de eventos discretos.
+
+<img src="https://github.com/NicolasDavila2001/APM-20261S/blob/main/Modulo_5/img/tecx1.png" width="550" alt="Vista General de la Línea 2D ">
+<img src="https://github.com/NicolasDavila2001/APM-20261S/blob/main/Modulo_5/img/tecx2.png" width="650" alt="Vista General de la Línea 3D - Ángulo 2">
+
+**Características del Modelo:**
+* **Visualización 3D Realista:** Integración y escalado de archivos CAD importados de GrabCAD para representar las botellas reales sin afectar el rendimiento de la simulación.
+* **Control de Cuello de Botella:** La Llenadora (`Fill_600`) actúa como la máquina restrictiva de la línea, regulando el flujo de producción.
+* **Gestión de Mermas (Calidad):** Estación de inspección automatizada para el descarte y conteo del producto defectuoso.
+* **Empaque y Paletizado:** Simulación del proceso de paletizado final para transporte al almacén.
+
+**Parámetros de Diseño y OEE:**
+El modelo se configuró bajo la métrica industrial estándar:
+
+$$\text{OEE} = \text{Disponibilidad} \times \text{Rendimiento} \times \text{Calidad}$$
+
+| Indicador | Valor Configurado | Método de Simulación |
+| :--- | :--- | :--- |
+| **Disponibilidad** | **85.9%** | Configuración de fallas (MTTR de 1 min) en la Llenadora. |
+| **Rendimiento** | **100.0%** | Tasa de entrada (`Source Interval = 0`) para eliminar esperas. |
+| **Calidad** | **98.5%** | Descarte automático del 1.5% de botellas en Inspección. |
+| **OEE Global** | **84.6%** | Resultado del sistema integrado. |
+
+<img src="https://github.com/NicolasDavila2001/APM-20261S/blob/main/Modulo_5/img/tecx3.png" width="500" alt="Gráfico de OEE y Resultados">
+
+**Monitoreo en Tiempo Real (Dashboards):**
+El modelo cuenta con una interfaz interactiva integrada en el entorno 3D. Incluye gráficos de recursos (Pie Charts) para monitorear los estados de la Llenadora (Trabajando vs. Fallo) y Displays digitales que funcionan como contadores en tiempo real de botellas aprobadas (antes del paletizado) y botellas rechazadas.
+
+**Requisitos para Correr la Simulación:**
+Requiere Siemens Tecnomatix Plant Simulation (versión de estudiante o comercial). Para ejecutarlo, abrir el archivo `.spp`, resetear la simulación y presionar **Play**. Se recomienda aumentar la velocidad de simulación para observar la estabilización de los indicadores al final del turno virtual.
 
 ## Gemelo digital robotizado: integración NX MCD ↔ RSLinx ↔ Studio 5000
 

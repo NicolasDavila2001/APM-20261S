@@ -1,0 +1,196 @@
+.gantt-container{
+
+    width:100%;
+
+    background:#242424;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    box-sizing:border-box;
+
+    overflow-x:auto;
+
+    border:1px solid #3a3a3a;
+
+}
+
+.gantt-header{
+
+    display:flex;
+
+    margin-bottom:15px;
+
+    color:white;
+
+    font-weight:bold;
+
+}
+
+.gantt-empleado{
+
+    width:180px;
+
+    min-width:180px;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.gantt-empleado small{
+
+    color:#bbbbbb;
+
+    margin-top:4px;
+
+}
+
+.gantt-horas{
+
+    flex:1;
+
+    display:grid;
+
+    grid-template-columns:repeat(17,1fr);
+
+}
+
+.gantt-hora{
+
+    text-align:center;
+
+    color:#bbbbbb;
+
+    font-size:12px;
+
+}
+
+.gantt-row{
+
+    display:flex;
+
+    margin-bottom:18px;
+
+}
+
+.gantt-linea{
+
+    flex:1;
+
+    position:relative;
+
+    height:46px;
+
+    display:grid;
+
+    grid-template-columns:repeat(17,1fr);
+
+    background:#303030;
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+}
+
+.gantt-grid{
+
+    border-left:1px dashed #4b4b4b;
+
+}
+
+.gantt-barra{
+
+    position:absolute;
+
+    top:5px;
+
+    bottom:5px;
+
+    background:#e74c3c;
+
+    border-radius:6px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.35);
+    transition:.25s;
+
+cursor:pointer;
+
+}
+.gantt-barra:hover{
+
+    transform:scaleY(1.15);
+
+    filter:brightness(1.15);
+
+}
+.gantt-legend{
+
+    display:flex;
+
+    gap:30px;
+
+    margin-bottom:20px;
+
+    color:white;
+
+    font-size:14px;
+
+}
+
+.gantt-legend span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.m,.t,.n{
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:4px;
+
+}
+
+.m{
+
+    background:#c0392b;
+
+}
+
+.t{
+
+    background:#e74c3c;
+
+}
+
+.n{
+
+    background:#ff6b5e;
+
+}
