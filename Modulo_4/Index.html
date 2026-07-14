@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Celda robotizada de paletizado - ABB IRB 660">
     <meta name="author" content="">
 
     <title>Chibcho Sistemas – Módulo 4</title>
@@ -32,7 +32,7 @@
     <!-- Modernizr -->
     <script src="../js/modernizr.custom.js"></script>
 
-       <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -93,41 +93,249 @@
             line-height: 1.8;
             text-align: justify;
         }
-            .tabla-personalizada {
-        width: 80%;
-        border-collapse: collapse;
-        margin: 20px auto;
-    }
-    
-    .tabla-personalizada th,
-    .tabla-personalizada td {
-        border: 1px solid #ddd;
-        padding: 12px;
-        text-align: left;
-    }
-    
-    .tabla-personalizada th {
-        background-color: #e74c3c;
-        color: white;
-        font-weight: bold;
-    }
-    
-    .tabla-personalizada tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-    
-    .tabla-personalizada tr:hover {
-        background-color: #ddd;
-    }
-            .diagram-container {
+        .tabla-personalizada {
+            width: 90%;
+            max-width: 900px;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        .tabla-personalizada th,
+        .tabla-personalizada td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .tabla-personalizada th {
+            background-color: #e74c3c;
+            color: white;
+            font-weight: bold;
+        }
+        .tabla-personalizada tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .tabla-personalizada tr:hover {
+            background-color: #ddd;
+        }
+        .diagram-container {
             text-align: center;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
-    }
+        }
 
+        /* ---------- Estilos añadidos para el resumen del Módulo 4 ---------- */
+        .section-block {
+            max-width: 1000px;
+            margin: 0 auto 60px auto;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .section-title i {
+            color: #e74c3c;
+        }
+        .section-underline {
+            width: 60px;
+            height: 3px;
+            background-color: #e74c3c;
+            margin-bottom: 24px;
+        }
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .info-card {
+            background: #fff;
+            border: 1px solid #eaeaea;
+            border-top: 4px solid #e74c3c;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            padding: 22px;
+            flex: 1 1 260px;
+            max-width: 300px;
+        }
+        .info-card i {
+            font-size: 26px;
+            color: #e74c3c;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .info-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .info-card p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .checklist {
+            max-width: 800px;
+            margin: 0 auto;
+            list-style: none;
+            padding-left: 0;
+        }
+        .checklist li {
+            position: relative;
+            padding: 8px 0 8px 34px;
+            font-size: 15px;
+            color: #333;
+            border-bottom: 1px dashed #eee;
+        }
+        .checklist li:before {
+            content: "\f00c";
+            font-family: "FontAwesome";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            color: #e74c3c;
+        }
+        .stepline {
+            max-width: 800px;
+            margin: 20px auto 0 auto;
+            counter-reset: step-counter;
+        }
+        .stepline li {
+            list-style: none;
+            position: relative;
+            padding: 10px 0 10px 50px;
+            font-size: 15px;
+            color: #333;
+        }
+        .stepline li:before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 30px;
+            height: 30px;
+            background: #e74c3c;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        .robot-highlight {
+            background: #222;
+            color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            max-width: 900px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .robot-highlight h3 {
+            color: #e74c3c;
+            font-size: 26px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .robot-highlight p {
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto 15px auto;
+        }
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .tag-list span {
+            background: #e74c3c;
+            color: #fff;
+            font-size: 12px;
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+        .risk-summary {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            margin: 25px auto;
+            max-width: 900px;
+        }
+        .risk-pill {
+            flex: 1 1 150px;
+            max-width: 170px;
+            text-align: center;
+            padding: 18px 10px;
+            border-radius: 8px;
+            color: #fff;
+        }
+        .risk-pill .num {
+            font-size: 26px;
+            font-weight: 700;
+            display: block;
+        }
+        .risk-pill .lbl {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .risk-trivial { background:#2ecc71; }
+        .risk-tolerable { background:#27ae60; }
+        .risk-moderado { background:#f39c12; }
+        .risk-importante { background:#e67e22; }
+        .risk-intolerable { background:#c0392b; }
+        .software-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            padding: 15px 20px;
+            max-width: 700px;
+            margin: 10px auto;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+        .software-card i {
+            font-size: 22px;
+            color: #e74c3c;
+        }
+        .software-card b {
+            display: block;
+        }
+        .video-box {
+            text-align: center;
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 30px;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+        .video-box i {
+            font-size: 40px;
+            color: #e74c3c;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .btn-red {
+            background-color: #e74c3c !important;
+            color: #fff !important;
+            border: none;
+        }
+        .btn-red:hover {
+            background-color: #c0392b !important;
+        }
     </style>
-    
+
 </head>
 
 <body>
@@ -172,19 +380,16 @@
     ====================================================== -->
     <div class="modulo-header">
         <div class="container text-center">
-            <h2>Módulo 4 – Celdas robotizadas de manufactura</h2>
-            <p class="justified-text">Como parte del diseño de la celda robotizada de paletizado, se realizó una evaluación de riesgos siguiendo los
-                principios de la Norma UNE-EN ISO 14121-1:2007 (Seguridad de las máquinas. Evaluación del riesgo). El análisis
-                cubre la determinación de los límites de la máquina, la identificación de peligros, la estimación y valoración
-                del riesgo, y la reducción del riesgo mediante el método de los tres pasos (diseño inherentemente seguro,
-                protecciones y medidas complementarias, e información para la utilización).</p>
+            <h2>Módulo 4 – Celda robotizada de manufactura</h2>
+            <p class="justified-text">Diseño y simulación de una celda robotizada para el paletizado de cajas de botellas,
+                integrando un robot ABB IRB 660, un PLC Siemens y un sistema SCADA desarrollado en Node-RED, con un análisis
+                de riesgos conforme a la Norma UNE-EN ISO 14121-1:2007.</p>
         </div>
     </div>
 
 
     <!-- =====================================================
          CONTENIDO PRINCIPAL DEL MÓDULO
-         Reemplaza esta sección con el contenido real de cada módulo
     ====================================================== -->
     <div class="modulo-content">
         <div class="container">
@@ -195,41 +400,334 @@
                     <i class="fa fa-arrow-left"></i>&nbsp; Volver a Módulos
                 </a>
             </div>
-            <br>
 
-            <h2 class="text-center">Evaluación de Riesgos — Celda Robotizada de Paletizado (Robot ABB IRB 660)</h2>
+            <!-- ============== DESCRIPCIÓN ============== -->
+            <div class="section-block">
+                <div class="section-title"><i class="fa fa-info-circle"></i> Descripción del módulo</div>
+                <div class="section-underline"></div>
+                <p class="justified-text">Este módulo corresponde al diseño y simulación de una celda robotizada para el
+                    proceso de paletizado de cajas de botellas, con el objetivo de reemplazar las tareas repetitivas que
+                    normalmente realiza un operario al final de una línea de producción. Durante el desarrollo se integraron
+                    diferentes tecnologías industriales: programación del robot, control mediante PLC, supervisión con un
+                    sistema SCADA e implementación de medidas de seguridad. Toda la celda fue desarrollada en un entorno de
+                    simulación, permitiendo validar su funcionamiento antes de una posible implementación física.</p>
+            </div>
 
-            <p class="justified-text">Se identificaron <b>20 peligros</b> asociados a la celda (mecánicos, eléctricos, térmicos, de ruido, vibraciones,
-                ergonómicos, del sistema de mando, entre otros), estimados mediante una matriz de riesgo basada en gravedad
-                (G1–G3) y probabilidad (P1–P3).</p>
-            <br>
+            <!-- ============== OBJETIVOS ============== -->
+            <div class="section-block">
+                <div class="section-title"><i class="fa fa-bullseye"></i> Objetivos de la celda robotizada</div>
+                <div class="section-underline"></div>
+                <ul class="checklist">
+                    <li>Automatizar el proceso de paletizado de cajas.</li>
+                    <li>Reducir los tiempos de ciclo del proceso.</li>
+                    <li>Disminuir el esfuerzo físico de los operarios.</li>
+                    <li>Mejorar la repetibilidad y precisión del proceso.</li>
+                    <li>Integrar el robot con un PLC Siemens y un sistema SCADA.</li>
+                    <li>Simular el funcionamiento completo de una celda industrial.</li>
+                    <li>Analizar los riesgos presentes durante la operación y proponer medidas para reducirlos.</li>
+                </ul>
+            </div>
 
-            <table class="tabla-personalizada">
-                <thead>
-                    <tr>
-                        <th>Nivel de riesgo</th>
-                        <th>Antes de las medidas</th>
-                        <th>Después de las medidas</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Trivial</td><td>0</td><td>5</td></tr>
-                    <tr><td>Tolerable</td><td>5</td><td>7</td></tr>
-                    <tr><td>Moderado</td><td>8</td><td>8</td></tr>
-                    <tr><td>Importante</td><td>6</td><td>0</td></tr>
-                    <tr><td>Intolerable</td><td>1</td><td>0</td></tr>
-                </tbody>
-            </table>
-            <br>
+            <!-- ============== ROBOT SELECCIONADO ============== -->
+            <div class="section-block">
+                <div class="section-title"><i class="fa fa-cogs"></i> Selección del robot</div>
+                <div class="section-underline"></div>
+                <div class="robot-highlight">
+                    <h3>ABB IRB 660</h3>
+                    <p>Robot industrial seleccionado por ser uno de los más utilizados en aplicaciones de paletizado,
+                        gracias a su alta capacidad de carga, amplio alcance de trabajo, altas velocidades sin perder
+                        precisión y excelente repetibilidad.</p>
+                    <div class="tag-list">
+                        <span>Diseñado para paletizado</span>
+                        <span>Alta capacidad de carga</span>
+                        <span>Amplio alcance</span>
+                        <span>Operación continua</span>
+                        <span>Integración con PLC Siemens</span>
+                        <span>Programable en RAPID</span>
+                        <span>Simulable en RobotStudio</span>
+                    </div>
+                </div>
+            </div>
 
-            <p class="justified-text">Tras aplicar las medidas descritas, ningún peligro conserva un nivel de riesgo Importante o Intolerable. Ocho
-                peligros mantienen un riesgo residual Moderado (principalmente ligados al acceso a la zona de trabajo del robot,
-                el armario eléctrico y el sistema de mando), por lo que quedan bajo vigilancia y revisión periódica.</p>
+            <!-- ============== FUNCIONES DEL ROBOT ============== -->
+            <div class="section-block">
+                <div class="section-title"><i class="fa fa-cube"></i> Funciones del robot en la línea de producción</div>
+                <div class="section-underline"></div>
+                <ul class="checklist">
+                    <li>Recibir las cajas provenientes de la banda transportadora.</li>
+                    <li>Detectar la presencia de cada caja mediante sensores.</li>
+                    <li>Tomar las cajas con un efector final diseñado para el proceso.</li>
+                    <li>Transportarlas desde la banda hasta la zona de almacenamiento.</li>
+                    <li>Organizar las cajas sobre el pallet según el patrón de apilado programado.</li>
+                    <li>Repetir el ciclo automáticamente hasta completar el pallet.</li>
+                    <li>Esperar la llegada de un nuevo pallet para reiniciar el proceso.</li>
+                </ul>
+                <p class="justified-text" style="margin-top:20px;">Durante toda la operación, el robot trabaja de manera
+                    sincronizada con el PLC y el sistema SCADA, intercambiando señales que permiten controlar el inicio del
+                    ciclo, las paradas, el estado de los sensores y las condiciones de seguridad.</p>
+            </div>
 
-            <div class="text-center" style="margin: 25px 0;">
-                <a href="Evaluacion_Riesgos_Celda_Robotizada_IRB660.pdf" target="_blank" class="btn btn-default">
-                    <i class="fa fa-file-pdf-o"></i>&nbsp; Documento completo: Evaluación de Riesgos — Celda Robotizada IRB 660
-                </a>
+            <!-- ============== FUNCIONAMIENTO GENERAL ============== -->
+            <div class="section-block">
+                <div class="section-title"><i class="fa fa-refresh"></i> Funcionamiento general</div>
+                <div class="section-underline"></div>
+                <ol class="stepline">
+                    <li>El operador inicia el proceso desde el sistema SCADA.</li>
+                    <li>El PLC verifica que todas las condiciones de seguridad sean correctas.</li>
+                    <li>Un sensor detecta la caja al llegar al final de la banda transportadora.</li>
+                    <li>El PLC informa al robot que existe una caja disponible.</li>
+                    <li>El robot realiza la secuencia de Pick &amp; Place.</li>
+                    <li>La caja es ubicada sobre el pallet siguiendo el patrón programado.</li>
+                    <li>El proceso se repite hasta completar el pallet.</li>
+                    <li>El sistema queda listo para comenzar un nuevo ciclo.</li>
+                </ol>
+            </div>
+
+            <!-- ============== VENTAJAS ============== -->
+            <div class="section-block">
+                <div class="section-title"><i class="fa fa-line-chart"></i> Ventajas de la celda robotizada</div>
+                <div class="section-underline"></div>
+                <div class="card-grid">
+                    <div class="info-card">
+                        <i class="fa fa-bolt"></i>
+                        <h4>Productividad</h4>
+                        <p>Disminuye el tiempo requerido por cada ciclo de paletizado.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fa fa-crosshairs"></i>
+                        <h4>Repetibilidad</h4>
+                        <p>Cada caja se ubica exactamente en la misma posición, reduciendo errores humanos.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fa fa-heartbeat"></i>
+                        <h4>Ergonomía</h4>
+                        <p>Disminuye lesiones asociadas al levantamiento repetitivo de cargas.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fa fa-clock-o"></i>
+                        <h4>Operación continua</h4>
+                        <p>Funciona durante largos periodos sin afectar la calidad del proceso.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fa fa-desktop"></i>
+                        <h4>Supervisión SCADA</h4>
+                        <p>Mayor facilidad para monitorear el sistema en tiempo real.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fa fa-sliders"></i>
+                        <h4>Flexibilidad</h4>
+                        <p>El patrón de apilado se modifica por programación, sin cambios mecánicos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============== ELEMENTOS DE LA CELDA ============== -->
+            <div class="section-block">
+                <div class="section-title"><i class="fa fa-th-large"></i> Elementos de la celda</div>
+                <div class="section-underline"></div>
+                <ul class="checklist">
+                    <li>Robot ABB IRB 660.</li>
+                    <li>Controlador IRC5.</li>
+                    <li>PLC Siemens encargado de la lógica de control.</li>
+                    <li>Sistema SCADA desarrollado en Node-RED.</li>
+                    <li>Sensores para detectar cajas y condiciones de operación.</li>
+                    <li>Estación de paletizado.</li>
+                    <li>Botones de parada de emergencia.</li>
+                </ul>
+            </div>
+
+            <!-- ============== EVALUACIÓN DE RIESGOS ============== -->
+            <div class="section-block">
+                <div class="section-title"><i class="fa fa-exclamation-triangle"></i> Evaluación de riesgos</div>
+                <div class="section-underline"></div>
+                <p class="justified-text">Siguiendo los principios de la <b>Norma UNE-EN ISO 14121-1:2007</b>, se
+                    identificaron <b>20 peligros</b> (mecánicos, eléctricos, ergonómicos, del sistema de mando, ruido,
+                    vibraciones y condiciones de mantenimiento), valorados mediante una matriz basada en la gravedad del daño
+                    y la probabilidad de ocurrencia.</p>
+
+                <div class="risk-summary">
+                    <div class="risk-pill risk-trivial"><span class="num">0 → 5</span><span class="lbl">Trivial</span></div>
+                    <div class="risk-pill risk-tolerable"><span class="num">5 → 7</span><span class="lbl">Tolerable</span></div>
+                    <div class="risk-pill risk-moderado"><span class="num">8 → 8</span><span class="lbl">Moderado</span></div>
+                    <div class="risk-pill risk-importante"><span class="num">6 → 0</span><span class="lbl">Importante</span></div>
+                    <div class="risk-pill risk-intolerable"><span class="num">1 → 0</span><span class="lbl">Intolerable</span></div>
+                </div>
+                <p class="text-center" style="font-size:13px; color:#888;">Cantidad de peligros por nivel, antes → después de aplicar las medidas de control.</p>
+
+                <p class="justified-text">Después de implementar las medidas de control, ningún riesgo permaneció
+                    clasificado como <b>Importante</b> o <b>Intolerable</b>. Los riesgos residuales corresponden
+                    principalmente a actividades de mantenimiento o intervención dentro de la celda, por lo que requieren
+                    procedimientos de trabajo seguros y capacitación del personal.</p>
+
+                <div class="text-center" style="margin: 20px 0;">
+                    <a href="Evaluacion_Riesgos_Celda_Robotizada_IRB660.pdf" target="_blank" class="btn btn-red">
+                        <i class="fa fa-file-pdf-o"></i>&nbsp; Ver documento completo de evaluación de riesgos
+                    </a>
+                </div>
+
+                <h4 style="margin-top:30px; font-weight:700;">Principales riesgos identificados</h4>
+                <div class="card-grid">
+                    <div class="info-card"><i class="fa fa-warning"></i><p>Colisión entre el robot y el operario.</p></div>
+                    <div class="info-card"><i class="fa fa-warning"></i><p>Atrapamiento entre el brazo robótico y la estructura de la celda.</p></div>
+                    <div class="info-card"><i class="fa fa-warning"></i><p>Caída de la carga por fallas del efector final.</p></div>
+                    <div class="info-card"><i class="fa fa-warning"></i><p>Golpes por cajas o pallets en movimiento.</p></div>
+                    <div class="info-card"><i class="fa fa-warning"></i><p>Movimientos inesperados del robot.</p></div>
+                    <div class="info-card"><i class="fa fa-warning"></i><p>Contacto con equipos energizados.</p></div>
+                    <div class="info-card"><i class="fa fa-warning"></i><p>Arranque inesperado del sistema.</p></div>
+                    <div class="info-card"><i class="fa fa-warning"></i><p>Atrapamiento en bandas transportadoras.</p></div>
+                    <div class="info-card"><i class="fa fa-warning"></i><p>Acceso no autorizado al interior de la celda.</p></div>
+                </div>
+            </div>
+
+            <!-- ============== MEDIDAS DE SEGURIDAD ============== -->
+            <div class="section-block">
+                <div class="section-title"><i class="fa fa-shield"></i> Medidas de seguridad implementadas</div>
+                <div class="section-underline"></div>
+                <ul class="checklist">
+                    <li>Cerramiento perimetral alrededor de toda la celda.</li>
+                    <li>Puertas de acceso con enclavamiento de seguridad.</li>
+                    <li>Botones de parada de emergencia en puntos estratégicos.</li>
+                    <li>Sensores para controlar el acceso a zonas peligrosas.</li>
+                    <li>PLC de seguridad para supervisar funciones críticas.</li>
+                    <li>Procedimientos seguros para mantenimiento.</li>
+                    <li>Capacitación del personal.</li>
+                    <li>Uso obligatorio de elementos de protección personal.</li>
+                    <li>Supervisión permanente mediante el sistema SCADA.</li>
+                    <li>Alarmas para informar condiciones anormales del proceso.</li>
+                </ul>
+            </div>
+
+            <!-- ============== SOFTWARE UTILIZADO ============== -->
+            <div class="section-block">
+                <div class="section-title"><i class="fa fa-code"></i> Software utilizado</div>
+                <div class="section-underline"></div>
+                <div class="software-card">
+                    <i class="fa fa-industry"></i>
+                    <div><b>ABB RobotStudio</b>Simulación y programación del robot.</div>
+                </div>
+                <div class="software-card">
+                    <i class="fa fa-code-fork"></i>
+                    <div><b>RAPID</b>Programación de los movimientos del robot.</div>
+                </div>
+                <div class="software-card">
+                    <i class="fa fa-microchip"></i>
+                    <div><b>Studio 5000</b>Programación del PLC.</div>
+                </div>
+                <div class="software-card">
+                    <i class="fa fa-dashboard"></i>
+                    <div><b>Node-RED</b>Desarrollo del sistema SCADA.</div>
+                </div>
+            </div>
+
+            <!-- ============== ARQUITECTURA DE COMUNICACIÓN ============== -->
+            <div class="section-block">
+                <div class="section-title"><i class="fa fa-sitemap"></i> Arquitectura de comunicación</div>
+                <div class="section-underline"></div>
+                <p class="justified-text">Se implementaron dos arquitecturas de comunicación para coordinar el
+                    funcionamiento completo de la celda: una entre RobotStudio y Node-RED, y otra entre el PLC (Studio 5000)
+                    y Node-RED.</p>
+
+                <h4 style="font-weight:700; margin-top:25px;">RobotStudio ↔ Node-RED</h4>
+                <p class="justified-text">La comunicación entre la simulación del robot y el sistema SCADA se realizó
+                    mediante <b>ABB IoT Gateway</b> junto con <b>Softing OPC UA Server</b>, permitiendo supervisar en
+                    tiempo real el estado del robot y enviar comandos de operación sin acceder directamente al
+                    controlador.</p>
+                <div class="diagram-container">
+                    <pre class="mermaid">
+flowchart LR
+    A["RobotStudio<br/>(Controlador Virtual IRC5)"]
+    B["ABB IoT Gateway"]
+    C["Softing OPC UA Server"]
+    D["Node-RED<br/>(SCADA)"]
+    A -->|"Publica variables OPC UA"| B
+    B -->|"Servidor OPC UA"| C
+    C <-->|"Lectura / Escritura de variables"| D
+                    </pre>
+                </div>
+
+                <h4 style="font-weight:700; margin-top:25px;">Studio 5000 (PLC) ↔ Node-RED</h4>
+                <p class="justified-text">El PLC supervisa las condiciones del proceso y genera alarmas según el estado de
+                    la planta. Cuando el PLC detecta una condición anormal, Node-RED procesa la información y escribe una
+                    variable hacia RobotStudio indicando qué rutina RAPID debe ejecutarse (operación normal, pausa,
+                    reanudación, espera o recuperación tras una falla), sin necesidad de modificar el programa manualmente.</p>
+                <div class="diagram-container">
+                    <pre class="mermaid">
+flowchart TB
+    PLC["Studio 5000<br/>(PLC)"]
+    NR["Node-RED"]
+    OPC["Softing OPC UA"]
+    IOT["ABB IoT Gateway"]
+    ROBOT["RobotStudio"]
+    PLC <-->|EtherNet/IP| NR
+    NR <-->|OPC UA| OPC
+    OPC --> IOT
+    IOT --> ROBOT
+                    </pre>
+                </div>
+
+                <h4 style="font-weight:700; margin-top:25px;">Integración general del sistema</h4>
+                <p class="justified-text">Node-RED actúa como elemento central de comunicación entre la supervisión, el
+                    PLC y el controlador virtual del robot, permitiendo visualizar el estado de la celda, enviar comandos y
+                    registrar alarmas en un solo sistema.</p>
+                <div class="diagram-container">
+                    <pre class="mermaid">
+flowchart TB
+    subgraph Supervisión
+        OP["Operador"]
+        SCADA["Dashboard SCADA<br/>Node-RED"]
+    end
+    subgraph Control
+        PLC["Studio 5000<br/>PLC"]
+        OPC["Softing OPC UA"]
+        IOT["ABB IoT Gateway"]
+        ROBOT["RobotStudio<br/>IRC5"]
+    end
+    OP --> SCADA
+    PLC <-->|EtherNet/IP| SCADA
+    SCADA <-->|OPC UA| OPC
+    OPC --> IOT
+    IOT --> ROBOT
+                    </pre>
+                </div>
+            </div>
+
+            <!-- ============== VIDEO ============== -->
+            <div class="section-block">
+                <div class="section-title"><i class="fa fa-play-circle"></i> Video de funcionamiento</div>
+                <div class="section-underline"></div>
+                <p class="justified-text">El siguiente video muestra el funcionamiento general de la celda robotizada
+                    durante la simulación: la toma de las cajas, su transporte y el patrón de apilado programado por el
+                    robot ABB IRB 660.</p>
+                <div class="video-box">
+                    <i class="fa fa-film"></i>
+                    <a href="CeldaRobotizada.mp4" target="_blank" class="btn btn-red">
+                        <i class="fa fa-play"></i>&nbsp; Ver video de la simulación
+                    </a>
+                </div>
+            </div>
+
+            <!-- ============== ARCHIVOS ============== -->
+            <div class="section-block">
+                <div class="section-title"><i class="fa fa-folder-open"></i> Archivos incluidos</div>
+                <div class="section-underline"></div>
+                <table class="tabla-personalizada">
+                    <thead>
+                        <tr>
+                            <th>Archivo</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="CeldaRobotizadaChibcho.rspag">CeldaRobotizadaChibcho.rspag</a></td>
+                            <td>Proyecto completo de RobotStudio.</td>
+                        </tr>
+                        <tr>
+                            <td><a href="RapidChibcho.modx">RapidChibcho.modx</a></td>
+                            <td>Programa del robot escrito en RAPID.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
             <br>
@@ -252,10 +750,8 @@
 
     <!-- =====================================================
          SECCIÓN DE CONTACTO Y FOOTER
-         (idéntica a la del index.html)
     ====================================================== -->
     <section id="contact" class="contact">
-        <!-- Footer con redes sociales -->
         <footer class="style-1">
             <div class="container">
                 <div class="row">
@@ -304,6 +800,11 @@
     <script src="../js/jquery.easing.1.3.js"></script>
     <script src="../js/classie.js"></script>
     <script src="../js/cbpAnimatedHeader.js"></script>
+    <script>
+        if (window.mermaid) {
+            mermaid.initialize({ startOnLoad: true, theme: 'default' });
+        }
+    </script>
 
 </body>
 </html>
