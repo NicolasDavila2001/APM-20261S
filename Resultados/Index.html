@@ -125,6 +125,173 @@
             background-color: #fff;
             border-radius: 8px;
     }
+    /*=====================================
+SUBMENÚ
+=====================================*/
+
+.module-navbar{
+
+    position:sticky;
+
+    top:70px;
+
+    z-index:998;
+
+    background:#222;
+
+    border-radius:10px;
+
+    margin-bottom:40px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+.module-menu{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+.module-menu li{
+
+    margin:0;
+
+}
+
+.module-menu a{
+
+    display:block;
+
+    padding:18px 22px;
+
+    color:white;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+    letter-spacing:.5px;
+
+}
+
+.module-menu a:hover{
+
+    background:#e74c3c;
+
+    color:white;
+
+}
+
+.module-menu a{
+
+    display:block;
+    padding:18px 22px;
+    color:#fff;
+    font-weight:600;
+    text-decoration:none;
+    transition:0.3s;
+    letter-spacing:.5px;
+    border-radius:6px;
+
+}
+
+.module-menu a:hover{
+
+    background:#e74c3c;
+    color:#fff;
+
+}
+
+.module-menu a:focus{
+
+    background:#e74c3c;
+    color:#fff;
+    outline:none;
+
+}
+
+.module-menu li{
+
+    margin:5px;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+/*==================================================
+SECCIONES DEL MÓDULO
+==================================================*/
+
+.module-section{
+
+    background:#fff;
+
+    border-radius:12px;
+
+    padding:45px;
+
+    margin-bottom:50px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.module-section h2{
+
+    color:#222;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+.module-divider{
+
+    width:90px;
+
+    height:4px;
+
+    background:#e74c3c;
+
+    margin:15px auto 35px;
+
+    border-radius:5px;
+
+}
+
+.module-section p{
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    text-align:justify;
+
+    color:#555;
+
+}
+section{
+    scroll-margin-top: 200px;
+}
 
     </style>
     
@@ -182,7 +349,8 @@
          CONTENIDO PRINCIPAL DEL MÓDULO
          Reemplaza esta sección con el contenido real de cada módulo
     ====================================================== -->
-            <div class="modulo-content">
+
+    <div class="modulo-content">
                     <div class="container">
 
                         <!-- Botón de regreso -->
@@ -191,64 +359,239 @@
                                 <i class="fa fa-arrow-left"></i>&nbsp; Volver a Módulos
                             </a>
                         </div>
+                        <div class="module-navbar">
 
-            <div class="text-center" style="margin-bottom: 40px;">
-                <h2>Propuesta de automatización</h2>
-                <p class="justified-text">
-                    La propuesta de automatización se diseñó a partir de una arquitectura integrada por robótica industrial, 
-                    control mediante PLC, un sistema SCADA y visión artificial. Para la etapa final de la línea se planteó 
-                    la implementación de un sistema robótico de clasificación, encargado de separar los productos defectuosos 
-                    de aquellos aptos para su comercialización.
-                </p>
+                            <div class="container">
 
-                <p class="justified-text">
-                    Para esta función se consideró el robot paletizador ABB IRB 660, ya que es un equipo diseñado específicamente 
-                    para aplicaciones de paletizado, con una capacidad de carga cercana a los 250 kg y un amplio alcance. Estas 
-                    características lo hacen adecuado para manipular canastas o agrupaciones de botellas al final del proceso. 
-                    Adicionalmente, para tareas de manipulación asociadas a inspección y manejo de unidades individuales, se tuvo 
-                    en cuenta el robot ABB IRB 140 M2000, el cual cuenta con una capacidad de carga aproximada de 6 kg y una buena 
-                    precisión, lo que lo convierte en una opción apropiada para trabajar en conjunto con un sistema de visión 
-                    artificial y retirar o manipular botellas detectadas como defectuosas.
-                </p>
+                                <ul class="module-menu">
 
-                <p class="justified-text">
-                    También es necesaria la selección de un PLC encargado de coordinar las operaciones de los robots y de los demás 
-                    equipos presentes en la línea. Para ello, se propuso el PLC Siemens S7-1200 CPU 1214C, debido a que es un 
-                    controlador ampliamente utilizado en aplicaciones industriales, con suficientes entradas y salidas para este tipo 
-                    de sistema y buena compatibilidad con redes industriales. Junto con el PLC, se planteó incorporar una HMI que 
-                    permita visualizar las variables del proceso, los estados del sistema y las alarmas, además de realizar ajustes 
-                    básicos de operación. Para esta función se seleccionó la HMI Siemens KTP700 Basic, compatible con el PLC elegido 
-                    y con una interfaz gráfica adecuada para la interacción del operador.
-                </p>
+                                    <li><a href="#Propuesta">Propuesta</a></li>
 
-                <p class="justified-text">
-                    Finalmente, para implementar la detección de objetos en la línea, se contempló el sensor de visión ifm O2D550, 
-                    capaz de identificar la posición y la presencia de objetos mediante procesamiento de imagen integrado. Esta 
-                    información puede ser utilizada posteriormente por el PLC o por el robot para ejecutar acciones de manipulación, 
-                    clasificación o rechazo.
-                </p>
+                                    <li><a href="#ISA">ISA-95</a></li>
 
-                <p class="justified-text">
-                    En conjunto, la selección de estos componentes se realizó buscando equipos industriales reales, disponibles en 
-                    el mercado, y que permitan construir una propuesta de automatización coherente, técnica y viable para las 
-                    necesidades del proceso de envasado de botellas.
-                </p>
-            </div>
+                                    <li><a href="#Arq">Arquitectura</a></li>
 
-            <br>
-            <br>
-            <div style="display: flex; justify-content: center; gap: 20px;">
-                <div class="btn-back">
-                    <a href="../Modulo_7/Index.html" class="btn btn-default">
-                        <i class="fa fa-arrow-left"></i>&nbsp; Módulo Anterior
-                    </a>
-                </div>
-                <div class="btn-next">
-                    <a href="../index.html#portfolio" class="btn btn-default">
-                        Volver a Módulos &nbsp;<i class="fa fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
+                                    <li><a href="#DT">Gemelo Digital</a></li>
+
+                                    <li><a href="#Scada">SCADA</a></li>
+
+                                    <li><a href="#MES">MES</a></li>
+
+                                    <li><a href="#ERP">ERP</a></li>
+
+                                    <li><a href="#Aportes">Aportes</a></li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+                        <section id="Propuesta" class="module-section">
+                            <div class="text-center" style="margin-bottom: 40px;">
+                                <h2>Propuesta de automatización</h2>
+                                <p class="justified-text">
+                                    La propuesta de automatización se diseñó a partir de una arquitectura integrada por robótica industrial, 
+                                    control mediante PLC, un sistema SCADA y visión artificial. Para la etapa final de la línea se planteó 
+                                    la implementación de un sistema robótico de clasificación, encargado de separar los productos defectuosos 
+                                    de aquellos aptos para su comercialización.
+                                </p>
+
+                                <p class="justified-text">
+                                    Para esta función se consideró el robot paletizador ABB IRB 660, ya que es un equipo diseñado específicamente 
+                                    para aplicaciones de paletizado, con una capacidad de carga cercana a los 250 kg y un amplio alcance. Estas 
+                                    características lo hacen adecuado para manipular canastas o agrupaciones de botellas al final del proceso. 
+                                    Adicionalmente, para tareas de manipulación asociadas a inspección y manejo de unidades individuales, se tuvo 
+                                    en cuenta el robot ABB IRB 140 M2000, el cual cuenta con una capacidad de carga aproximada de 6 kg y una buena 
+                                    precisión, lo que lo convierte en una opción apropiada para trabajar en conjunto con un sistema de visión 
+                                    artificial y retirar o manipular botellas detectadas como defectuosas.
+                                </p>
+
+                                <p class="justified-text">
+                                    También es necesaria la selección de un PLC encargado de coordinar las operaciones de los robots y de los demás 
+                                    equipos presentes en la línea. Para ello, se propuso el PLC Siemens S7-1200 CPU 1214C, debido a que es un 
+                                    controlador ampliamente utilizado en aplicaciones industriales, con suficientes entradas y salidas para este tipo 
+                                    de sistema y buena compatibilidad con redes industriales. Junto con el PLC, se planteó incorporar una HMI que 
+                                    permita visualizar las variables del proceso, los estados del sistema y las alarmas, además de realizar ajustes 
+                                    básicos de operación. Para esta función se seleccionó la HMI Siemens KTP700 Basic, compatible con el PLC elegido 
+                                    y con una interfaz gráfica adecuada para la interacción del operador.
+                                </p>
+
+                                <p class="justified-text">
+                                    Finalmente, para implementar la detección de objetos en la línea, se contempló el sensor de visión ifm O2D550, 
+                                    capaz de identificar la posición y la presencia de objetos mediante procesamiento de imagen integrado. Esta 
+                                    información puede ser utilizada posteriormente por el PLC o por el robot para ejecutar acciones de manipulación, 
+                                    clasificación o rechazo.
+                                </p>
+
+                                <p class="justified-text">
+                                    En conjunto, la selección de estos componentes se realizó buscando equipos industriales reales, disponibles en 
+                                    el mercado, y que permitan construir una propuesta de automatización coherente, técnica y viable para las 
+                                    necesidades del proceso de envasado de botellas.
+                                </p>
+                            </div>
+                            <div class="module-divider"></div>
+                        </section>
+                        <section id="ISA" class="module-section">
+
+                        <div class="text-center">
+
+                        <h2>Alcance ISA-95</h2>
+
+                        <div class="module-divider"></div>
+
+                        </div>
+                        <section id="Arq" class="module-section">
+
+                        <div class="text-center">
+
+                        <h2>Arquitectura General</h2>
+
+                        <div class="module-divider"></div>
+
+                        </div>
+
+                        <p>
+
+                        La arquitectura propuesta integra los niveles definidos por ISA-95, permitiendo la comunicación entre los dispositivos de campo, el sistema de supervisión SCADA, el sistema MES y el ERP. Esta integración facilita el intercambio de información en tiempo real para apoyar la toma de decisiones y la trazabilidad del proceso productivo.
+
+                        </p>
+
+                        <p>
+
+                        La comunicación entre dispositivos se plantea mediante redes Ethernet Industrial, utilizando protocolos ampliamente implementados en la industria como Profinet y OPC UA, permitiendo escalabilidad e interoperabilidad entre los distintos equipos.
+
+                        </p>
+
+                        </section>
+                        <section id="DT" class="module-section">
+
+                        <div class="text-center">
+
+                        <h2>Gemelo Digital</h2>
+
+                        <div class="module-divider"></div>
+
+                        </div>
+
+                        <p>
+
+                        El gemelo digital representa virtualmente la planta de producción permitiendo validar modificaciones, realizar simulaciones y evaluar el comportamiento del sistema antes de implementar cambios sobre la planta física.
+
+                        </p>
+
+                        <p>
+
+                        Su implementación reduce tiempos de puesta en marcha, disminuye riesgos y facilita actividades de mantenimiento y capacitación de operadores.
+
+                        </p>
+
+                        </section>
+                        <section id="Scada" class="module-section">
+
+                        <div class="text-center">
+
+                        <h2>Sistema SCADA</h2>
+
+                        <div class="module-divider"></div>
+
+                        </div>
+
+                        <p>
+
+                        El sistema SCADA permite supervisar todas las variables del proceso, registrar históricos, administrar alarmas y visualizar el estado de cada estación de producción mediante una interfaz gráfica amigable para el operador.
+
+                        </p>
+
+                        <p>
+
+                        Toda la información recolectada será almacenada para posteriormente ser utilizada por el sistema MES y el ERP.
+
+                        </p>
+
+                        </section>
+                        <section id="MES" class="module-section">
+
+                        <div class="text-center">
+
+                        <h2>Manufacturing Execution System (MES)</h2>
+
+                        <div class="module-divider"></div>
+
+                        </div>
+
+                        <p>
+
+                        El sistema MES desarrollado permite administrar órdenes de producción, consultar el estado de fabricación, registrar indicadores de producción, visualizar información histórica y servir como puente entre el nivel de control y el nivel empresarial.
+
+                        </p>
+
+                        <p>
+
+                        Además incorpora indicadores de desempeño como producción, disponibilidad y eficiencia para apoyar la toma de decisiones.
+
+                        </p>
+
+                        </section>
+                        <section id="ERP" class="module-section">
+
+                        <div class="text-center">
+
+                        <h2>Enterprise Resource Planning</h2>
+
+                        <div class="module-divider"></div>
+
+                        </div>
+
+                        <p>
+
+                        El ERP integra los procesos administrativos relacionados con inventario, compras, ventas, recursos humanos y producción, permitiendo una gestión centralizada de la información empresarial.
+
+                        </p>
+
+                        <p>
+
+                        La comunicación entre el ERP y el MES garantiza la sincronización de órdenes de producción y el control de inventarios en tiempo real.
+
+                        </p>
+
+                        </section>
+                        <section id="Aportes" class="module-section">
+
+                        <div class="text-center">
+
+                        <h2>Aportes del Equipo</h2>
+
+                        <div class="module-divider"></div>
+
+                        </div>
+
+                        <p>
+
+                        Durante el desarrollo del proyecto se realizaron actividades relacionadas con el diseño de la arquitectura, selección de equipos industriales, desarrollo del prototipo MES, modelado del ERP, integración mediante ISA-95 y elaboración de la documentación técnica.
+
+                        </p>
+
+                        <p>
+
+                        El trabajo permitió aplicar conocimientos de automatización industrial, robótica, sistemas de información industrial e Industria 4.0 en una propuesta integral para una planta de bebidas.
+
+                        </p>
+
+                        </section>
+                                                <br>
+                        <br>
+                        <div style="display: flex; justify-content: center; gap: 20px;">
+                            <div class="btn-back">
+                                <a href="../Modulo_7/Index.html" class="btn btn-default">
+                                    <i class="fa fa-arrow-left"></i>&nbsp; Módulo Anterior
+                                </a>
+                            </div>
+                            <div class="btn-next">
+                                <a href="../index.html#portfolio" class="btn btn-default">
+                                    Volver a Módulos &nbsp;<i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
         </div>
     </div>
     <!-- FIN CONTENIDO PRINCIPAL -->
@@ -308,6 +651,23 @@
     <script src="../js/jquery.easing.1.3.js"></script>
     <script src="../js/classie.js"></script>
     <script src="../js/cbpAnimatedHeader.js"></script>
+    <script>
+
+window.addEventListener("scroll",function(){
+
+    const navbar=document.querySelector(".navbar");
+
+    const menu=document.querySelector(".module-navbar");
+
+    if(window.scrollY>120){
+
+        menu.style.top=navbar.offsetHeight+"px";
+
+    }
+
+});
+
+</script>
 
 </body>
 </html>
