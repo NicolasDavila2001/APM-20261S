@@ -316,7 +316,7 @@ Con esta arquitectura fue posible integrar la supervisión del proceso, la lógi
 
 # 🎥 Video de funcionamiento
 
-El siguiente video muestra el funcionamiento general de la celda robotizada durante la simulación. En él se observa la secuencia completa de paletizado realizada por el robot ABB IRB 660, incluyendo la toma de las cajas, su transporte y el patrón de apilado programado.
+El siguiente video muestra el resumen de lo trabajo en este módulo.
 
 ▶️ **Ver video de la simulación:** [CeldaRobotizada.mp4](./CeldaRobotizada.mp4)
 
