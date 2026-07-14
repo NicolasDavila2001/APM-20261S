@@ -185,5 +185,123 @@ Durante el desarrollo del proyecto se utilizaron diferentes herramientas de inge
 | Node-RED | Desarrollo del sistema SCADA |
 ---
 
+# 🔗 Arquitectura de comunicación
+
+Uno de los principales objetivos del proyecto fue lograr la comunicación entre los diferentes sistemas de automatización para que la celda funcionara de manera coordinada. Para esto se implementaron dos arquitecturas de comunicación diferentes, cada una encargada de una parte específica del proceso.
+
+---
+
+## Comunicación entre RobotStudio y Node-RED
+
+La comunicación entre la simulación del robot y el sistema SCADA se realizó utilizando **ABB IoT Gateway** junto con **Softing OPC UA Server**.
+
+En RobotStudio se configuró el **IoT Gateway**, el cual permite publicar las señales del controlador virtual IRC5 hacia un servidor OPC UA. Posteriormente, **Softing OPC UA Server** actuó como intermediario, exponiendo estas variables para que pudieran ser leídas y escritas desde Node-RED.
+
+Gracias a esta arquitectura fue posible que el sistema SCADA supervisara en tiempo real el estado del robot y enviara comandos de operación sin necesidad de acceder directamente al controlador del robot.
+
+Las principales señales intercambiadas fueron:
+
+- Estado del robot (En marcha, detenido o en espera).
+- Botón Start.
+- Botón Stop.
+- Continue.
+- Reset.
+- Señales de los sensores virtuales.
+- Contador de cajas procesadas.
+- Estado del ciclo de paletizado.
+- Alarmas generadas por el robot.
+
+Esta comunicación permitió desarrollar un dashboard desde Node-RED donde el operador podía supervisar toda la celda en tiempo real e interactuar con ella mediante una interfaz gráfica.
+
+### Flujo de comunicación
+
+```
+RobotStudio (IRC5)
+        │
+        │
+ABB IoT Gateway
+        │
+        │
+Softing OPC UA Server
+        │
+        │
+Node-RED (SCADA)
+```
+
+---
+
+## Comunicación entre Studio 5000 y Node-RED
+
+Además del robot, el proyecto incluyó un PLC programado en Studio 5000, encargado de supervisar diferentes condiciones del proceso y generar alarmas dependiendo del estado de la planta.
+
+
+Gracias a esta conexión el sistema SCADA podía:
+
+- Visualizar el estado de las entradas y salidas del PLC.
+- Mostrar alarmas activas.
+- Registrar eventos del proceso.
+- Enviar comandos de control cuando era necesario.
+
+Una de las funciones implementadas consistía en modificar automáticamente la rutina que debía ejecutar el robot dependiendo de la alarma detectada por el PLC.
+
+Por ejemplo, cuando el PLC identificaba una condición anormal, enviaba una señal a Node-RED indicando el tipo de alarma. Node-RED procesaba esta información y escribía una nueva variable hacia RobotStudio indicando cuál rutina RAPID debía ejecutarse.
+
+De esta forma el robot podía cambiar automáticamente su comportamiento sin necesidad de modificar el programa manualmente.
+
+Algunos ejemplos de estas rutinas fueron:
+
+- Operación normal.
+- Pausa del proceso.
+- Reanudación del ciclo.
+- Rutina de espera.
+- Rutina de recuperación después de una falla.
+- Reinicio del proceso una vez eliminada la alarma.
+
+Esta arquitectura permitió desacoplar la lógica del PLC de la programación del robot, utilizando Node-RED como intermediario para coordinar ambos sistemas.
+
+### Flujo de comunicación
+
+```
+Studio 5000 (PLC)
+        │
+EtherNet/IP
+        │
+Node-RED
+        │
+OPC UA
+        │
+Softing OPC UA
+        │
+ABB IoT Gateway
+        │
+RobotStudio
+```
+
+---
+
+## Integración general del sistema
+
+Finalmente, la arquitectura completa del proyecto quedó conformada por cuatro niveles principales:
+
+```
+                    Operador
+                       │
+                       │
+              Dashboard SCADA
+                  (Node-RED)
+               ▲             ▲
+               │             │
+          EtherNet/IP      OPC UA
+               │             │
+         Studio 5000     Softing OPC UA
+          (PLC)               │
+                              │
+                      ABB IoT Gateway
+                              │
+                         RobotStudio
+                          (IRC5)
+```
+
+Con esta arquitectura fue posible integrar la supervisión del proceso, la lógica de control del PLC y la programación del robot dentro de un mismo sistema. Node-RED actuó como el elemento central de comunicación, permitiendo visualizar el estado de la celda en tiempo real, enviar comandos al robot, registrar alarmas y coordinar el intercambio de información entre el PLC y el controlador virtual del ABB IRB 660.
 
 
