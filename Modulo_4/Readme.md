@@ -215,19 +215,18 @@ Esta comunicación permitió desarrollar un dashboard desde Node-RED donde el op
 
 ### Flujo de comunicación
 
-```
-RobotStudio (IRC5)
-        │
-        │
-ABB IoT Gateway
-        │
-        │
-Softing OPC UA Server
-        │
-        │
-Node-RED (SCADA)
-```
+```mermaid
+flowchart LR
 
+    A["RobotStudio<br/>(Controlador Virtual IRC5)"]
+    B["ABB IoT Gateway"]
+    C["Softing OPC UA Server"]
+    D["Node-RED<br/>(SCADA)"]
+
+    A -->|"Publica variables OPC UA"| B
+    B -->|"Servidor OPC UA"| C
+    C <-->|"Lectura / Escritura de variables"| D
+```
 ---
 
 ## Comunicación entre Studio 5000 y Node-RED
@@ -261,20 +260,23 @@ Esta arquitectura permitió desacoplar la lógica del PLC de la programación de
 
 ### Flujo de comunicación
 
-```
-Studio 5000 (PLC)
-        │
-EtherNet/IP
-        │
-Node-RED
-        │
-OPC UA
-        │
-Softing OPC UA
-        │
-ABB IoT Gateway
-        │
-RobotStudio
+```mermaid
+flowchart TB
+
+    PLC["Studio 5000<br/>(PLC)"]
+
+    NR["Node-RED"]
+
+    OPC["Softing OPC UA"]
+
+    IOT["ABB IoT Gateway"]
+
+    ROBOT["RobotStudio"]
+
+    PLC <-->|EtherNet/IP| NR
+    NR <-->|OPC UA| OPC
+    OPC --> IOT
+    IOT --> ROBOT
 ```
 
 ---
@@ -283,23 +285,26 @@ RobotStudio
 
 Finalmente, la arquitectura completa del proyecto quedó conformada por cuatro niveles principales:
 
-```
-                    Operador
-                       │
-                       │
-              Dashboard SCADA
-                  (Node-RED)
-               ▲             ▲
-               │             │
-          EtherNet/IP      OPC UA
-               │             │
-         Studio 5000     Softing OPC UA
-          (PLC)               │
-                              │
-                      ABB IoT Gateway
-                              │
-                         RobotStudio
-                          (IRC5)
+```mermaid
+flowchart TB
+
+    subgraph Supervisión
+        OP["Operador"]
+        SCADA["Dashboard SCADA<br/>Node-RED"]
+    end
+
+    subgraph Control
+        PLC["Studio 5000<br/>PLC"]
+        OPC["Softing OPC UA"]
+        IOT["ABB IoT Gateway"]
+        ROBOT["RobotStudio<br/>IRC5"]
+    end
+
+    OP --> SCADA
+    PLC <-->|EtherNet/IP| SCADA
+    SCADA <-->|OPC UA| OPC
+    OPC --> IOT
+    IOT --> ROBOT
 ```
 
 Con esta arquitectura fue posible integrar la supervisión del proceso, la lógica de control del PLC y la programación del robot dentro de un mismo sistema. Node-RED actuó como el elemento central de comunicación, permitiendo visualizar el estado de la celda en tiempo real, enviar comandos al robot, registrar alarmas y coordinar el intercambio de información entre el PLC y el controlador virtual del ABB IRB 660.
