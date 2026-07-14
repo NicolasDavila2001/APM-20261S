@@ -316,5 +316,5 @@ Con esta arquitectura fue posible integrar la supervisión del proceso, la lógi
 
 | Archivo | Descripción |
 |---------|-------------|
-| [CeldaRobotizadaChibcho.rspag](./Modulo_4/CeldaRobotizadaChibcho.rspag) | Proyecto completo de RobotStudio. |
-| [RapidChibcho.modx](./Modulo_4/RapidChibcho.modx) | Programa del robot escrito en RAPID. |
+| [CeldaRobotizadaChibcho.rspag](./CeldaRobotizadaChibcho.rspag) | Proyecto completo de RobotStudio. |
+| [RapidChibcho.modx](./RapidChibcho.modx) | Programa del robot escrito en RAPID. |
