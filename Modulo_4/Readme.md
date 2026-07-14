@@ -310,3 +310,11 @@ flowchart TB
 Con esta arquitectura fue posible integrar la supervisión del proceso, la lógica de control del PLC y la programación del robot dentro de un mismo sistema. Node-RED actuó como el elemento central de comunicación, permitiendo visualizar el estado de la celda en tiempo real, enviar comandos al robot, registrar alarmas y coordinar el intercambio de información entre el PLC y el controlador virtual del ABB IRB 660.
 
 
+---
+
+# 📁 Archivos incluidos
+
+| Archivo | Descripción |
+|---------|-------------|
+| [CeldaRobotizadaChibcho.rspag](./Modulo_4/CeldaRobotizadaChibcho.rspag) | Proyecto completo de RobotStudio. |
+| [RapidChibcho.modx](./Modulo_4/RapidChibcho.modx) | Programa del robot escrito en RAPID. |

@@ -1,0 +1,220 @@
+MODULE Module1
+    CONST robtarget HOME:=[[1910,0,1833],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Pick_Pos:=[[-60,2650,940],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_Pos:=[[1765.69,-215.59,1166.16],[0,0.07376038,0.997275993,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Retreat_Pick:=[[-60,2650,1090],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_1:=[[2400,795,685],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_1_APRT:=[[2400,795,1135],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Approach_Pick:=[[-60,2650,1090],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_2:=[[1800,795,685],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_2_APRT:=[[1800,795,1135],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_3:=[[2400,375,685],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_3_APRT:=[[2400,375,1135],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_4:=[[1800,375,685],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_4_APRT:=[[1800,375,1135],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_5:=[[2400,-45,685],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_5_APRT:=[[2400,-45,1135],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_6:=[[1800,-45,685],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_6_APRT:=[[1800,-45,1135],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_7:=[[2400,795,945],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_7_APRT:=[[2400,795,1295],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_8:=[[1800,795,945],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_8_APRT:=[[1800,795,1295],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_9:=[[2400,375,945],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_9_APRT:=[[2400,375,1295],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_10:=[[1800,375,945],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_10_APRT:=[[1800,375,1295],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_11:=[[2400,-45,945],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_11_APRT:=[[2400,-45,1295],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_12:=[[1800,-45,945],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_12_APRT:=[[1800,-45,1295],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+
+    PERS num BoxCounter:=12;
+    CONST robtarget ApproachPlaces:=[[1900,1150,2090],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+
+    ! Interrupt variable used to link the run-permission signal to TrapPause
+    VAR intnum iRunStop;
+
+    !***********************************************************
+    !
+    ! Module:  Module1
+    !
+    ! Description:
+    !   <Insert description here>
+    !
+    ! Author: Juan D
+    !
+    ! Version: 1.2 - Se agrega SetGO GO_RobotSpeed en cada cambio de velocidad,
+    !                para que Node-RED pueda leer la velocidad activa del robot.
+    !
+    !***********************************************************
+
+
+    !***********************************************************
+    !
+    ! TRAP TrapPause
+    !
+    !   Fires the instant DI_RunPermission goes to 0 (falling edge).
+    !   Stops the robot immediately (mid-path if needed) and waits
+    !   until the signal is set high again before resuming the
+    !   exact same motion.
+    !
+    !***********************************************************
+    TRAP TrapPause
+        TPWrite "DI_RunPermission = 0 -> Deteniendo robot.";
+        StopMove;
+
+        ! El robot está detenido: la velocidad efectiva es 0
+        SetGO GO_RobotSpeed,0;
+
+        WaitDI DI_RunPermission, 1;
+        TPWrite "Permiso restaurado. Presione Continue o Reset...";
+
+        ! Espera a que se active CUALQUIERA de las dos señales
+        WaitUntil DI_Continue=1 OR DI_Reset=1;
+
+        IF DI_Reset=1 THEN
+            TPWrite "DI_Reset activado -> Reiniciando rutina desde el inicio.";
+
+            StopMove;
+            ClearPath;
+
+            BoxCounter:=0;
+            SetGO GO_BoxCounter,BoxCounter;
+
+            ! Se libera la interrupción para que main la vuelva a registrar limpia
+            IDelete iRunStop;
+
+            ! Regresa el puntero de programa al inicio de main y reinicia el ciclo
+            ExitCycle;
+        ELSE
+            TPWrite "DI_Continue activado -> Reanudando movimiento.";
+            StartMove;
+        ENDIF
+    ENDTRAP
+
+
+    PROC EsperarInicio()
+
+        TPWrite "Esperando señal de inicio...";
+        SetGO GO_RobotSpeed,0;
+
+        WaitDI DI_Start,1;
+
+        TPWrite "Inicio recibido.";
+
+    ENDPROC
+
+    PROC EsperarCaja()
+        
+
+        TPWrite "Esperando caja...";
+        SetGO GO_RobotSpeed,0;
+        WaitDI DI_BoxReady,1;
+
+    ENDPROC
+
+    PROC PickAndPlace(robtarget PlaceTarget, robtarget PlaceApproach)
+
+        EsperarCaja;
+
+        SetDO MoveCaja, 0;
+
+        ! --- Velocidad 2500 (llega igual desde el movimiento anterior, sin cambio) ---
+        MoveL Approach_Pick,v2500,z100,Tooldata_2\WObj:=Workobject_1;
+
+        ! --- Cambio de velocidad: 2500 -> 1500 ---
+        SetGO GO_RobotSpeed,1500;
+        MoveL Pick_Pos,v1500,fine,Tooldata_2\WObj:=Workobject_1;
+
+        SetDO D0_attach, 1;
+        WaitTime 0.1;
+        SetDO D0_attach, 0;
+
+        ! --- Cambio de velocidad: 1500 -> 2500 ---
+        SetGO GO_RobotSpeed,2500;
+        MoveL Retreat_Pick,v2500,z100,Tooldata_2\WObj:=Workobject_1;
+
+        SetDO MoveCaja, 1;
+
+        ! --- Velocidad 2500 (sin cambio) ---
+        MoveL ApproachPlaces,v2500,z100,Tooldata_2\WObj:=Workobject_1;
+
+
+        ! --- Velocidad 2500 (sin cambio) ---
+        MoveL PlaceApproach,v2500,z100,Tooldata_2\WObj:=Workobject_1;
+
+        ! --- Cambio de velocidad: 2500 -> 1500 ---
+        SetGO GO_RobotSpeed,1500;
+        MoveL PlaceTarget,v1500,fine,Tooldata_2\WObj:=Workobject_1;
+
+        SetDO D0_detach, 1;
+        WaitTime 0.1;
+        SetDO D0_detach, 0;
+
+
+        BoxCounter:=BoxCounter+1;
+        SetGO GO_BoxCounter,BoxCounter;
+
+        ! --- Cambio de velocidad: 1500 -> 2500 ---
+        SetGO GO_RobotSpeed,2500;
+        MoveL PlaceApproach,v2500,z100,Tooldata_2\WObj:=Workobject_1;
+
+        ! --- Velocidad 2500 (sin cambio) ---
+        MoveL ApproachPlaces,v2500,z100,Tooldata_2\WObj:=Workobject_1;
+
+
+
+
+    ENDPROC
+
+    PROC main()
+
+        ! --- Configuración del watchdog de la señal de permiso de marcha ---
+        CONNECT iRunStop WITH TrapPause;
+        ISignalDI DI_RunPermission, 0, iRunStop;
+
+        ! Si la señal ya está apagada antes de arrancar, esperar a que se active
+        WaitDI DI_RunPermission, 1;
+
+        SetDO D0_attach, 0;
+        SetDO D0_detach, 1;
+        WaitTime 0.1;
+        SetDO D0_detach, 0;
+
+        EsperarInicio;
+        SetDO D0_attach, 0;
+        SetDO D0_detach, 0;
+        BoxCounter:=0;
+        SetGO GO_BoxCounter,BoxCounter;
+
+        ! --- Velocidad inicial del ciclo: 2500 ---
+        SetGO GO_RobotSpeed,2500;
+        MoveL HOME,v2500,z100,Tooldata_2\WObj:=Workobject_1;
+
+        PickAndPlace Place_1,Place_1_APRT;
+        PickAndPlace Place_2,Place_2_APRT;
+        PickAndPlace Place_3,Place_3_APRT;
+        PickAndPlace Place_4,Place_4_APRT;
+        PickAndPlace Place_5,Place_5_APRT;
+        PickAndPlace Place_6,Place_6_APRT;
+
+        PickAndPlace Place_7,Place_7_APRT;
+        PickAndPlace Place_8,Place_8_APRT;
+        PickAndPlace Place_9,Place_9_APRT;
+        PickAndPlace Place_10,Place_10_APRT;
+        PickAndPlace Place_11,Place_11_APRT;
+        PickAndPlace Place_12,Place_12_APRT;
+
+        ! --- Velocidad 2500 (sin cambio, cada PickAndPlace termina en 2500) ---
+        MoveL HOME,v2500,z100,Tooldata_2\WObj:=Workobject_1;
+
+        ! Robot detenido al finalizar el programa
+        SetGO GO_RobotSpeed,0;
+
+        ! Liberar la interrupción al finalizar el programa
+        IDelete iRunStop;
+
+    ENDPROC
+
+ENDMODULE
