@@ -27,10 +27,10 @@ Siemens Tecnomatix Plant Simulation
 - 3 productos
 - fallas por MTTR
 
-Simulación y optimización de un **Gemelo Digital** de una línea de envasado de botellas de vidrio de 330 mL utilizando **Siemens Tecnomatix Plant Simulation**. El objetivo principal es modelar el comportamiento dinámico de la planta y validar un **OEE global competitivo y superior** al estimado en la visita tecnica mediante la simulación de eventos discretos.
+Simulación y optimización de un **Gemelo Digital** de una línea de envasado de botellas de vidrio de 330 mL, Botellas de plastico de 2L y Botellones de 20L utilizando **Siemens Tecnomatix Plant Simulation**. El objetivo principal es modelar el comportamiento dinámico de la planta y validar un **OEE global competitivo y superior** al estimado en la visita tecnica mediante la simulación de eventos discretos.
 
-<img src="tu_primera_imagen_3d.png" width="450" alt="Vista General de la Línea 3D - Ángulo 1">
-<img src="tu_segunda_imagen_3d.png" width="450" alt="Vista General de la Línea 3D - Ángulo 2">
+<img src="https://github.com/NicolasDavila2001/APM-20261S/blob/main/Modulo_5/img/tecx1.png" width="550" alt="Vista General de la Línea 2D ">
+<img src="https://github.com/NicolasDavila2001/APM-20261S/blob/main/Modulo_5/img/tecx2.png" width="650" alt="Vista General de la Línea 3D - Ángulo 2">
 
 **Características del Modelo:**
 * **Visualización 3D Realista:** Integración y escalado de archivos CAD importados de GrabCAD para representar las botellas reales sin afectar el rendimiento de la simulación.
@@ -50,7 +50,7 @@ $$\text{OEE} = \text{Disponibilidad} \times \text{Rendimiento} \times \text{Cali
 | **Calidad** | **98.5%** | Descarte automático del 1.5% de botellas en Inspección. |
 | **OEE Global** | **84.6%** | Resultado del sistema integrado. |
 
-<img src="tu_imagen_del_chart_y_displays.png" width="500" alt="Gráfico de Torta OEE y Resultados">
+<img src="https://github.com/NicolasDavila2001/APM-20261S/blob/main/Modulo_5/img/tecx3.png" width="500" alt="Gráfico de OEE y Resultados">
 
 **Monitoreo en Tiempo Real (Dashboards):**
 El modelo cuenta con una interfaz interactiva integrada en el entorno 3D. Incluye gráficos de recursos (Pie Charts) para monitorear los estados de la Llenadora (Trabajando vs. Fallo) y Displays digitales que funcionan como contadores en tiempo real de botellas aprobadas (antes del paletizado) y botellas rechazadas.
