@@ -1,0 +1,14 @@
+# Dependencias de Node (backend y frontend) — nunca deben subirse a git
+node_modules/
+**/node_modules/
+
+# Variables de entorno
+.env
+**/.env
+
+# Builds de frontend (React)
+frontend/build/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
