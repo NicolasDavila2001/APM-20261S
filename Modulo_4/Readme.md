@@ -344,6 +344,7 @@ Con esta arquitectura fue posible integrar la supervisión del proceso, la lógi
   <img src="./images/SCADA_Seguridad.png" alt="Vista Planta 2 Copia" width="48%">
   <figcaption align="center">Indicadores de producción, seguridad y velocidad del robot.</figcaption>
 </figure>
+
 ---
 
 # 🎥 Video de funcionamiento

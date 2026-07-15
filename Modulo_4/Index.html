@@ -334,6 +334,33 @@
         .btn-red:hover {
             background-color: #c0392b !important;
         }
+        .module-figure {
+            text-align: center;
+            margin: 25px auto;
+        }
+        .module-figure img {
+            max-width: 85%;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+        }
+        .module-figure figcaption {
+            margin-top: 10px;
+            font-size: 13px;
+            color: #888;
+        }
+        .figure-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px auto;
+            max-width: 900px;
+        }
+        .figure-row img {
+            width: 48%;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+        }
     </style>
 
 </head>
@@ -481,6 +508,9 @@
                     <li>El proceso se repite hasta completar el pallet.</li>
                     <li>El sistema queda listo para comenzar un nuevo ciclo.</li>
                 </ol>
+                <figure class="module-figure">
+                    <img src="./images/VistaPlanta1.png" alt="VistaPlanta">
+                </figure>
             </div>
 
             <!-- ============== VENTAJAS ============== -->
@@ -627,11 +657,38 @@
                     funcionamiento completo de la celda: una entre RobotStudio y Node-RED, y otra entre el PLC (Studio 5000)
                     y Node-RED.</p>
 
+                <figure class="module-figure">
+                    <img src="./images/VistaPlanta2.png" alt="VistaPlanta">
+                    <figcaption>Vista de la planta en RobotStudio.</figcaption>
+                </figure>
+
                 <h4 style="font-weight:700; margin-top:25px;">RobotStudio ↔ Node-RED</h4>
                 <p class="justified-text">La comunicación entre la simulación del robot y el sistema SCADA se realizó
                     mediante <b>ABB IoT Gateway</b> junto con <b>Softing OPC UA Server</b>, permitiendo supervisar en
                     tiempo real el estado del robot y enviar comandos de operación sin acceder directamente al
                     controlador.</p>
+
+                <p class="justified-text">Las principales señales intercambiadas fueron:</p>
+                <ul class="checklist">
+                    <li>Estado del robot (en marcha, detenido o en espera).</li>
+                    <li>Botón Start.</li>
+                    <li>Botón Stop.</li>
+                    <li>Continue.</li>
+                    <li>Reset.</li>
+                    <li>Señales de los sensores virtuales.</li>
+                    <li>Contador de cajas procesadas.</li>
+                    <li>Estado del ciclo de paletizado.</li>
+                    <li>Alarmas generadas por el robot.</li>
+                </ul>
+                <p class="justified-text">Esta comunicación permitió desarrollar un dashboard desde Node-RED donde el
+                    operador podía supervisar toda la celda en tiempo real e interactuar con ella mediante una interfaz
+                    gráfica.</p>
+
+                <figure class="module-figure">
+                    <img src="./images/NodosNode_red.png" alt="Nodos Node-RED">
+                    <figcaption>Nodos creados en Node-RED.</figcaption>
+                </figure>
+
                 <div class="diagram-container">
                     <pre class="mermaid">
 flowchart LR
@@ -646,10 +703,34 @@ flowchart LR
                 </div>
 
                 <h4 style="font-weight:700; margin-top:25px;">Studio 5000 (PLC) ↔ Node-RED</h4>
+                <p class="justified-text">Además del robot, el proyecto incluyó un PLC programado en Studio 5000,
+                    encargado de supervisar diferentes condiciones del proceso y generar alarmas dependiendo del estado
+                    de la planta.</p>
+
+                <p class="justified-text">Gracias a esta conexión el sistema SCADA podía:</p>
+                <ul class="checklist">
+                    <li>Visualizar el estado de las entradas y salidas del PLC.</li>
+                    <li>Mostrar alarmas activas.</li>
+                    <li>Registrar eventos del proceso.</li>
+                    <li>Enviar comandos de control cuando era necesario.</li>
+                </ul>
+
                 <p class="justified-text">El PLC supervisa las condiciones del proceso y genera alarmas según el estado de
                     la planta. Cuando el PLC detecta una condición anormal, Node-RED procesa la información y escribe una
-                    variable hacia RobotStudio indicando qué rutina RAPID debe ejecutarse (operación normal, pausa,
-                    reanudación, espera o recuperación tras una falla), sin necesidad de modificar el programa manualmente.</p>
+                    variable hacia RobotStudio indicando qué rutina RAPID debe ejecutarse, sin necesidad de modificar el
+                    programa manualmente.</p>
+
+                <p class="justified-text">Algunos ejemplos de estas rutinas fueron:</p>
+                <ul class="checklist">
+                    <li>Operación normal.</li>
+                    <li>Pausa del proceso.</li>
+                    <li>Reanudación del ciclo.</li>
+                    <li>Rutina de espera.</li>
+                    <li>Rutina de recuperación después de una falla.</li>
+                    <li>Reinicio del proceso una vez eliminada la alarma.</li>
+                </ul>
+                <p class="justified-text">Esta arquitectura permitió desacoplar la lógica del PLC de la programación del
+                    robot, utilizando Node-RED como intermediario para coordinar ambos sistemas.</p>
                 <div class="diagram-container">
                     <pre class="mermaid">
 flowchart TB
@@ -664,6 +745,11 @@ flowchart TB
     IOT --> ROBOT
                     </pre>
                 </div>
+
+                <figure class="module-figure">
+                    <img src="./images/PLC.png" alt="Conexión con PLC">
+                    <figcaption>Conexión con PLC en Studio 5000.</figcaption>
+                </figure>
 
                 <h4 style="font-weight:700; margin-top:25px;">Integración general del sistema</h4>
                 <p class="justified-text">Node-RED actúa como elemento central de comunicación entre la supervisión, el
@@ -689,6 +775,23 @@ flowchart TB
     IOT --> ROBOT
                     </pre>
                 </div>
+            </div>
+
+            <!-- ============== HMI EN NODE-RED ============== -->
+            <div class="section-block">
+                <div class="section-title"><i class="fa fa-desktop"></i> HMI en Node-RED</div>
+                <div class="section-underline"></div>
+                <div class="figure-row">
+                    <img src="./images/SCADA_PanelControl1.png" alt="Panel de control 1">
+                    <img src="./images/SCADA_PanelControl2.png" alt="Panel de control 2">
+                </div>
+                <p class="text-center" style="font-size:13px; color:#888;">HMI del robot en Node-RED.</p>
+
+                <div class="figure-row">
+                    <img src="./images/SCADA_Produccion.png" alt="Indicadores de producción">
+                    <img src="./images/SCADA_Seguridad.png" alt="Indicadores de seguridad">
+                </div>
+                <p class="text-center" style="font-size:13px; color:#888;">Indicadores de producción, seguridad y velocidad del robot.</p>
             </div>
 
             <!-- ============== VIDEO ============== -->
