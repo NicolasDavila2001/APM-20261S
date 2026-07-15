@@ -114,6 +114,8 @@ El funcionamiento de la celda puede resumirse de la siguiente manera:
 7. El proceso se repite hasta completar el pallet.
 8. Una vez finalizado, el sistema queda listo para comenzar un nuevo ciclo.
 
+![VistaPlanta](./images/VistaPlanta1.png)
+
 ---
 
 # Evaluación de riesgos
@@ -189,13 +191,18 @@ Durante el desarrollo del proyecto se utilizaron diferentes herramientas de inge
 
 Uno de los principales objetivos del proyecto fue lograr la comunicación entre los diferentes sistemas de automatización para que la celda funcionara de manera coordinada. Para esto se implementaron dos arquitecturas de comunicación diferentes, cada una encargada de una parte específica del proceso.
 
+<figure>
+  <img src="./images/VistaPlanta2.png" alt="VistaPlanta">
+  <figcaption>Vista de la planta en RobotStudio.</figcaption>
+</figure>
+
 ---
 
 ## Comunicación entre RobotStudio y Node-RED
 
-La comunicación entre la simulación del robot y el sistema SCADA se realizó utilizando **ABB IoT Gateway** junto con **Softing OPC UA Server**.
+La comunicación entre la simulación del robot y el sistema SCADA se realizó utilizando ABB IoT Gateway junto con Softing OPC UA Server.
 
-En RobotStudio se configuró el **IoT Gateway**, el cual permite publicar las señales del controlador virtual IRC5 hacia un servidor OPC UA. Posteriormente, **Softing OPC UA Server** actuó como intermediario, exponiendo estas variables para que pudieran ser leídas y escritas desde Node-RED.
+En RobotStudio se configuró el IoT Gateway, el cual permite publicar las señales del controlador virtual IRC5 hacia un servidor OPC UA. Posteriormente, Softing OPC UA Server actuó como intermediario, exponiendo estas variables para que pudieran ser leídas y escritas desde Node-RED.
 
 Gracias a esta arquitectura fue posible que el sistema SCADA supervisara en tiempo real el estado del robot y enviara comandos de operación sin necesidad de acceder directamente al controlador del robot.
 
@@ -212,6 +219,11 @@ Las principales señales intercambiadas fueron:
 - Alarmas generadas por el robot.
 
 Esta comunicación permitió desarrollar un dashboard desde Node-RED donde el operador podía supervisar toda la celda en tiempo real e interactuar con ella mediante una interfaz gráfica.
+
+<figure>
+  <img src="./images/NodosNode_red.png" alt="VistaPlanta">
+  <figcaption>Nodos creados en node-red.</figcaption>
+</figure>
 
 ### Flujo de comunicación
 
@@ -279,6 +291,11 @@ flowchart TB
     IOT --> ROBOT
 ```
 
+<figure>
+  <img src="./images/PLC.png" alt="VistaPlanta">
+  <figcaption>Conexion con PLC en Studio 5000.</figcaption>
+</figure>
+
 ---
 
 ## Integración general del sistema
@@ -312,6 +329,21 @@ Con esta arquitectura fue posible integrar la supervisión del proceso, la lógi
 
 ---
 
+
+## HMI en Node-red
+
+<figure>
+  <img src="./images/SCADA_PanelControl1.png" alt="Vista Planta 2" width="48%">
+  <img src="./images/SCADA_PanelControl2.png" alt="Vista Planta 2 Copia" width="48%">
+  <figcaption align="center">HMI del robot en node--red.</figcaption>
+</figure>
+
+
+<figure>
+  <img src="./images/SCADA_Produccion.png" alt="Vista Planta 2" width="48%">
+  <img src="./images/SCADA_Seguridad.png" alt="Vista Planta 2 Copia" width="48%">
+  <figcaption align="center">Indicadores de producción, seguridad y velocidad del robot.</figcaption>
+</figure>
 ---
 
 # 🎥 Video de funcionamiento
