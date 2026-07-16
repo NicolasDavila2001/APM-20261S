@@ -264,7 +264,137 @@
                 llenado (vía NX MCD/Studio 5000) como el de la celda robotizada (vía RobotStudio), aunque cada sistema use un
                 protocolo distinto en su origen (OPC DA vs. OPC UA).</p>
 
+            <br><br>
+
+            <h2 class="text-center">Desarrollo del SCADA (Node-RED)</h2>
+            <p class="justified-text">Dentro de la arquitectura general descrita arriba, esta sección detalla el trabajo
+                realizado específicamente en <b>Node-RED</b> para supervisar y controlar la etapa de
+                <b>Llenado (carrusel rotativo)</b>: un carrusel de 20 boquillas, una banda transportadora de entrada recta
+                y un mecanismo de rechazo de botellas. El editor de Node-RED se trabajó siempre desde el navegador (sin
+                edición directa de archivos de código), sobre Windows.</p>
             <br>
+
+            <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">1. Conexión con el controlador virtual (CIP / EtherNet-IP)</h3>
+            <p class="justified-text">La comunicación entre Node-RED y el PLC virtual (Logix Emulate + RSLinx Classic) se
+                estableció mediante la paleta <code>node-red-contrib-cip-ethernet-ip</code>, que implementa el protocolo
+                CIP sobre EtherNet-IP:</p>
+            <ul class="justified-text" style="max-width:900px; margin:0 auto 20px; text-align:left;">
+                <li>Se configuró un nodo <b>ETH-IP In</b> apuntando a la IP del controlador virtual, con el modo de lectura
+                    en <b>"all tags"</b>, de forma que todas las tags del PLC llegan agrupadas en un único mensaje por
+                    ciclo de escaneo.</li>
+                <li>Para extraer valores de tags con notación de punto (por ejemplo <code>C_Btl_Count.ACC</code>, el valor
+                    acumulado del contador de botellas), se usaron expresiones <b>JSONata</b> con la función
+                    <code>$lookup(payload, "C_Btl_Count.ACC")</code>, evitando el uso de comillas invertidas (backticks)
+                    que provocaban corrupción de caracteres en el nombre de la tag.</li>
+                <li>Un nodo <b>ETH-IP Out</b> permite escribir tags de control hacia el PLC (por ejemplo, el arranque del
+                    sistema).</li>
+            </ul>
+
+            <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">2. Supervisión de sensores y actuadores</h3>
+            <p class="justified-text">Cumpliendo el requerimiento de supervisar la totalidad de sensores y actuadores, se
+                mapearon en el dashboard las tags provenientes del programa ladder de Studio 5000, entre ellas:</p>
+            <table class="tabla-personalizada">
+                <thead>
+                    <tr><th>Tag del PLC</th><th>Elemento físico / función</th><th>Uso en el SCADA</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>I_Strt_PB</code></td><td>Pulsador de arranque de la línea</td><td>Reutilizada como botón de <b>Start</b> del SCADA (control, no solo lectura)</td></tr>
+                    <tr><td><code>O_Rej_Pos</code></td><td>Posición del actuador de rechazo</td><td>Supervisión de solo lectura en el dashboard</td></tr>
+                    <tr><td><code>C_Btl_Count.ACC</code></td><td>Valor acumulado del contador de botellas procesadas por el carrusel</td><td>Fuente directa del conteo de <b>botellas procesadas</b> (sin recontar en Node-RED)</td></tr>
+                    <tr><td>Sensores de banda de entrada y boquillas del carrusel</td><td>Detección de botellas / posición del carrusel</td><td>Indicadores de estado en el dashboard</td></tr>
+                    <tr><td>Actuador/mecanismo de rechazo</td><td>Expulsión de botellas no conformes</td><td>Supervisión y conteo de <b>botellas rechazadas</b></td></tr>
+                </tbody>
+            </table>
+            <p class="justified-text">El valor de <code>C_Btl_Count.ACC</code> se lee directamente desde el PLC en lugar
+                de reimplementar un contador en Node-RED, evitando duplicidad e inconsistencias entre el conteo del PLC
+                y el del SCADA.</p>
+            <br>
+
+            <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">3. Control Arranque y Parada desde el SCADA</h3>
+            <p class="justified-text">El dashboard incluye control de arranque y parada de la línea, reutilizando el tag
+                <code>I_Strt_PB</code> ya existente en el programa del PLC en lugar de crear un tag nuevo. Los botones de
+                control del dashboard se implementaron con nodos <code>ui-template</code> siguiendo el patrón de Vue
+                <code>@click="send(...)"</code>, consistente en toda la interfaz para los elementos interactivos.</p>
+
+            <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">4. Alarmas</h3>
+            <p class="justified-text">Se configuraron alarmas asociadas a condiciones críticas del proceso de llenado (por
+                ejemplo, detención no esperada del carrusel y activación sostenida del mecanismo de rechazo).</p>
+
+            <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">5. Registro histórico (CSV logger)</h3>
+            <p class="justified-text">Para el registro de los históricos, se implementó un <b>logger en CSV</b> que
+                registra en cada ciclo:</p>
+            <ul class="justified-text" style="max-width:900px; margin:0 auto 20px; text-align:left;">
+                <li><code>procesadas</code>: botellas procesadas, tomadas de <code>C_Btl_Count.ACC</code> a través del
+                    nodo <b>CONTADOR BOTELLAS PROCESADAS</b>.</li>
+                <li><code>rechazadas</code>: botellas rechazadas, tomadas de <code>flow.contadorRechazadas</code> a través
+                    del nodo <b>CONTADOR RECHAZO</b>.</li>
+                <li><code>tiempoCorriendo</code> y <code>tiempoPlaneado</code>: tiempos usados posteriormente para el
+                    cálculo de OEE.</li>
+            </ul>
+            <p class="justified-text">El archivo histórico se guarda en local.</p>
+
+            <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">6. Analítica de OEE (Python + pandas)</h3>
+            <p class="justified-text">Sobre el histórico anterior se construyó un pipeline de análisis:</p>
+            <ul class="justified-text" style="max-width:900px; margin:0 auto 20px; text-align:left;">
+                <li>Un nodo <code>exec</code> en Node-RED invoca un script de Python (<code>analisis.py</code>) alojado en
+                    local.</li>
+                <li>El script usa <b>pandas</b> para calcular, a partir del CSV histórico, los tres componentes clásicos
+                    del OEE:
+                    <ul>
+                        <li><b>Disponibilidad</b> = tiempo corriendo / tiempo planeado.</li>
+                        <li><b>Rendimiento</b> = comparación entre el ciclo real y el <b>tiempo de ciclo ideal</b>
+                            (<code>IDEAL_CYCLE_TIME_SEC</code>).</li>
+                        <li><b>Calidad</b> = proporción de botellas procesadas frente al total (procesadas + rechazadas).</li>
+                        <li><b>OEE</b> = Disponibilidad × Rendimiento × Calidad.</li>
+                    </ul>
+                </li>
+                <li>Un nodo <code>trigger</code> llamado <b>AUTO TRIGGER ANALISIS</b> dispara la ejecución del script
+                    automáticamente cada 5–8 segundos, y el resultado en JSON se guarda en
+                    <code>flow.get('ultimoAnalisis')</code> para su reutilización sin tener que recalcular en cada
+                    petición.</li>
+                <li>Nota de arquitectura: el OEE se calcula <b>por etapa</b>, no para la línea completa, ya que cada
+                    etapa del proceso tiene su propio tiempo de ciclo ideal; un único número de OEE de línea no sería
+                    representativo.</li>
+            </ul>
+
+            <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">7. Dashboard (Node-RED Dashboard 2.0)</h3>
+            <p class="justified-text">La visualización se construyó sobre <b>Dashboard 2.0</b>
+                (<code>@flowfuse/node-red-dashboard</code>), con un tema claro y una paleta de colores consistente:</p>
+            <ul class="justified-text" style="max-width:900px; margin:0 auto 20px; text-align:left;">
+                <li>Fondo blanco.</li>
+                <li>Azul <code>#0284c7</code> para valores e indicadores normales.</li>
+                <li>Rojo <code>#dc2626</code> para alarmas/estados críticos.</li>
+                <li>Ámbar <code>#d97706</code> para estados de advertencia.</li>
+            </ul>
+            <p class="justified-text">Las tarjetas de KPI (Disponibilidad, Rendimiento, Calidad, OEE, botellas procesadas
+                y rechazadas) se implementaron con nodos <code>ui-template</code> personalizados en lugar de los widgets
+                estándar, para tener control total sobre el estilo visual.</p>
+            <p class="justified-text">Adicionalmente, se incorporó un nodo de función <b>REINICIAR CONTADORES</b> (con
+                tres salidas) que reinicia simultáneamente las tarjetas de KPI, las variables de flujo usadas en el
+                cálculo de OEE y los estados internos de los contadores, permitiendo reiniciar una corrida de prueba sin
+                recargar todo el flujo.</p>
+
+            <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">8. Integración con el MES/ERP (endpoint HTTP)</h3>
+            <p class="justified-text">Para que el sistema MES/ERP pueda consumir los datos de producción de esta etapa,
+                se expuso un <b>endpoint HTTP GET</b> en <code>/api/oee</code>:</p>
+            <ul class="justified-text" style="max-width:900px; margin:0 auto 20px; text-align:left;">
+                <li>Responde con el último análisis de OEE calculado, tomado de <code>flow.get('ultimoAnalisis')</code>.</li>
+                <li>Este valor se mantiene actualizado en segundo plano por el trigger <b>AUTO TRIGGER ANALISIS</b> (cada
+                    5–8 segundos), por lo que el endpoint responde de inmediato con el dato más reciente ya calculado, sin
+                    recalcular en cada llamada.</li>
+                <li>El endpoint es de tipo <b>solicitud–respuesta</b> (no <i>streaming</i>/push), por lo que el sistema
+                    MES/ERP debe consultarlo periódicamente (<i>polling</i>) para mantenerse sincronizado.</li>
+                <li>La disponibilidad del endpoint se validó dentro de la misma red local (LAN) en la que corre Node-RED.</li>
+            </ul>
+
+            <h3 style="text-align: center; color: #1a3e6f; margin-bottom: 15px;">9. Acceso remoto (Remote-RED)</h3>
+            <p class="justified-text">Para el acceso remoto del SCADA, se instaló la paleta
+                <code>node-red-contrib-remote</code>, que permite exponer el dashboard de Node-RED fuera de la red local.
+                El acceso remoto se validó exitosamente desde un teléfono móvil conectado por <b>datos celulares (5G)</b>,
+                confirmando que el dashboard y sus controles (incluyendo Start/Stop) son accesibles sin depender de la
+                red WiFi local.</p>
+
+            <br><br>
             <div style="display: flex; justify-content: center; gap: 20px;">
                 <div class="btn-back">
                     <a href="../Modulo_6/Index.html" class="btn btn-default">
