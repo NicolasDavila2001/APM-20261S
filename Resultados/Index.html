@@ -371,6 +371,8 @@ section{
 
                                     <li><a href="#Arq">Arquitectura</a></li>
 
+                                    <li><a href="#Economico">Evaluación Económica</a></li>
+
                                     <li><a href="#DT">Gemelo Digital</a></li>
 
                                     <li><a href="#Robotica">Celda Robotizada</a></li>
@@ -473,6 +475,90 @@ section{
                             <p>
 
                             La comunicación entre dispositivos se plantea mediante redes Ethernet Industrial, utilizando protocolos ampliamente implementados en la industria como Profinet y OPC UA, permitiendo escalabilidad e interoperabilidad entre los distintos equipos.
+
+                            </p>
+
+                        </section>
+                        <section id="Economico" class="module-section">
+
+                            <div class="text-center">
+
+                                <h2>Evaluación Económica Ampliada</h2>
+
+                                <div class="module-divider"></div>
+
+                            </div>
+
+                            <p>
+
+                            El Análisis de Precios Unitarios y el flujo de caja anteriores fueron el primer planteamiento del presupuesto del proyecto. A partir de ahí se hizo una revisión más profunda para:
+
+                            </p>
+
+                            <ul class="justified-text" style="list-style: disc; padding-left: 25px;">
+
+                                <li style="margin-bottom: 12px;">Corregir los equipos presupuestados para que coincidan con lo que realmente se implementó en los Módulos 4-6 (el PLC y el HMI presupuestados originalmente eran de una marca distinta a la que finalmente se programó, y la línea de producto presupuestada no era la correcta).</li>
+
+                                <li style="margin-bottom: 12px;">Reemplazar la tarifa de mano de obra plana ($30.000-60.000 COP/hora) por el salario real de mercado de un Ingeniero de Automatización en Colombia, aplicado a los 6 integrantes del equipo con un cronograma de ejecución realista para un proyecto industrial (no el calendario del semestre académico).</li>
+
+                                <li style="margin-bottom: 12px;">Agregar los costos operativos anuales (OPEX) y una evaluación completa de rentabilidad — VAN, TIR, Payback y ROI — que el planteamiento inicial no incluía.</li>
+
+                            </ul>
+
+                            <p>
+
+                            Este análisis ampliado está en el archivo <strong>Evaluacion_Economica_def.xlsx</strong>, un modelo editable (con fórmulas) organizado en hojas: <em>Supuestos</em>, <em>Nomina</em>, <em>CAPEX</em>, <em>OPEX</em>, <em>Beneficios</em>, <em>FlujoCaja</em> y <em>Resumen</em>, disponible en el repositorio del proyecto.
+
+                            </p>
+
+                            <div class="text-center" style="margin-top: 30px;">
+                                <h3 style="font-size: 22px; font-weight: 700; color: #222; margin-bottom: 20px;">Resultados principales</h3>
+                            </div>
+
+                            <div style="overflow-x: auto;">
+                                <table class="tabla-personalizada">
+                                    <thead>
+                                        <tr>
+                                            <th>Indicador</th>
+                                            <th>Valor</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>CAPEX total (inversión inicial)</td>
+                                            <td>$426.632.750 COP</td>
+                                        </tr>
+                                        <tr>
+                                            <td>OPEX anual</td>
+                                            <td>$32.358.250 COP</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Beneficios ciertos anuales (ahorro de mano de obra)</td>
+                                            <td>$124.320.000 COP</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Payback simple</td>
+                                            <td>4,64 años</td>
+                                        </tr>
+                                        <tr>
+                                            <td>VAN (@ 15% anual)</td>
+                                            <td>-$118.362.701 COP</td>
+                                        </tr>
+                                        <tr>
+                                            <td>TIR</td>
+                                            <td>2,5%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ROI al horizonte de evaluación (5 años)</td>
+                                            <td>7,8%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p>
+
+                            Contando únicamente el ahorro de mano de obra por paletizado automatizado, el proyecto recupera la inversión dentro del horizonte de evaluación, pero no supera la tasa de descuento exigida (15% anual). El argumento financiero más fuerte del proyecto es el beneficio potencial de cerrar la brecha de OEE (73,1% → 84,6%), estimado en <strong>$4.581.158.400 COP/año</strong> — este valor se muestra aparte porque depende de que el mercado absorba la producción adicional liberada, algo que no se puede confirmar por sí solo.
 
                             </p>
 
