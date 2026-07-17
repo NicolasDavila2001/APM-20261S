@@ -60,7 +60,7 @@
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
-        #contact a {
+    #contact a {
         color: #ffffff;
     }
 
@@ -69,17 +69,67 @@
         text-decoration: underline;
     }
     .portfolio-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
     }
     .justified-text {
-    max-width: 900px;
-    margin: auto;
-    font-size: 16px;
-    line-height: 1.8;
-    text-align: justify;
+        max-width: 900px;
+        margin: auto;
+        font-size: 16px;
+        line-height: 1.8;
+        text-align: justify;
+    }
+
+/* AJUSTE DEFINITIVO PARA CENTRADO PERFECTO */
+
+/* Forzamos al contenedor a usar flexbox limpio */
+.portfolio-caption {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
+    transform: none !important; /* Resetea herencias de la plantilla */
 }
+
+/* Forzamos al título a centrarse en su propio eje y eliminamos posiciones fijas */
+.portfolio-caption h4 {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin: 0 0 15px 0 !important; /* Espacio exacto entre el título y la bolita */
+    width: auto !important;
+    display: inline-block !important;
+    transform: none !important; /* Elimina desfases porcentuales antiguos */
+}
+
+.portfolio-caption h4 a {
+    color: inherit; 
+    text-decoration: none;
+}
+
+.portfolio-caption h4 a:hover {
+    text-decoration: underline;
+}
+
+/* Forzamos a la bolita blanca a resetear posiciones relativas previas */
+.portfolio-caption a i{
+    position:absolute !important;
+    top:60% !important;
+}
+
+.portfolio-caption a.link-2 i{
+    left:50% !important;
+    margin-left:-25px !important;   /* prueba -30, -35 o -40 */
+    transform:none !important;
+}
+
 </style>
 
 </head>
@@ -396,90 +446,137 @@
             <div class="col-md-12">
                 
                 <!-- Start Portfolio items -->
-                <ul id="portfolio-list">
-                    <li>
-                        <div class="portfolio-item">
-                            <img src="images/portfolio/img1.jpg" class="img-responsive" alt="" />
-                            <div class="portfolio-caption">
-                                <h4>Módulo 1</h4>
-                                <a href="Modulo_1/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_1" class="link-2"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="portfolio-item">
-                            <img src="images/portfolio/img2.jpg" class="img-responsive" alt="" />
-                            <div class="portfolio-caption">
-                                <h4>Módulo 2</h4>
-                                <a href="Modulo_2/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_2" class="link-2"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="portfolio-item">
-                            <img src="images/portfolio/img3.jpg" class="img-responsive" alt="" />
-                            <div class="portfolio-caption">
-                                <h4>Módulo 3</h4>
-                                <a href="Modulo_3/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_3" class="link-2"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="portfolio-item">
-                            <img src="images/portfolio/img4.jpg" class="img-responsive" alt="" />
-                            <div class="portfolio-caption">
-                                <h4>Módulo 4</h4>
-                                <a href="Modulo_4/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_4" class="link-2"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="portfolio-item">
-                            <img src="images/portfolio/img5.jpg" class="img-responsive" alt="" />
-                            <div class="portfolio-caption">
-                                <h4>Módulo 5</h4>
-                                <a href="Modulo_5/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_5" class="link-2"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="portfolio-item">
-                            <img src="images/portfolio/img6.jpg" class="img-responsive" alt="" />
-                            <div class="portfolio-caption">
-                                <h4>Módulo 6</h4>
-                                <a href="Modulo_6/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_6" class="link-2"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="portfolio-item">
-                            <img src="images/portfolio/img8.jpg" class="img-responsive" alt="" />
-                            <div class="portfolio-caption">
-                                <h4>Módulo 7</h4>
-                                <a href="Modulo_7/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_7" class="link-2"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="portfolio-item">
-                            <img src="images/portfolio/img7.jpg" class="img-responsive" alt="" />
-                            <div class="portfolio-caption">
-                                <h4>Propuesta</h4>
-                                <a href="Resultados/Index.html" class="link-1"><i class="fa fa-magic"></i></a>
-                                <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Resultados" class="link-2"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    
-                </ul>
+<ul id="portfolio-list">
+
+    <li>
+        <div class="portfolio-item">
+            <img src="images/portfolio/img1.jpg" class="img-responsive" alt="">
+            <div class="portfolio-caption">
+                <div class="caption-content">
+                    <h4>
+                        <a href="Modulo_1/Index.html">Módulo 1</a>
+                    </h4>
+                    <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_1" class="link-2">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <li>
+        <div class="portfolio-item">
+            <img src="images/portfolio/img2.jpg" class="img-responsive" alt="">
+            <div class="portfolio-caption">
+                <div class="caption-content">
+                    <h4>
+                        <a href="Modulo_2/Index.html">Módulo 2</a>
+                    </h4>
+                    <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_2" class="link-2">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <li>
+        <div class="portfolio-item">
+            <img src="images/portfolio/img3.jpg" class="img-responsive" alt="">
+            <div class="portfolio-caption">
+                <div class="caption-content">
+                    <h4>
+                        <a href="Modulo_3/Index.html">Módulo 3</a>
+                    </h4>
+                    <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_3" class="link-2">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <li>
+        <div class="portfolio-item">
+            <img src="images/portfolio/img4.jpg" class="img-responsive" alt="">
+            <div class="portfolio-caption">
+                <div class="caption-content">
+                    <h4>
+                        <a href="Modulo_4/Index.html">Módulo 4</a>
+                    </h4>
+                    <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_4" class="link-2">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <li>
+        <div class="portfolio-item">
+            <img src="images/portfolio/img5.jpg" class="img-responsive" alt="">
+            <div class="portfolio-caption">
+                <div class="caption-content">
+                    <h4>
+                        <a href="Modulo_5/Index.html">Módulo 5</a>
+                    </h4>
+                    <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_5" class="link-2">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <li>
+        <div class="portfolio-item">
+            <img src="images/portfolio/img6.jpg" class="img-responsive" alt="">
+            <div class="portfolio-caption">
+                <div class="caption-content">
+                    <h4>
+                        <a href="Modulo_6/Index.html">Módulo 6</a>
+                    </h4>
+                    <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_6" class="link-2">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <li>
+        <div class="portfolio-item">
+            <img src="images/portfolio/img8.jpg" class="img-responsive" alt="">
+            <div class="portfolio-caption">
+                <div class="caption-content">
+                    <h4>
+                        <a href="Modulo_7/Index.html">Módulo 7</a>
+                    </h4>
+                    <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_7" class="link-2">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <li>
+        <div class="portfolio-item">
+            <img src="images/portfolio/img7.jpg" class="img-responsive" alt="">
+            <div class="portfolio-caption">
+                <div class="caption-content">
+                    <h4>
+                        <a href="Resultados/Index.html">Propuesta</a>
+                    </h4>
+                    <a href="https://github.com/NicolasDavila2001/APM-20261S/tree/main/Resultados" class="link-2">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </li>
+
+</ul>
                 <!-- End Portfolio items -->
             </div>
         </div>

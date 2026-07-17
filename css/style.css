@@ -1023,13 +1023,52 @@ and (min-width : 551px){
 }
 
 .portfolio-caption a.link-1 i {
-    left: 30%;
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    font-size: 25px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 60%;
 }
 
 .portfolio-caption a.link-2 i {
-    left: 50%;
+    left: calc(50% - 30px);
+    transform: none;
+}
+/* ====== Sobrescribir plantilla ====== */
+
+.portfolio-caption{
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
 }
 
+.portfolio-caption .caption-content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    height:100%;
+}
+
+.portfolio-caption h4{
+    position:static !important;
+    top:auto !important;
+    margin-bottom:20px !important;
+}
+
+.portfolio-caption a{
+    position:static !important;
+}
+
+.portfolio-caption a i{
+    position:static !important;
+    transform:none !important;
+    margin:0 auto !important;
+}
 
 /*---------------------------------------------------------*/
 /* Start About Us Section                                  */
