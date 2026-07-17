@@ -152,7 +152,7 @@ El trabajo colaborativo se hizo evidente en cada entregable: desde los documento
 Si algo nos llevamos de esta experiencia es que la ingeniería no se hace en solitario. Así como una planta de bebidas depende de cada válvula, motor y sensor funcionando en armonía, un proyecto exitoso depende de que cada persona sepa cuándo liderar, cuándo seguir y cuándo dar una mano sin que se lo pidan. Hoy podemos decir que, más allá del resultado técnico, el mayor logro fue construir una dinámica de equipo que funcionó, con más altos que bajos, y que nos dejó una experiencia valiosa para nuestra vida profesional.
 
 ## Aporte y Reflexciones personales
-- *Nicolas Fernando Davila Peñuela- Sistema Mes y ERP*
+- **Nicolas Fernando Davila Peñuela- Sistema Mes y ERP**
   Con el desarrollo de este proyecto se evidenció la importancia de cada una de las etapas que conforman un proceso de automatización industrial y cómo la correcta ejecución de cada una de ellas influye directamente en el desempeño y los resultados finales del sistema. Asimismo, fue una experiencia enriquecedora enfrentarse a un reto de esta magnitud sin la necesidad de contar con una planta física, demostrando que, mediante herramientas de simulación y virtualización, es posible desarrollar proyectos de ingeniería de manera eficiente. Este enfoque permite validar diseños, identificar posibles mejoras y reducir tanto los riesgos asociados a la implementación como el tiempo y los costos requeridos para la puesta en marcha de un sistema real.
 - Juan David Meza Criollo - Technomatix
 - Cristian Fabián Martínez Bohorquez - Sistema SCADA
