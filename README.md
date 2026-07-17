@@ -160,19 +160,14 @@ Durante el desarrollo de este proyecto pude notar la importancia de los pequeño
 - Cristian Fabián Martínez Bohorquez - Sistema SCADA\
 Uno de los aprendizajes más importantes de este proyecto fue comprender que ninguna de sus partes tiene sentido de forma aislada. El sistema que construimos entre todos, con cada integrante aportando en su módulo correspondiente, resultó mucho más sólido de lo que habría logrado individualmente. Me llevo no solo el conocimiento técnico adquirido, sino la experiencia de coordinar componentes complejos junto a otras personas hasta lograr que el conjunto funcionara.
 
-- Andres Mauricio Avilan Herrera - Gemelo digital y Control\\
+- Andres Mauricio Avilan Herrera - Gemelo digital y Control\
 El desarrollo de este proyecto demostró el valor de los gemelos digitales al asumir el reto de automatizar el proceso central de una empresa, integrando la co-simulación entre Studio 5000 y NX MCD con un riguroso análisis operativo. Esta experiencia evidenció cómo la logística de control y la gestión precisa de flancos lógicos determinan la estabilidad y sincronización de un sistema industrial de alta velocidad. Validar la interacción de variables físicas y lógicas en un entorno virtualizado permitió depurar el comportamiento del proceso, mitigar riesgos y estructurar una arquitectura robusta, demostrando que el comisionamiento digital es una herramienta estratégica para optimizar la eficiencia, reducir costos y garantizar el éxito en una puesta en marcha real
 
 - Santiago Avila Corredor - Análisis economico y parametros de seguridad celda robótica\
 Este proyecto me demostró el valor de la ingeniería virtual. Emular la complejidad física y lógica de la planta con softwares especializados nos brinda una radiografía casi exacta de la capacidad de producción real. Esta inmersión técnica evidencia una gran oportunidad de mejora en la industria actual: la necesidad de afianzar e implementar con rigor las capas de la pirámide de automatización bajo el estándar ISA-95. Al integrar los datos desde los sensores en campo hasta los sistemas de supervisión, las empresas pueden transformar indicadores críticos como el OEE en herramientas fluidas, logrando dinamismo en la optimización.
 
 - Juan José Delgado Estrada - Celda robótica\
-La puesta en marcha de una empresa y un proyecto como este ha sido un proceso de aprendizaje continuo.
-                            De cometer errores, corregirlos y tener en cuenta cada experiencia como un criterio futuro.
-                            Sin dudas, son muchas las cosas que pueden salir mal y demasiadas cosas que no van a salir bien a la primera,
-                            pero la satisfacción de avanzar y ver el funcionamiento de diferentes módulos es una recompensa que vale la pena todo su esfuerzo.
-                            Es un trabajo que requiere tiempo y como recomnedación, se debería tener en cuenta que no va a salir todo bien a la primera, entonces no hay que confiarse que en el tiempo planeado va a salir todo perfecto.
-                            Hay que tener tiempos de colchon para corregir los errores y hacer las tareas faltantes. Es un proyecto donde se pone en práctica la gestión de proyectos y la importancia de este.
+La puesta en marcha de una empresa y un proyecto como este ha sido un proceso de aprendizaje continuo.De cometer errores, corregirlos y tener en cuenta cada experiencia como un criterio futuro.Sin dudas, son muchas las cosas que pueden salir mal y demasiadas cosas que no van a salir bien a la primera,pero la satisfacción de avanzar y ver el funcionamiento de diferentes módulos es una recompensa que vale la pena todo su esfuerzo.Es un trabajo que requiere tiempo y como recomnedación, se debería tener en cuenta que no va a salir todo bien a la primera, entonces no hay que confiarse que en el tiempo planeado va a salir todo perfecto.Hay que tener tiempos de colchon para corregir los errores y hacer las tareas faltantes. Es un proyecto donde se pone en práctica la gestión de proyectos y la importancia de este.
 
 
 ## 💾Anexos 
