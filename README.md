@@ -129,31 +129,36 @@ Línea de alto volumen con mínimo **3 productos diferentes**
 - [Reflexiones y Aportes](#Reflexiones-y-aportes)
 
 ## 🤔 Reflexciones y Aportes
-## 1. Gestión de Proyecto
+# 1. Gestión de Proyecto
 
 **La planeación como columna vertebral de la operación**
 
 Para nosotros, abordar la automatización de una planta de bebidas no fue solo un reto técnico, sino un ejercicio profundo de gestión. Desde el inicio, el proyecto nos obligó a ver más allá de los diagramas de control y los PLCs; tuvimos que entender que estábamos simulando la "columna vertebral" de una operación productiva. 
 
-Al principio, nuestras reuniones carecían de la estructura necesaria y, al igual que una línea de producción mal sincronizada, los esfuerzos no rendían al máximo. Sin embargo, comprendimos como equipo que la gestión de un proyecto no se trata de reunirse por reunirse, sino de sincronizar talentos y tiempos para mantener el flujo constante de trabajo. Nos costó encontrar ese ritmo, pero cuando lo logramos, todo empezó a fluir mejor.
+Al principio, nuestras reuniones carecían de la estructura necesaria y los esfuerzos no rendían al máximo. Sin embargo, comprendimos como equipo que la gestión de un proyecto no se trata de reunirse por reunirse, sino de sincronizar talentos y tiempos para mantener el flujo constante de trabajo. Nos costó encontrar ese ritmo, pero cuando lo logramos, todo empezó a fluir mejor.
 
-Aprendimos juntos a gestionar la ambigüedad. Hubo semanas donde el avance era tan fluido como el llenado de botellas, y otras donde tuvimos que detenernos a "hacer mantenimiento" de tareas que no quedaron claras. Fue en esas pausas donde maduramos como equipo, entendiendo que la priorización de recursos no es un acto de limitación, sino de inteligencia estratégica. Nos dimos cuenta de que no siempre se puede tener todo lo que se quiere, pero sí se puede hacer mucho con lo que se tiene.
+Aprendimos juntos a gestionar los problemas que se fueron presentando, ya que al contar con herramientas nuevas, nos vimos en la necesidad de entender y aprender como usar cada una de esta, adquiriendo asi habilidades que sabemos seran cruciales en el mundo real.
 
-Al no contar con las herramientas ideales, nos vimos en la necesidad de innovar con lo que teníamos, una habilidad que sabemos será crucial en el mundo real, donde los presupuestos y los tiempos siempre son ajustados. La interacción con los docentes fue nuestro principal "sensor de calidad"; aunque sus correcciones a veces fueron inesperadas, nos ayudaron a recalibrar el rumbo y a tomar decisiones más acertadas. Como grupo entendimos que un buen proyecto no es el que nunca se equivoca, sino el que sabe corregir a tiempo y aprender de cada desviación.
-
----
-
-## 2. Trabajo Colaborativo
+# 2. Trabajo Colaborativo
 
 **Del trabajo en equipo al liderazgo compartido**
 
 Automatizar una planta de bebidas es un desafío que, por su naturaleza multidisciplinaria, no puede recaer en una sola persona. Desde el primer día, dividimos roles buscando aprovechar las fortalezas individuales de cada integrante, pero la verdadera lección llegó cuando entendimos que los roles son solo un punto de partida. 
 
-En la práctica, el éxito del proyecto dependió de nuestra capacidad para apoyarnos mutuamente cuando alguien se atascaba. Hubo momentos de mucha sinergia, donde las ideas fluían y los avances se multiplicaban, pero también hubo otros donde el trabajo se estancaba y la comunicación se volvía crítica. Fue en esos momentos donde el equipo demostró su madurez, porque en lugar de señalar culpables, nos sentamos a resolver los cuellos de botella como un solo grupo.
+En la práctica, el éxito del proyecto dependió de nuestra capacidad para apoyarnos mutuamente cuando alguien se atascaba. Fue en esos momentos donde el equipo demostró su madurez, porque en lugar de señalar culpables, nos sentamos a resolver los cuellos de botella como un solo grupo.
 
 El trabajo colaborativo se hizo evidente en cada entregable: desde los documentos compartidos hasta las simulaciones que requerían unir esfuerzos entre varios. Aprendimos que la colaboración real no es hacer todo juntos, sino confiar en que cada uno hará su parte y estar listo para tender un puente cuando el otro lo necesite. Las asesorías con los docentes reforzaron esta dinámica, porque salíamos de ellas con tareas claras y con el compromiso de resolverlas en conjunto, repartiéndolas de manera equitativa y estratégica.
 
 Si algo nos llevamos de esta experiencia es que la ingeniería no se hace en solitario. Así como una planta de bebidas depende de cada válvula, motor y sensor funcionando en armonía, un proyecto exitoso depende de que cada persona sepa cuándo liderar, cuándo seguir y cuándo dar una mano sin que se lo pidan. Hoy podemos decir que, más allá del resultado técnico, el mayor logro fue construir una dinámica de equipo que funcionó, con más altos que bajos, y que nos dejó una experiencia valiosa para nuestra vida profesional.
+
+## Aporte y Reflexciones personales
+- Nicolas Fernando Davila Peñuela- Sistema Mes y ERP
+  Con el desarrollo de este proyecto se evidenció la importancia de cada una de las etapas que conforman un proceso de automatización industrial y cómo la correcta ejecución de cada una de ellas influye directamente en el desempeño y los resultados finales del sistema. Asimismo, fue una experiencia enriquecedora enfrentarse a un reto de esta magnitud sin la necesidad de contar con una planta física, demostrando que, mediante herramientas de simulación y virtualización, es posible desarrollar proyectos de ingeniería de manera eficiente. Este enfoque permite validar diseños, identificar posibles mejoras y reducir tanto los riesgos asociados a la implementación como el tiempo y los costos requeridos para la puesta en marcha de un sistema real.
+- Juan David Meza Criollo - Technomatix
+- Cristian Fabián Martínez Bohorquez - Sistema SCADA
+- Andres Mauricio Avilan Herrera - Gemelo digital y Control
+- Santiago Avila Corredor - Análisis economico y parametros de seguridad celda robótica 
+- Juan José Delgado Estrada - Celda robótica
 
 
 ## 💾Anexos 
