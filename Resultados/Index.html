@@ -485,17 +485,88 @@ section{
                             </p>
 
                         </section>
-<
+
                         <section id="Technomatix" class="module-section">
 
                             <div class="text-center">
 
-                                <h2>Technomatix</h2>
+                                <h2>Technomatix Plant Simulation</h2>
 
                                 <div class="module-divider"></div>
+                                
+                                <p class="justified-text">
+                                    Este submódulo comprende el diseño, simulación y optimización del <strong>Gemelo Digital</strong> de la línea de envasado de botellas de PET de 600 mL. El objetivo principal fue modelar el comportamiento dinámico de la planta y validar un <strong>OEE global del 84.6%</strong> mediante la simulación de eventos discretos.
+                                </p>
+
+                                <!-- Contenedor de Imágenes Escaladas -->
+                                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 30px 0;">
+                                    <img src="../Modulo_5/img/tecx1.png" class="img-responsive" style="max-width: 450px; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" alt="Vista General de la Línea 2D">
+                                    <img src="../Modulo_5/img/tecx2.png" class="img-responsive" style="max-width: 450px; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" alt="Vista General de la Línea 3D">
+                                </div>
+
+                                <p class="justified-text">
+                                    <strong>Características clave del modelo:</strong>
+                                </p>
+                                <ul class="justified-text" style="list-style: disc; padding-left: 25px; margin-bottom: 30px;">
+                                    <li style="margin-bottom: 12px;"><strong>Visualización 3D Realista:</strong> Integración y escalado de archivos CAD importados de GrabCAD para representar las botellas reales sin comprometer el rendimiento computacional de la simulación.</li>
+                                    <li style="margin-bottom: 12px;"><strong>Control de Cuello de Botella:</strong> La Llenadora (<code>Fill_600</code>) actúa como la máquina restrictiva de la línea, regulando de manera exacta el flujo completo de producción.</li>
+                                    <li style="margin-bottom: 12px;"><strong>Gestión de Mermas (Calidad):</strong> Estación de inspección automatizada para el descarte y conteo del 1.5% de producto defectuoso.</li>
+                                    <li style="margin-bottom: 12px;"><strong>Empaque y Paletizado:</strong> Simulación del proceso de paletizado final e ingreso ordenado al almacén de producto terminado.</li>
+                                </ul>
+
+                                <p class="justified-text">
+                                    <strong>Configuración del OEE Objetivo:</strong><br>
+                                    El modelo se calibró bajo la métrica industrial estándar: OEE = Disponibilidad x Rendimiento x Calidad. Los datos validados en el sistema integrado se consolidan en la siguiente tabla:
+                                </p>
+
+                                <!-- Tabla de Indicadores OEE -->
+                                <div style="overflow-x: auto;">
+                                    <table class="tabla-personalizada">
+                                        <thead>
+                                            <tr>
+                                                <th>Indicador</th>
+                                                <th>Valor Configurado</th>
+                                                <th>Método de Simulación</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Disponibilidad</strong></td>
+                                                <td>85.9%</td>
+                                                <td>Configuración de fallas cíclicas (MTTR de 1 min) en la Llenadora.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Rendimiento</strong></td>
+                                                <td>100.0%</td>
+                                                <td>Ajuste de tasa de entrada (<code>Source Interval = 0</code>) para eliminar tiempos de espera.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Calidad</strong></td>
+                                                <td>98.5%</td>
+                                                <td>Descarte automático del 1.5% de botellas en la estación de Inspección.</td>
+                                            </tr>
+                                            <tr style="background-color: #fce4d6; font-weight: bold;">
+                                                <td>OEE Global</td>
+                                                <td>84.6%</td>
+                                                <td>Resultado final del sistema integrado medido en los displays de control.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <p class="justified-text" style="margin-top: 30px;">
+                                    <strong>Monitoreo en Tiempo Real (Dashboards):</strong><br>
+                                    El entorno cuenta con una interfaz interactiva integrada en el espacio de trabajo 3D. Incluye gráficos de recursos (Pie Charts) para monitorear los estados de la Llenadora (Working vs. Failed) y Displays digitales que funcionan como contadores en tiempo real de botellas aprobadas (tomadas justo antes del paletizado para evitar conteo erróneo de contenedores), botellas rechazadas y el indicador de producción promedio por hora (<code>statThroughputPerHour</code>).
+                                </p>
+
+                                <p class="justified-text" style="margin-top: 15px;">
+                                    <strong>Requisitos de Ejecución:</strong><br>
+                                    El modelo requiere Siemens Tecnomatix Plant Simulation. Para ejecutarlo correctamente, se debe abrir el archivo <code>.spp</code>, resetear la simulación y presionar Play, aumentando la velocidad del reloj virtual para observar la estabilización matemática de los indicadores al concluir el turno.
+                                </p>
 
                             </div>
 
+                        </section>
 
                         </section>
                         <section id="DT" class="module-section">
