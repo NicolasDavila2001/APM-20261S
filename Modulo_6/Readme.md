@@ -2,6 +2,8 @@
 
 Este módulo documenta el programa de control discreto desarrollado en Studio 5000 (Logix Designer) para la estación de llenado rotativo (carrusel de 20 boquillas). El programa corre sobre un controlador virtual **Logix Emulate 5570** y sus salidas se envían al gemelo digital construido en Siemens NX presentado en el [Módulo 5](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_5), conformando así el lazo entre la lógica de control y la simulación del carrusel y el rechazador. Para el desarrollo de las pantallas de supervisión sobre esta misma lógica(SCADA en Node-Red), se explica el [Módulo 7](https://github.com/NicolasDavila2001/APM-20261S/tree/main/Modulo_7).
 
+## Grafcet descriptivo y tecnologico
+![Grafcets Etapa realizadas en DT](Grafcets.png)
 ## Descripción general del controlador
 
 | Elemento | Valor |
