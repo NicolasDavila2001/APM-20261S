@@ -126,7 +126,6 @@ Línea de alto volumen con mínimo **3 productos diferentes**
 - [Modulo 6: Automatización discreta (PLC)](Modulo_6)
 - [Modulo 7: SCADA y comunicaciones](Modulo_7)
 - [Resultados -  Propuesta de automatización](Resultados)
-- [Reflexiones y Aportes](#Reflexiones-y-aportes)
 
 ## 🤔 Reflexciones y Aportes
 # 1. Gestión de Proyecto
